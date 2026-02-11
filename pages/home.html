@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Home - Fashion & Quality</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta name="description"
+        content="Level up your interior aesthetics with our home décor range. Furniture, bedding, cushions, candles & more at H&M.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        /* Home page specific styles */
+        .stage-teaser {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stage-teaser img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .stage-teaser .teaser-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .stage-teaser .teaser-content h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .stage-teaser .teaser-content .shop-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+
+        .stage-teaser .teaser-content .shop-link:hover {
+            opacity: 0.8;
+        }
+
+        .shop-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Two teaser grid */
+        .two-teaser-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .two-teaser-grid .stage-teaser {
+            aspect-ratio: 4/5;
+        }
+
+        .two-teaser-grid .stage-teaser img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Price tag on teaser */
+        .price-tag {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 6px 12px;
+            border-radius: 2px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .price-tag:hover {
+            transform: scale(1.05);
+        }
+
+        /* New In section */
+        .new-in-section {
+            padding: 48px 0;
+        }
+
+        .new-in-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .new-in-header h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .new-in-header .view-all-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #222;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .new-in-header .view-all-link:hover {
+            text-decoration: underline;
+        }
+
+        .new-in-scroll {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 16px;
+            scrollbar-width: none;
+        }
+
+        .new-in-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .new-in-item {
+            flex: 0 0 160px;
+            scroll-snap-align: start;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .new-in-item img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Shop by Room section */
+        .shop-by-room {
+            padding: 48px 0;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            padding: 0 16px;
+        }
+
+        .room-card {
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: #fff;
+            aspect-ratio: 3/4;
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .room-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .room-card .room-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        }
+
+        .room-card .room-info h2 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+
+        .room-card .room-info .explore-link {
+            font-size: 0.8rem;
+            text-decoration: underline;
+        }
+
+        /* SEO section */
+        .seo-section {
+            padding: 48px 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .seo-section h3 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .seo-section p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .seo-section a {
+            color: #222;
+            text-decoration: underline;
+        }
+
+        /* Dynamic products section */
+        .home-products-section {
+            padding: 48px 0;
+        }
+
+        .home-products-section .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 0 16px;
+        }
+
+        .home-products-section .section-header h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        #home-product-grid {
+            padding: 0 16px;
+        }
+
+        @media (max-width: 768px) {
+            .two-teaser-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .room-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stage-teaser .teaser-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .new-in-item {
+                flex: 0 0 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .room-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- Header -->
+<header class="header">
+    <!-- Announcement Banner -->
+    <div class="header-banner">
+        <p>The season's new arrivals are all here</p>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="header-nav" aria-label="Primary navigation">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" aria-label="H&M">
+            <svg viewBox="0 0 200 132" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desktop-hm-logo">
+                <title id="desktop-hm-logo">H&amp;M</title>
+                <path
+                    d="M94.378.062c-1.39-.335-4.266.748-7.295 1.888-2.33.877-4.749 1.788-6.65 2.113-1.389.238-2.72 1.72-3.178 2.767a1250.033 1250.033 0 0 0-18.713 45.388 476.105 476.105 0 0 0-24.188 4.794c6.503-16.72 13.092-33.208 19.519-49.08 3.162-7.81-5.162-8.547-8.392-.63l-.206.503c-4.237 10.392-11.984 29.386-20.54 51.47A516.167 516.167 0 0 0 4.483 64.68c-5.146 1.486-5.368 2.857-3.14 5.944.689.955 1.776 1.326 2.805 1.677.823.281 1.61.55 2.125 1.094.646.682 1.236 1.392 1.819 2.093 2.132 2.563 4.16 5.001 8.383 5.452-4.803 12.82-9.594 26.039-13.933 38.768-2.724 7.99 5.039 9.625 8.021 1.171 4.808-13.629 9.883-27.425 15.086-41.179 3.688-.857 11.837-2.621 20.163-4.424l.005-.001 4.377-.948c-7.706 21.094-12.772 37.117-14.68 44.914-.323 1.324.114 2.128.436 2.719.043.079.083.154.12.226 1.246 1.816 2.463 2.795 3.763 3.841 1.406 1.131 2.907 2.339 4.647 4.768.91 1.275 3.94 1.962 4.978-1.175 7.127-21.543 14.46-41.755 21.305-59.876 2.841-.622 7.956-1.856 11.09-6.527 3.483-5.194 5.414-6.474 6.699-7.325.766-.508 1.302-.863 1.8-1.805 1.673-3.163.566-6.134-5.377-5.4 0 0-2.244.16-6.384.632 2.77-7.133 5.395-13.81 7.815-19.968v-.003c3.331-8.476 6.275-15.967 8.68-22.305 1.407-3.71 1.595-6.426-.708-6.98ZM140.484 4.007c7.256-3.577 10.858-3.1 10.936.512.101 4.608-.566 10.686-1.06 15.187l-.03.274c-.899 8.195-2 15.89-3.081 23.444-2.157 15.077-4.233 29.59-4.461 46.388 11.859-30.703 21.808-52.042 34.61-78.329 3.133-6.437 5.391-6.997 7.787-7.592.717-.178 1.446-.359 2.215-.701 13.017-5.792 13.505-2.234 11.804 4.838-6.317 26.244-22.455 108.852-24.927 121.571-.717 3.68-4.71 2.121-5.753.681-2.057-2.843-4.229-4.444-5.957-5.718-2.165-1.596-3.634-2.679-3.309-5.049 2.904-21.207 13.357-74.414 16.082-86.953-13.902 28.484-28.308 64.09-35.704 84.278-1.572 4.287-4.426 3.973-6.206.836-.978-1.722-2.315-3.115-3.629-4.483-2.049-2.133-4.041-4.207-4.529-7.378-1.647-10.726.058-27.747 1.67-43.833.876-8.743 1.724-17.21 1.991-24.24-7.564 21.805-20.265 64.144-25.828 83.273-2.301 7.915-9.936 6.623-7.907-1.091 8.456-32.102 26.663-88.878 34.549-109.296 1.316-3.407 4.146-4.31 7.119-5.26 1.213-.388 2.45-.783 3.618-1.359Z"
+                    fill="#E50010"></path>
+                <path
+                    d="M85.55 97.56a42.278 42.278 0 0 1 1.561-1.44c3.569-3.093 6.977-.025 3.449 5.204a59.27 59.27 0 0 1-2.557 3.526c.446 1.271.844 2.365 1.16 3.176 1.825 4.678-2.966 5.851-4.51 1.976a88.444 88.444 0 0 1-.42-1.078c-2.913 2.58-6.28 4.204-9.88 3.085-5.92-1.842-7.427-10.178-1.899-16.6 2.218-2.577 3.887-4.365 5.282-5.793-.42-1.375-.76-2.528-.983-3.335-.718-2.6-1.366-5.63 1.236-8.719 4.88-5.79 16.2-.65 10.474 8.264-1.38 2.147-2.992 4.175-4.674 6.231a530.665 530.665 0 0 0 1.761 5.503Zm-7.04 1.149c-2.912 3.998-1.188 5.421.975 4.097a17.54 17.54 0 0 0 2.036-1.486 406.179 406.179 0 0 1-1.524-4.577 75.337 75.337 0 0 0-1.488 1.966Zm3.303-13.187a53.206 53.206 0 0 0 1.546-1.67c3.605-4.07-3.522-5.773-1.881.452.092.351.207.764.335 1.218Z"
+                    fill="#E50010"></path>
+            </svg>
+        </a>
+
+        <!-- Nav Links -->
+        <div class="nav-links">
+            <a href="women.html" class="nav-link">Ladies</a>
+            <a href="men.html" class="nav-link">Men</a>
+            <a href="kids.html" class="nav-link">Kids</a>
+            <a href="home.html" class="nav-link active">Home</a>
+        </div>
+
+        <!-- Action Icons -->
+        <div class="header-actions">
+            <button class="header-action" aria-label="Open search">
+                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M9.823 10.883a5.5 5.5 0 1 1 1.06-1.06l4.72 4.72-1.06 1.06-4.72-4.72ZM10.5 6.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
+                    </path>
+                </svg>
+                <span>Search</span>
+            </button>
+            <button class="header-action" aria-label="Sign in">
+                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-1.5 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z M8 9.5c-1.888 0-3.826.201-5.319.855-.755.33-1.43.793-1.918 1.435C.268 12.444 0 13.24 0 14.17V16h1.5v-1.83c0-.626.174-1.098.458-1.473.292-.384.732-.708 1.325-.968C4.487 11.202 6.174 11 8 11c1.833 0 3.518.182 4.721.7.591.254 1.03.574 1.319.96.283.375.46.859.46 1.511V16H16v-1.829c0-.948-.265-1.755-.761-2.414-.49-.65-1.168-1.11-1.925-1.436C11.82 9.678 9.88 9.5 8 9.5Z">
+                    </path>
+                </svg>
+                <span>Sign in</span>
+            </button>
+            <a href="#" class="header-action" aria-label="Favourites">
+                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                    <path
+                        d="M8.697 2.253a4.278 4.278 0 0 1 6.05 6.05L8 15.05 1.253 8.304a4.278 4.278 0 0 1 6.05-6.05L8 2.948l.696-.696Zm4.99 1.06a2.778 2.778 0 0 0-3.93 0L8.003 5.07 6.243 3.315a2.779 2.779 0 0 0-3.93 3.928L8 12.928l5.686-5.686a2.778 2.778 0 0 0 0-3.928Z">
+                    </path>
+                </svg>
+                <span>Favourites</span>
+            </a>
+            <a href="cart.html" class="header-action" aria-label="Shopping bag"><span class="cart-count" style="display:none;">0</span>
+                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M8 0C6.928 0 5.92.298 5.16.75c-.704.42-1.411 1.115-1.411 2V4.5L0 4.501V15h16V4.5h-3.75V2.75c0-.893-.7-1.59-1.41-2.01C10.08.29 9.072 0 8 0Zm2.75 6v3h1.5V6h2.25v7.5h-13V6h2.25v3h1.5V6h5.5Zm0-1.5V2.75c0-.08-.107-.383-.674-.72C9.557 1.724 8.816 1.5 8 1.5c-.808 0-1.55.228-2.07.539-.577.343-.68.648-.68.711V4.5h5.5Z">
+                    </path>
+                </svg>
+                <span>Shopping bag</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <main id="main-content">
+
+        <!-- Hero: The Mediterranean table -->
+        <section class="stage-teaser">
+            <picture>
+                <source media="(max-width: 767px)"
+                    srcset="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk07/7023C-2x3-home-startpage-wk-07.jpg?imwidth=768">
+                <img loading="eager"
+                    src="https://image.hm.com/content/dam/ind-local-assets/7023C_03-S-16x9.jpg?imwidth=1920"
+                    alt="The Mediterranean table" style="width:100%; max-height: 70vh; object-fit: cover;">
+            </picture>
+            <div class="teaser-content">
+                <h2>The Mediterranean table</h2>
+                <a href="#" class="shop-link">
+                    Shop now
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                        <path d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Two Teaser: Bedding + Kids' room -->
+        <div class="two-teaser-grid">
+            <div class="stage-teaser">
+                <img loading="lazy"
+                    src="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk07/7023E-4x5-home-startpage-wk-07.jpg?imwidth=1024"
+                    alt="Bedding">
+                <div class="teaser-content">
+                    <h2>Bedding</h2>
+                    <a href="#" class="shop-link">
+                        Shop now
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <path
+                                d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="stage-teaser">
+                <img loading="lazy"
+                    src="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk06/7023D-4x5-home-startpage-wk-06.jpg?imwidth=1024"
+                    alt="Kids' room spring vibes">
+                <div class="teaser-content">
+                    <h2>Kids' room spring vibes</h2>
+                    <a href="#" class="shop-link">
+                        Shop now
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <path
+                                d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="product.html?id=1308222002" class="price-tag" style="top: 38%; left: 65%;">Rs.5,499.00</a>
+            </div>
+        </div>
+
+        <!-- New In Section -->
+        <section class="new-in-section">
+            <div class="new-in-header">
+                <h2>New In</h2>
+                <a href="#" class="view-all-link">
+                    View all
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor">
+                        <path d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="new-in-scroll" id="new-in-scroll">
+                <!-- Dynamically loaded from products data -->
+            </div>
+        </section>
+
+        <!-- Shop by Room -->
+        <section class="shop-by-room">
+            <div class="room-grid">
+                <a href="#" class="room-card">
+                    <img loading="lazy"
+                        src="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk07/7023E-4x5-home-startpage-wk-07.jpg?imwidth=640"
+                        alt="Bedroom">
+                    <div class="room-info">
+                        <h2>Bedroom</h2>
+                        <span class="explore-link">Explore</span>
+                    </div>
+                </a>
+                <a href="#" class="room-card">
+                    <img loading="lazy"
+                        src="https://image.hm.com/content/dam/ind-local-assets/7023C_03-S-16x9.jpg?imwidth=640"
+                        alt="Dining Room">
+                    <div class="room-info">
+                        <h2>Dining Room</h2>
+                        <span class="explore-link">Explore</span>
+                    </div>
+                </a>
+                <a href="#" class="room-card">
+                    <img loading="lazy"
+                        src="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk06/7023D-4x5-home-startpage-wk-06.jpg?imwidth=640"
+                        alt="Living Room">
+                    <div class="room-info">
+                        <h2>Living Room</h2>
+                        <span class="explore-link">Explore</span>
+                    </div>
+                </a>
+                <a href="#" class="room-card">
+                    <img loading="lazy"
+                        src="https://image.hm.com/content/dam/global_campaigns/season_03/home/start-page-assets/wk07/7023C-2x3-home-startpage-wk-07.jpg?imwidth=640"
+                        alt="Bathroom">
+                    <div class="room-info">
+                        <h2>Bathroom</h2>
+                        <span class="explore-link">Explore</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products from Data -->
+        <section class="home-products-section">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <a href="#" class="view-all-link"
+                    style="display:inline-flex;align-items:center;gap:6px;color:#222;text-decoration:none;font-size:0.875rem;">
+                    View all
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor">
+                        <path d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="product-grid" id="home-product-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- SEO Section -->
+        <section class="seo-section">
+            <h3>Home décor</h3>
+            <p>Level up your interior aesthetics with our home décor range. Whether you've moved into a new home, or
+                you want to breathe new life into your existing living space, our collection has every room in the house
+                covered. Our furniture edit offers stunning side tables and comfy lounge chairs, plus there's an array
+                of
+                chic lighting to create a calming ambience. Looking for those finishing touches? Check out our beautiful
+                <a href="#">bed linen</a>, and top it off by scrolling for decorative
+                <a href="#">cushions and cushion covers</a>, or create textured layers with blankets and throws. When it
+                comes to decorations, add scented candles to your bathroom, give your favorite plants a place to call
+                home in our chic plant pots, or experiment with wall hangings and elegant glassware. Whether your
+                preferred style is minimalistic or bold, we've got something to suit every taste in our home décor
+                range.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3>H&M</h3>
+                        <p class="footer-description">
+                            Fashion and quality at best price in a sustainable way.
+                        </p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Shop</h4>
+                        <ul class="footer-links">
+                            <li><a href="women.html">Ladies</a></li>
+                            <li><a href="men.html">Men</a></li>
+                            <li><a href="kids.html">Kids</a></li>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="#">Beauty</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Corporate Info</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Career at H&M</a></li>
+                            <li><a href="#">About H&M group</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Help</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">My H&M</a></li>
+                            <li><a href="#">Find a store</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2025 H&M Hennes & Mauritz. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load New In items from products data
+            const newInScroll = document.getElementById('new-in-scroll');
+            if (window.productsData && window.productsData.products && window.productsData.products.home) {
+                const homeProducts = window.productsData.products.home;
+                homeProducts.forEach(product => {
+                    const item = document.createElement('a');
+                    item.className = 'new-in-item';
+                    item.href = `product.html?id=${product.id}`;
+                    item.setAttribute('aria-label', product.name);
+                    item.innerHTML = `
+                        <img loading="lazy" src="${product.image}" alt="${product.name} - ${(product.colors || []).join('/')}">
+                    `;
+                    newInScroll.appendChild(item);
+                });
+            }
+
+            // Load Featured Products grid
+            const productGrid = document.getElementById('home-product-grid');
+            if (window.productsData && window.productsData.products && window.productsData.products.home) {
+                const homeProducts = window.productsData.products.home;
+                homeProducts.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.onclick = () => { window.location.href = `product.html?id=${product.id}`; };
+                    card.innerHTML = `
+                        <div class="product-image-container">
+                            <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                            <div class="product-actions">
+                                <button class="product-action-btn" aria-label="Add to favourites">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <p class="product-brand">${product.brand || 'H&M Home'}</p>
+                            <h3 class="product-name">${product.name}</h3>
+                            <div class="product-price">
+                                <span class="price-current">${product.price}</span>
+                            </div>
+                        </div>
+                    `;
+                    productGrid.appendChild(card);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

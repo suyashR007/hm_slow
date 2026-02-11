@@ -1,0 +1,286 @@
+/* Product Page Specific Styles */
+
+:root {
+    --hm-red: #e50010;
+    --hm-black: #222;
+    --hm-gray-100: #f4f4f4;
+    --hm-gray-200: #e4e4e4;
+    --hm-gray-600: #767676;
+    --hm-gray-800: #222;
+    --font-heading: 'HM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body: 'HM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--hm-black);
+}
+
+/* Layout */
+.product-page-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .product-page-grid {
+        display: grid;
+        grid-template-columns: 60% 35%;
+        /* Wider image column */
+        gap: 5%;
+        align-items: start;
+    }
+}
+
+/* Gallery */
+.product-gallery {
+    width: 100%;
+}
+
+.product-image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    /* Minimal gap */
+}
+
+@media (min-width: 768px) {
+    .product-image-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns for images */
+    }
+}
+
+.product-image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* Sticky Right Column */
+.product-info-column {
+    position: relative;
+    padding-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .product-details-sticky {
+        position: sticky;
+        top: 8rem;
+        /* Account for header */
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        padding-right: 1rem;
+        /* For scrollbar */
+        scrollbar-width: thin;
+    }
+}
+
+/* Typography & Elements */
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    /* 24px */
+    font-weight: 500;
+    /* Regular/Medium */
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.2;
+    max-width: 85%;
+    /* Leave room for heart icon */
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.product-discount {
+    color: var(--hm-red);
+    font-weight: 500;
+    font-size: 0.875rem;
+    background: #ffecec;
+    padding: 2px 6px;
+}
+
+.section-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--hm-black);
+}
+
+/* Reviews */
+.reviews-snippet {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.stars {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.review-count {
+    color: var(--hm-gray-600);
+    text-decoration: underline;
+}
+
+/* Options */
+.color-option {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--hm-gray-200);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.color-option.selected {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--hm-black);
+    border-color: transparent;
+}
+
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.size-option {
+    border: 1px solid var(--hm-black);
+    /* H&M uses black borders often or dark gray */
+    color: var(--hm-black);
+    background: #fff;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    font-weight: 400;
+}
+
+.size-option:hover {
+    border-width: 2px;
+}
+
+.size-option.selected {
+    background: var(--hm-black);
+    color: #fff;
+    border-color: var(--hm-black);
+}
+
+.size-option.disabled {
+    color: var(--hm-gray-200);
+    border-color: var(--hm-gray-200);
+    cursor: not-allowed;
+    background: #fafafa;
+    text-decoration: line-through;
+    /* Optional */
+}
+
+/* Buttons */
+.btn-add-to-bag {
+    width: 100%;
+    background-color: var(--hm-black);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.btn-add-to-bag:hover {
+    opacity: 0.9;
+}
+
+.add-to-wishlist-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.add-to-wishlist-icon:hover {
+    background-color: var(--hm-gray-100);
+}
+
+/* Accordions */
+.accordion-group {
+    border-top: 1px solid var(--hm-gray-200);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--hm-gray-200);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    background: none;
+    border: none;
+    font-size: 0.9375rem;
+    /* 15px */
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    color: var(--hm-black);
+}
+
+.accordion-header:hover {
+    text-decoration: underline;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+    max-height: 1000px;
+    /* Arbitrary large number */
+}
+
+.accordion-body {
+    padding-bottom: 1.25rem;
+    font-size: 0.875rem;
+    color: var(--hm-gray-600);
+    line-height: 1.5;
+}
+
+.desc-list dt {
+    float: left;
+    clear: left;
+    width: 30%;
+    font-weight: 600;
+    color: var(--hm-black);
+}
+
+.desc-list dd {
+    margin-left: 35%;
+    margin-bottom: 4px;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
