@@ -342,8 +342,42 @@
 /* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
+}
+
+.product-grid>* {
+  min-width: 0;
+}
+
+/* Enforce uniform image boxes inside product grid cards */
+.product-grid .aspect-\[2\/3\] {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 150%;
+  /* 3/2 = 1.5 = 150% — forces exact 2:3 ratio */
+  overflow: hidden;
+}
+
+.product-grid .aspect-\[2\/3\]>a,
+.product-grid .aspect-\[2\/3\]>button {
+  position: absolute;
+}
+
+.product-grid .aspect-\[2\/3\]>a {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.product-grid .aspect-\[2\/3\] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .product-card {

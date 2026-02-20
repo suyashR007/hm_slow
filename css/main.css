@@ -869,3 +869,7 @@ h6 {
   display: block;
   color: #e50010;
 }
+
+.product-image-blend {
+  mix-blend-mode: multiply;
+}

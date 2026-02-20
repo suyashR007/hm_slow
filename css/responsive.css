@@ -26,7 +26,7 @@
   }
 
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero {
@@ -220,7 +220,7 @@
 /* Mobile (480px and down) */
 @media screen and (max-width: 480px) {
   .container {
-    padding: 0 var(--spacing-xs);
+    padding: 0 var(--spacing-sm);
   }
 
   .header-nav {
@@ -284,13 +284,9 @@
     font-size: var(--font-size-xl);
   }
 
-  .category-subtitle {
-    font-size: var(--font-size-sm);
-  }
-
   .product-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
   }
 
   .product-badges {
@@ -609,5 +605,20 @@
     background-color: var(--hm-white);
     color: var(--hm-gray-600);
     border-color: var(--hm-gray-300);
+  }
+}
+
+/* Campaign Spotlight Grid */
+@media screen and (min-width: 1025px) {
+  .campaign-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .layout-grid {
+    grid-template-columns: 240px 1fr !important;
   }
 }

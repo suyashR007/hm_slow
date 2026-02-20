@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H&M - Fashion & Quality</title>
-    <!-- Performance Degradation - must be first to block FCP -->
-    <script src="js/performance-delay.js"></script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="description"
         content="Discover the latest fashion trends with H&M. Shop women's, men's, children's and home clothing and accessories.">
@@ -20,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Preload hero videos to massively improve LCP metric before JS executes them -->
+    <link rel="preload" as="video" type="video/mp4" href="assets/videos/mobile-hero.mp4" media="(max-width: 767px)">
+    <link rel="preload" as="video" type="video/mp4" href="assets/videos/desktop-hero.mp4" media="(min-width: 768px)">
 </head>
 
 <body>
@@ -98,11 +99,24 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slide active">
-            <video data-testid="videoBackground" aria-hidden="true" tabindex="-1" preload="metadata" playsinline=""
-                autoplay loop muted style="width: 100%; height: 100%; object-fit: cover;">
-                <source src="assets/videos/mobile-hero.mp4" media="(max-width: 767px)" type="video/mp4">
-                <source src="assets/videos/desktop-hero.mp4" media="(min-width: 767.1px)" type="video/mp4">
-            </video>
+            <video id="heroVideo" data-testid="videoBackground" aria-hidden="true" tabindex="-1" preload="auto"
+                playsinline autoplay loop muted style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <script>
+                (function () {
+                    var video = document.getElementById('heroVideo');
+                    var src = window.innerWidth <= 767
+                        ? 'assets/videos/mobile-hero.mp4'
+                        : 'assets/videos/desktop-hero.mp4';
+                    video.src = src;
+                    video.load();
+                    var playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(function () {
+                            // Autoplay was blocked; video will play on user interaction
+                        });
+                    }
+                })();
+            </script>
         </div>
 
         <div class="hero-content">
@@ -118,7 +132,8 @@
                 <!-- Product 1 -->
                 <a href="pages/product.html?id=149500003"
                     class="group relative aspect-[2/3] w-full overflow-hidden bg-gray-50 block">
-                    <img src="images/products/women/149500003.jpg" alt="Floral chiffon dress"
+                    <img src="images/products/women/149500003.jpg" alt="Floral chiffon dress" width="400" height="600"
+                        fetchpriority="high"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute bottom-6 left-6">
                         <h3 class="text-xl font-bold mb-2 text-black">Floral chiffon dress</h3>
@@ -130,7 +145,8 @@
                 <!-- Product 2 -->
                 <a href="pages/product.html?id=149500008"
                     class="group relative aspect-[2/3] w-full overflow-hidden bg-gray-50 block">
-                    <img src="images/products/women/149500008.jpg" alt="Cropped denim jacket"
+                    <img src="images/products/women/149500008.jpg" alt="Cropped denim jacket" width="400" height="600"
+                        fetchpriority="high"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute bottom-6 left-6">
                         <h3 class="text-xl font-bold mb-2 text-black">Cropped denim jacket</h3>
@@ -142,7 +158,8 @@
                 <!-- Product 3 -->
                 <a href="pages/product.html?id=149500014"
                     class="group relative aspect-[2/3] w-full overflow-hidden bg-gray-50 block">
-                    <img src="images/products/women/149500014.jpg" alt="Wide-leg jeans"
+                    <img src="images/products/women/149500014.jpg" alt="Wide-leg jeans" width="400" height="600"
+                        fetchpriority="high"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute bottom-6 left-6">
                         <h3 class="text-xl font-bold mb-2 text-black">Wide-leg jeans</h3>
@@ -154,7 +171,8 @@
                 <!-- Product 4 -->
                 <a href="pages/product.html?id=149500005"
                     class="group relative aspect-[2/3] w-full overflow-hidden bg-gray-50 block">
-                    <img src="images/products/women/149500005.jpg" alt="Knit cardigan"
+                    <img src="images/products/women/149500005.jpg" alt="Knit cardigan" width="400" height="600"
+                        fetchpriority="high"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute bottom-6 left-6">
                         <h3 class="text-xl font-bold mb-2 text-black">Knit cardigan</h3>
@@ -171,16 +189,16 @@
     <section class="py-5" style="padding-bottom: 4rem;">
         <div class="container">
             <h2 class="text-xl font-bold mb-4">New Arrivals</h2>
-            <div class="product-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="group block relative">
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
                         <a href="pages/product.html?id=w-new-001" class="block h-full">
                             <img src="https://image.hm.com/assets/hm/22/03/2203091a6f38ee637f6090805ffe4f5bc1b4a296.jpg?imwidth=1536"
-                                alt="Printed lyocell shirt"
+                                alt="Printed lyocell shirt" width="400" height="600" loading="lazy"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </a>
-                        <button class="wishlist-btn absolute bottom-2 right-2 hover:scale-110 transition-transform z-10"
+                        <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
                             data-product-id="w-new-001" data-name="Printed lyocell shirt" data-price="Rs. 1,299.00"
                             data-image="https://image.hm.com/assets/hm/22/03/2203091a6f38ee637f6090805ffe4f5bc1b4a296.jpg?imwidth=1536"
                             aria-label="Add to favourites" id="btn-w-new-001">
@@ -213,10 +231,10 @@
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
                         <a href="pages/product.html?id=w-new-002" class="block h-full">
                             <img src="https://image.hm.com/assets/hm/06/27/0627dc40c3970e264821174164787d51d81b95df.jpg?imwidth=1536"
-                                alt="Square polarized sunglasses"
+                                alt="Square polarized sunglasses" width="400" height="600" loading="lazy"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </a>
-                        <button class="wishlist-btn absolute bottom-2 right-2 hover:scale-110 transition-transform z-10"
+                        <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
                             data-product-id="w-new-002" data-name="Square polarized sunglasses"
                             data-price="Rs. 2,299.00"
                             data-image="https://image.hm.com/assets/hm/06/27/0627dc40c3970e264821174164787d51d81b95df.jpg?imwidth=1536"
@@ -250,10 +268,10 @@
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
                         <a href="pages/product.html?id=w-new-003" class="block h-full">
                             <img src="https://image.hm.com/assets/hm/17/58/1758ac081351609bdae70b953b266762066f8e09.jpg?imwidth=1536"
-                                alt="Heart-pendant necklace"
+                                alt="Heart-pendant necklace" width="400" height="600" loading="lazy"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </a>
-                        <button class="wishlist-btn absolute bottom-2 right-2 hover:scale-110 transition-transform z-10"
+                        <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
                             data-product-id="w-new-003" data-name="Heart-pendant necklace" data-price="Rs. 799.00"
                             data-image="https://image.hm.com/assets/hm/17/58/1758ac081351609bdae70b953b266762066f8e09.jpg?imwidth=1536"
                             aria-label="Add to favourites" id="btn-w-new-003">
@@ -286,10 +304,10 @@
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
                         <a href="pages/product.html?id=w-new-004" class="block h-full">
                             <img src="https://image.hm.com/assets/hm/d9/30/d930bfe7972ec249e0ec2ecf26fd6c76ec1512fd.jpg?imwidth=1536"
-                                alt="Printed lyocell shorts"
+                                alt="Printed lyocell shorts" width="400" height="600" loading="lazy"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </a>
-                        <button class="wishlist-btn absolute bottom-2 right-2 hover:scale-110 transition-transform z-10"
+                        <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
                             data-product-id="w-new-004" data-name="Printed lyocell shorts" data-price="Rs. 1,499.00"
                             data-image="https://image.hm.com/assets/hm/d9/30/d930bfe7972ec249e0ec2ecf26fd6c76ec1512fd.jpg?imwidth=1536"
                             aria-label="Add to favourites" id="btn-w-new-004">

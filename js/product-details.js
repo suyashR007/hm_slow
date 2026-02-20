@@ -572,9 +572,9 @@ function renderOthersBought(currentProduct) {
         card.innerHTML = `
             <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] relative mb-3">
                 <a href="product.html?id=${product.id}" class="block h-full">
-                    <img src="${image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="${image}" alt="${product.name}" width="400" height="600" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 </a>
-                <button class="wishlist-btn absolute bottom-2 right-2 hover:scale-110 transition-transform z-10 bg-white rounded-full p-1.5 shadow-md" 
+                <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10 bg-white rounded-full p-1.5 shadow-md" 
                     data-product-id="${product.id}"
                     aria-label="Toggle wishlist">
                     ${heartIcon}

@@ -397,9 +397,9 @@
 }
 
 .sort-select {
-    padding: 8px 32px 8px 12px;
-    border: 1px solid var(--hm-gray-300, #d0d0d0);
-    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpath d='m7.999 9.758 6.818-6.818L15.877 4 8 11.88l-.52-.52a.717.717 0 0 1-.01-.01L.12 4l1.06-1.06L8 9.758Z' fill='%23222'/%3E%3C/svg%3E") no-repeat right 12px center;
+    padding: 8px 24px 8px 8px;
+    border: none;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpath d='m7.999 9.758 6.818-6.818L15.877 4 8 11.88l-.52-.52a.717.717 0 0 1-.01-.01L.12 4l1.06-1.06L8 9.758Z' fill='%23222'/%3E%3C/svg%3E") no-repeat right center;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -409,12 +409,12 @@
     cursor: pointer;
     outline: none;
     transition: border-color 0.2s ease;
-    min-width: 160px;
+    min-width: 120px;
 }
 
 .sort-select:hover,
 .sort-select:focus {
-    border-color: var(--hm-black, #222);
+    color: var(--hm-black, #222);
 }
 
 /* ── Active Filter Tags ────────────────────────────────── */
