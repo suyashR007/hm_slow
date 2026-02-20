@@ -322,21 +322,21 @@ html.slow-mode img.slow-media-img {
     pictures.forEach((picture, index) => preparePicture(picture, index));
 
     const allImages = Array.from(document.querySelectorAll("img"));
-    const standaloneImages = allImages.filter(
-      (img) => !img.closest("picture"),
-    );
+    const standaloneImages = allImages.filter((img) => !img.closest("picture"));
     standaloneImages.forEach((img, index) =>
-      prepareImage(img, index + pictures.length),
+      prepareImage(img, index + pictures.length)
     );
 
     const allVideos = Array.from(document.querySelectorAll("video"));
     allVideos.forEach((video, index) =>
-      prepareVideo(video, index + pictures.length + standaloneImages.length),
+      prepareVideo(video, index + pictures.length + standaloneImages.length)
     );
 
     const sectionTargets = new Set();
     slowSectionSelectors.forEach((selector) => {
-      document.querySelectorAll(selector).forEach((el) => sectionTargets.add(el));
+      document
+        .querySelectorAll(selector)
+        .forEach((el) => sectionTargets.add(el));
     });
 
     const sections = Array.from(sectionTargets);
@@ -346,27 +346,6 @@ html.slow-mode img.slow-media-img {
         el.classList.add("slow-section-visible");
       }, delay);
     });
-
-    /* ------------------------------------------------------------------ */
-    /* 2d. CLS Injection                                                   */
-    /* ------------------------------------------------------------------ */
-    setTimeout(() => {
-      console.log("Triggering CLS...");
-      const banner = document.createElement("div");
-      banner.style.cssText = [
-        "width:100%",
-        "height:200px",
-        "background-color:#f0f0f0",
-        "color:#333",
-        "display:flex",
-        "align-items:center",
-        "justify-content:center",
-        "font-size:24px",
-        "font-weight:bold",
-      ].join(";");
-      banner.innerText = "SPECIAL OFFER - LOADING...";
-      document.body.prepend(banner);
-    }, 4000);
 
     /* ------------------------------------------------------------------ */
     /* 2e. TTI Degradation                                                  */
