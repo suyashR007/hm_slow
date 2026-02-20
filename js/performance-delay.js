@@ -32,12 +32,12 @@
     style.textContent = `
 ${sectionSelectorText} {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  margin-top: 40px;
+  transition: opacity 0.8s ease, margin-top 0.01s ease;
 }
 ${sectionVisibleSelectorText} {
   opacity: 1;
-  transform: translateY(0);
+  margin-top: 0;
 }
 html.slow-mode .slow-media-overlay {
   position: absolute;
@@ -311,7 +311,7 @@ html.slow-mode img.slow-media-img {
         sources.forEach((source) => restoreAttribute(source, "src", "slowSrc"));
         video.load();
         if (video.autoplay) {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         }
       }, delay);
 

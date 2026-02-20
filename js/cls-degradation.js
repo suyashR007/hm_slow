@@ -1,23 +1,21 @@
 /**
  * CLS Degradation Script
  * Causes Cumulative Layout Shift (CLS) > 0.25 WITHOUT adding any
- * visible UI elements or changing the final appearance of the page.
+ * new visible UI elements. Works by shifting existing elements
+ * AFTER they become visible on screen.
  *
- * Techniques used:
- *  - Strip image width/height so they reflow on load
- *  - Temporarily wrong-size containers that snap to correct size
- *  - Late-apply margins/paddings on existing elements
- *  - Shift the header/hero dimensions then restore
- * The final rendered page looks identical to the fast version.
+ * Key insight: CLS only counts shifts of VISIBLE elements.
+ * performance-delay.js reveals sections starting at ~4000ms,
+ * so our shifts must fire AFTER that to be counted.
  */
 
 (function () {
     'use strict';
 
     // ── 1. Strip image dimensions immediately ───────────────────────
-    // Without width/height, images start at 0px tall then expand
-    // when loaded, pushing all content below them downward.
-    // This is the #1 real-world cause of CLS.
+    // Without width/height, images reflow when they load.
+    // The aspect-ratio containers may prevent some of this,
+    // but standalone images will still shift.
     function stripImageDimensions() {
         var images = document.querySelectorAll('img[width][height]');
         for (var i = 0; i < images.length; i++) {
@@ -26,155 +24,180 @@
         }
     }
 
-    // Run immediately during parse (before images start loading)
+    // Run immediately during parse
     stripImageDimensions();
 
-    // ── Helper: apply style then revert after a delay ───────────────
-    function shiftThenRestore(el, props, shiftDuration) {
-        if (!el) return;
-        var originals = {};
-        for (var key in props) {
-            originals[key] = el.style[key] || '';
-            el.style[key] = props[key];
-        }
-        setTimeout(function () {
-            for (var key in originals) {
-                el.style[key] = originals[key];
-            }
-        }, shiftDuration);
-    }
-
-    // ── All DOM-dependent shifts on DOMContentLoaded ────────────────
+    // ── After DOM ready, schedule shifts timed to section reveals ───
     function initShifts() {
 
-        // ── 2. Header banner height shift ───────────────────────────
-        // Start with extra padding, then snap to normal
-        var headerBanner = document.querySelector('.header-banner') ||
-            document.querySelector('.bc6fab');
-        if (headerBanner) {
-            shiftThenRestore(headerBanner, {
-                paddingTop: '28px',
-                paddingBottom: '28px'
-            }, 400);
-        }
+        // performance-delay.js reveals sections at: 4000 + index * 1200 ms
+        // We need our shifts to happen AFTER sections are visible.
 
-        // ── 3. Hero section height shift ────────────────────────────
-        // Temporarily constrain hero height, then release
-        var hero = document.querySelector('.hero');
-        if (hero) {
-            var originalMinH = hero.style.minHeight;
-            var originalMaxH = hero.style.maxHeight;
-            var originalOverflow = hero.style.overflow;
-
-            hero.style.minHeight = '150px';
-            hero.style.maxHeight = '150px';
-            hero.style.overflow = 'hidden';
-
-            setTimeout(function () {
-                hero.style.minHeight = originalMinH;
-                hero.style.maxHeight = originalMaxH;
-                hero.style.overflow = originalOverflow;
-            }, 500);
-        }
-
-        // ── 4. Product grid column shift ────────────────────────────
-        // Temporarily use wrong column count, then snap to correct
-        var productGrids = document.querySelectorAll('.product-grid');
-        for (var g = 0; g < productGrids.length; g++) {
-            (function (grid) {
-                var origCols = grid.style.gridTemplateColumns;
-                grid.style.gridTemplateColumns = '1fr';
-
+        // ── 2. Shift header banner AFTER it becomes visible ─────────
+        // The header-banner is usually visible quickly.
+        // Add extra padding, wait, then snap it back.
+        setTimeout(function () {
+            var banner = document.querySelector('.header-banner');
+            if (banner) {
+                banner.style.transition = 'none';
+                banner.style.paddingTop = '24px';
+                banner.style.paddingBottom = '24px';
+                // Snap back after a frame
                 setTimeout(function () {
-                    grid.style.gridTemplateColumns = origCols;
-                }, 600);
-            })(productGrids[g]);
-        }
+                    banner.style.paddingTop = '';
+                    banner.style.paddingBottom = '';
+                }, 80);
+            }
+        }, 4200); // After first section reveal
 
-        // ── 5. Container margin shift ───────────────────────────────
-        // Add temporary top margin to main containers, then remove
-        var containers = document.querySelectorAll('.container');
-        for (var c = 0; c < Math.min(containers.length, 3); c++) {
-            (function (container, index) {
-                var origMargin = container.style.marginTop;
-                container.style.marginTop = (30 + index * 15) + 'px';
-
+        // ── 3. Shift hero dimensions after it becomes visible ───────
+        setTimeout(function () {
+            var hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transition = 'none';
+                hero.style.marginBottom = '50px';
                 setTimeout(function () {
-                    container.style.marginTop = origMargin;
-                }, 350 + index * 150);
-            })(containers[c], c);
-        }
+                    hero.style.marginBottom = '';
+                }, 80);
+            }
+        }, 4500);
 
-        // ── 6. Section padding shift ────────────────────────────────
-        // Temporarily add extra padding to above-fold sections
-        var sections = document.querySelectorAll('section');
-        for (var s = 0; s < Math.min(sections.length, 4); s++) {
-            (function (section, index) {
-                if (section.getBoundingClientRect().top < window.innerHeight) {
-                    var origPadTop = section.style.paddingTop;
-                    var origPadBot = section.style.paddingBottom;
-                    section.style.paddingTop = '40px';
-                    section.style.paddingBottom = '40px';
-
+        // ── 4. Shift product grid layout after visible ──────────────
+        // Temporarily switch to 2 columns then back to 4
+        setTimeout(function () {
+            var grids = document.querySelectorAll('.product-grid');
+            for (var i = 0; i < grids.length; i++) {
+                (function (grid) {
+                    grid.style.transition = 'none';
+                    grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
                     setTimeout(function () {
-                        section.style.paddingTop = origPadTop;
-                        section.style.paddingBottom = origPadBot;
-                    }, 450 + index * 100);
-                }
-            })(sections[s], s);
-        }
+                        grid.style.gridTemplateColumns = '';
+                    }, 80);
+                })(grids[i]);
+            }
+        }, 5500); // After product grid section reveals
 
-        // ── 7. Nav links spacing shift ──────────────────────────────
-        var navLinks = document.querySelectorAll('.nav-link');
-        for (var n = 0; n < navLinks.length; n++) {
-            (function (link) {
-                var origPad = link.style.padding;
-                link.style.padding = '12px 24px';
-
-                setTimeout(function () {
-                    link.style.padding = origPad;
-                }, 300);
-            })(navLinks[n]);
-        }
-
-        // ── 8. Heading margin shift ─────────────────────────────────
-        // Temporarily add bottom margin to headings, then remove
-        var headings = document.querySelectorAll('h1, h2, h3');
-        for (var h = 0; h < Math.min(headings.length, 6); h++) {
-            (function (heading) {
-                if (heading.getBoundingClientRect().top < window.innerHeight * 1.5) {
-                    var origMB = heading.style.marginBottom;
-                    var origMT = heading.style.marginTop;
-                    heading.style.marginBottom = '32px';
-                    heading.style.marginTop = '24px';
-
+        // ── 5. Shift container widths ───────────────────────────────
+        setTimeout(function () {
+            var containers = document.querySelectorAll('.container');
+            for (var c = 0; c < Math.min(containers.length, 4); c++) {
+                (function (container) {
+                    container.style.transition = 'none';
+                    container.style.paddingLeft = '40px';
+                    container.style.paddingRight = '40px';
                     setTimeout(function () {
-                        heading.style.marginBottom = origMB;
-                        heading.style.marginTop = origMT;
-                    }, 550);
-                }
-            })(headings[h]);
-        }
+                        container.style.paddingLeft = '';
+                        container.style.paddingRight = '';
+                    }, 80);
+                })(containers[c]);
+            }
+        }, 5000);
 
-        // ── 9. Footer shift ─────────────────────────────────────────
-        var footer = document.querySelector('.footer') || document.querySelector('footer');
-        if (footer) {
-            shiftThenRestore(footer, {
-                marginTop: '60px'
-            }, 700);
-        }
+        // ── 6. Shift section spacing (visible sections only) ────────
+        setTimeout(function () {
+            var sections = document.querySelectorAll('section.slow-section-visible');
+            for (var s = 0; s < sections.length; s++) {
+                (function (section, idx) {
+                    section.style.transition = 'none';
+                    section.style.paddingTop = '35px';
+                    section.style.paddingBottom = '35px';
+                    setTimeout(function () {
+                        section.style.paddingTop = '';
+                        section.style.paddingBottom = '';
+                    }, 80);
+                })(sections[s], s);
+            }
+        }, 6000);
 
-        // ── 10. Re-strip any dynamically added images ───────────────
-        // Catch images added by JS (product grids, etc.)
+        // ── 7. Nav link spacing shift (header is always visible) ────
         setTimeout(function () {
-            stripImageDimensions();
-        }, 100);
+            var navLinks = document.querySelectorAll('.nav-link');
+            for (var n = 0; n < navLinks.length; n++) {
+                (function (link) {
+                    link.style.transition = 'none';
+                    var origPad = link.style.padding;
+                    link.style.padding = '10px 20px';
+                    setTimeout(function () {
+                        link.style.padding = origPad;
+                    }, 80);
+                })(navLinks[n]);
+            }
+        }, 4300);
+
+        // ── 8. Heading margin shifts after visible ──────────────────
         setTimeout(function () {
-            stripImageDimensions();
-        }, 1000);
+            var headings = document.querySelectorAll('h1, h2');
+            for (var h = 0; h < headings.length; h++) {
+                (function (heading) {
+                    // Only shift if element is currently in viewport
+                    var rect = heading.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top < window.innerHeight) {
+                        heading.style.transition = 'none';
+                        var origMB = heading.style.marginBottom;
+                        heading.style.marginBottom = '30px';
+                        setTimeout(function () {
+                            heading.style.marginBottom = origMB;
+                        }, 80);
+                    }
+                })(headings[h]);
+            }
+        }, 5800);
+
+        // ── 9. Second wave: shift again after more sections visible ─
         setTimeout(function () {
-            stripImageDimensions();
-        }, 3000);
+            // Shift hero content positioning
+            var heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transition = 'none';
+                heroContent.style.bottom = '25%';
+                setTimeout(function () {
+                    heroContent.style.bottom = '';
+                }, 80);
+            }
+
+            // Shift the campaign/category section
+            var categoryCards = document.querySelectorAll('.category-card, .aspect-\\[2\\/3\\]');
+            for (var i = 0; i < Math.min(categoryCards.length, 4); i++) {
+                (function (card) {
+                    card.style.transition = 'none';
+                    card.style.marginBottom = '20px';
+                    setTimeout(function () {
+                        card.style.marginBottom = '';
+                    }, 80);
+                })(categoryCards[i]);
+            }
+        }, 7000);
+
+        // ── 10. Third wave: more shifts for higher CLS ──────────────
+        setTimeout(function () {
+            // Shift footer up
+            var footer = document.querySelector('.footer, footer');
+            if (footer) {
+                footer.style.transition = 'none';
+                footer.style.marginTop = '40px';
+                setTimeout(function () {
+                    footer.style.marginTop = '';
+                }, 80);
+            }
+
+            // Re-shift grids
+            var grids = document.querySelectorAll('.product-grid');
+            for (var i = 0; i < grids.length; i++) {
+                (function (grid) {
+                    grid.style.transition = 'none';
+                    grid.style.gap = '30px';
+                    setTimeout(function () {
+                        grid.style.gap = '';
+                    }, 80);
+                })(grids[i]);
+            }
+        }, 8000);
+
+        // ── 11. Keep stripping image dimensions from dynamic content ─
+        setTimeout(stripImageDimensions, 100);
+        setTimeout(stripImageDimensions, 2000);
+        setTimeout(stripImageDimensions, 4000);
+        setTimeout(stripImageDimensions, 6000);
     }
 
     if (document.readyState === 'loading') {
