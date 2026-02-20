@@ -1,0 +1,650 @@
+/* ═══════════════════════════════════════════════════════════
+   H&M Filter Sidebar – Premium Component Styles
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Sidebar Container ─────────────────────────────────── */
+.filters-sidebar {
+    position: sticky;
+    top: 7rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--hm-gray-300, #d0d0d0) transparent;
+}
+
+.filters-sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.filters-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filters-sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--hm-gray-300, #d0d0d0);
+    border-radius: 4px;
+}
+
+/* ── Filter Section (Accordion-style) ──────────────────── */
+.filter-section {
+    border-bottom: 1px solid var(--hm-gray-200, #e4e4e4);
+    padding: 0;
+}
+
+.filter-section:first-child {
+    border-top: 1px solid var(--hm-gray-200, #e4e4e4);
+}
+
+/* ── Filter Header (Accordion toggle) ──────────────────── */
+.filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--hm-black, #222);
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.filter-header:hover {
+    color: var(--hm-gray-600, #707070);
+}
+
+.filter-header-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.filter-section.open .filter-header-icon {
+    transform: rotate(180deg);
+}
+
+/* ── Filter Body (collapsible content) ─────────────────── */
+.filter-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+}
+
+.filter-section.open .filter-body {
+    max-height: 500px;
+    padding-bottom: 1.25rem;
+}
+
+/* ── Category Checkboxes ───────────────────────────────── */
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-list li {
+    margin-bottom: 2px;
+}
+
+.filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--hm-black, #222);
+    letter-spacing: 0.2px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    border-radius: 2px;
+    user-select: none;
+}
+
+.filter-checkbox-label:hover {
+    background-color: var(--hm-gray-50, #fafafa);
+}
+
+/* Custom Checkbox */
+.filter-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--hm-gray-400, #b6b6b6);
+    border-radius: 2px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+}
+
+.filter-checkbox:hover {
+    border-color: var(--hm-black, #222);
+}
+
+.filter-checkbox:checked {
+    background-color: var(--hm-black, #222);
+    border-color: var(--hm-black, #222);
+}
+
+.filter-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.filter-checkbox:focus-visible {
+    outline: 2px solid var(--hm-black, #222);
+    outline-offset: 2px;
+}
+
+.filter-checkbox-count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--hm-gray-500, #999);
+    font-weight: 400;
+}
+
+/* ── Size Chips ────────────────────────────────────────── */
+.size-filter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.size-chip-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid var(--hm-gray-300, #d0d0d0);
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: var(--hm-black, #222);
+    letter-spacing: 0.3px;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.size-chip-label:hover {
+    border-color: var(--hm-black, #222);
+}
+
+.size-chip-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.size-chip-input:checked+.size-chip-label,
+.size-chip-label.active {
+    background-color: var(--hm-black, #222);
+    border-color: var(--hm-black, #222);
+    color: #fff;
+}
+
+.size-chip-input:focus-visible+.size-chip-label {
+    outline: 2px solid var(--hm-black, #222);
+    outline-offset: 2px;
+}
+
+/* ── Color Swatches ────────────────────────────────────── */
+.color-filter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.color-swatch-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.color-swatch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.color-swatch-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+}
+
+.color-swatch-label:hover {
+    background-color: var(--hm-gray-50, #fafafa);
+}
+
+.color-swatch-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--hm-gray-300, #d0d0d0);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+/* White swatch needs visible border */
+.color-swatch-circle[data-color="white"],
+.color-swatch-circle[style*="background:#fff"],
+.color-swatch-circle[style*="background: #fff"],
+.color-swatch-circle[style*="background-color: rgb(255, 255, 255)"] {
+    border-color: var(--hm-gray-300, #d0d0d0);
+}
+
+.color-swatch-input:checked+.color-swatch-label .color-swatch-circle {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--hm-black, #222);
+}
+
+.color-swatch-input:focus-visible+.color-swatch-label .color-swatch-circle {
+    outline: 2px solid var(--hm-black, #222);
+    outline-offset: 4px;
+}
+
+.color-swatch-name {
+    font-size: 0.6875rem;
+    color: var(--hm-gray-600, #707070);
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Price Range Filter ────────────────────────────────── */
+.price-filter-container {
+    padding: 0;
+}
+
+.price-inputs-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.price-input-group {
+    flex: 1;
+}
+
+.price-input-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--hm-gray-600, #707070);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.price-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--hm-gray-300, #d0d0d0);
+    background: #fff;
+    font-size: 0.875rem;
+    font-family: inherit;
+    color: var(--hm-black, #222);
+    transition: border-color 0.2s ease;
+    outline: none;
+}
+
+.price-input:focus {
+    border-color: var(--hm-black, #222);
+}
+
+.price-input::placeholder {
+    color: var(--hm-gray-400, #b6b6b6);
+}
+
+.price-apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 11px;
+    margin-top: 14px;
+    background-color: var(--hm-black, #222);
+    color: #fff;
+    border: none;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    font-family: inherit;
+}
+
+.price-apply-btn:hover {
+    opacity: 0.85;
+}
+
+/* ── Sort Bar ──────────────────────────────────────────── */
+.sort-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--hm-gray-200, #e4e4e4);
+}
+
+.product-count-text {
+    font-size: 0.8125rem;
+    color: var(--hm-gray-600, #707070);
+    letter-spacing: 0.2px;
+}
+
+.product-count-number {
+    font-weight: 600;
+    color: var(--hm-black, #222);
+}
+
+.sort-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-label {
+    font-size: 0.8125rem;
+    color: var(--hm-gray-600, #707070);
+    white-space: nowrap;
+}
+
+.sort-select {
+    padding: 8px 32px 8px 12px;
+    border: 1px solid var(--hm-gray-300, #d0d0d0);
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpath d='m7.999 9.758 6.818-6.818L15.877 4 8 11.88l-.52-.52a.717.717 0 0 1-.01-.01L.12 4l1.06-1.06L8 9.758Z' fill='%23222'/%3E%3C/svg%3E") no-repeat right 12px center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 0.8125rem;
+    font-family: inherit;
+    color: var(--hm-black, #222);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+    min-width: 160px;
+}
+
+.sort-select:hover,
+.sort-select:focus {
+    border-color: var(--hm-black, #222);
+}
+
+/* ── Active Filter Tags ────────────────────────────────── */
+.active-filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    animation: fadeSlideDown 0.25s ease;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--hm-gray-100, #f4f4f4);
+    border: 1px solid var(--hm-gray-200, #e4e4e4);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--hm-black, #222);
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    border-radius: 0;
+    transition: all 0.15s ease;
+}
+
+.filter-tag:hover {
+    border-color: var(--hm-gray-400, #b6b6b6);
+}
+
+.filter-tag-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1;
+    color: var(--hm-gray-600, #707070);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s ease;
+}
+
+.filter-tag-remove:hover {
+    color: var(--hm-red, #e50010);
+}
+
+.filter-clear-all {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--hm-black, #222);
+    text-decoration: underline;
+    padding: 6px 8px;
+    letter-spacing: 0.3px;
+    transition: color 0.15s ease;
+}
+
+.filter-clear-all:hover {
+    color: var(--hm-red, #e50010);
+}
+
+/* ── Mobile Filter Drawer ──────────────────────────────── */
+@media (max-width: 767px) {
+    .filters-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 360px;
+        height: 100vh;
+        max-height: 100vh;
+        background: #fff;
+        z-index: 1000;
+        padding: 0 1.25rem 2rem;
+        transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .filters-sidebar.open {
+        left: 0;
+    }
+
+    .filter-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .filter-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-filter-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--hm-gray-200, #e4e4e4);
+        margin-bottom: 0.5rem;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 1;
+    }
+
+    .mobile-filter-title {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .mobile-filter-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-filter-close svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mobile-filter-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border: 1px solid var(--hm-gray-300, #d0d0d0);
+        background: #fff;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: inherit;
+        color: var(--hm-black, #222);
+        transition: border-color 0.15s ease;
+    }
+
+    .mobile-filter-toggle:hover {
+        border-color: var(--hm-black, #222);
+    }
+
+    .mobile-filter-toggle svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .mobile-filter-header,
+    .mobile-filter-toggle,
+    .filter-overlay {
+        display: none !important;
+    }
+}
+
+/* ── Animations ────────────────────────────────────────── */
+.filter-section.open .filter-body {
+    animation: filterReveal 0.3s ease forwards;
+}
+
+@keyframes filterReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Checkbox ripple effect on click */
+.filter-checkbox-label:active {
+    transform: scale(0.98);
+}
+
+.size-chip-label:active {
+    transform: scale(0.96);
+}
+
+.color-swatch-label:active .color-swatch-circle {
+    transform: scale(0.9);
+}
+
+/* ── Results Count Badge ───────────────────────────────── */
+.filter-results-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background: var(--hm-black, #222);
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-left: 8px;
+}

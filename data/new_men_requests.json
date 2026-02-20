@@ -1,0 +1,292 @@
+[
+    {
+        "name": "Regular Fit Linen shirt",
+        "price": "Rs. 2,299.00",
+        "category": "Shirt",
+        "description": "Regular fit shirt crafted from breathable linen fabric, ideal for summer wear.",
+        "image_link": "https://image.hm.com/assets/hm/men/linen-shirt-regular.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.regular-fit-linen-shirt.html",
+        "fabric_details": "Linen blend",
+        "other_details": "Button-down front, collar neckline"
+    },
+    {
+        "name": "Relaxed Fit Denim shirt",
+        "price": "Rs. 2,499.00",
+        "category": "Shirt",
+        "description": "Denim shirt with relaxed fit and durable construction.",
+        "image_link": "https://image.hm.com/assets/hm/men/denim-shirt-relaxed.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.relaxed-fit-denim-shirt.html",
+        "fabric_details": "Cotton denim",
+        "other_details": "Chest pocket and button closure"
+    },
+    {
+        "name": "Slim Fit Cotton chinos",
+        "price": "Rs. 2,299.00",
+        "category": "Chinos",
+        "description": "Slim fit chinos offering tailored silhouette and versatile styling.",
+        "image_link": "https://image.hm.com/assets/hm/men/chinos-slim.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.slim-fit-chinos.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Button and zip closure"
+    },
+    {
+        "name": "Relaxed Fit Hoodie",
+        "price": "Rs. 1,999.00",
+        "category": "Hoodie",
+        "description": "Relaxed hoodie featuring drawstring hood and kangaroo pocket.",
+        "image_link": "https://image.hm.com/assets/hm/men/hoodie-relaxed.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.relaxed-fit-hoodie.html",
+        "fabric_details": "Cotton blend fleece",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Regular Fit Polo shirt",
+        "price": "Rs. 1,299.00",
+        "category": "Polo",
+        "description": "Classic polo shirt with ribbed collar and button placket.",
+        "image_link": "https://image.hm.com/assets/hm/men/polo-regular.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.regular-fit-polo.html",
+        "fabric_details": "Cotton",
+        "other_details": "Short sleeves"
+    },
+    {
+        "name": "Loose Fit Graphic sweatshirt",
+        "price": "Rs. 1,999.00",
+        "category": "Sweatshirt",
+        "description": "Graphic sweatshirt designed with oversized fit and ribbed trims.",
+        "image_link": "https://image.hm.com/assets/hm/men/sweatshirt-graphic.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.graphic-sweatshirt.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Printed motif"
+    },
+    {
+        "name": "Relaxed Fit Cargo pants",
+        "price": "Rs. 2,999.00",
+        "category": "Cargo trousers",
+        "description": "Cargo trousers featuring multiple utility pockets.",
+        "image_link": "https://image.hm.com/assets/hm/men/cargo-pants.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cargo-pants.html",
+        "fabric_details": "Cotton twill",
+        "other_details": "Relaxed silhouette"
+    },
+    {
+        "name": "Slim Fit Easy-iron shirt",
+        "price": "Rs. 1,799.00",
+        "category": "Shirt",
+        "description": "Easy-iron shirt offering wrinkle resistance and slim fit.",
+        "image_link": "https://image.hm.com/assets/hm/men/easy-iron-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.easy-iron-shirt.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Formal wear"
+    },
+    {
+        "name": "Loose Fit Denim jeans",
+        "price": "Rs. 2,699.00",
+        "category": "Jeans",
+        "description": "Loose fit jeans offering relaxed styling and durability.",
+        "image_link": "https://image.hm.com/assets/hm/men/loose-jeans.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.loose-fit-jeans.html",
+        "fabric_details": "Cotton denim",
+        "other_details": "Five-pocket design"
+    },
+    {
+        "name": "Regular Fit Cotton shorts",
+        "price": "Rs. 1,499.00",
+        "category": "Shorts",
+        "description": "Comfortable cotton shorts designed for casual wear.",
+        "image_link": "https://image.hm.com/assets/hm/men/cotton-shorts.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cotton-shorts.html",
+        "fabric_details": "Cotton",
+        "other_details": "Elastic waistband"
+    },
+    {
+        "name": "Regular Fit Denim jacket",
+        "price": "Rs. 3,499.00",
+        "category": "Jacket",
+        "description": "Classic denim jacket designed for layering.",
+        "image_link": "https://image.hm.com/assets/hm/men/denim-jacket.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.denim-jacket.html",
+        "fabric_details": "Cotton denim",
+        "other_details": "Button front"
+    },
+    {
+        "name": "Slim Fit Blazer",
+        "price": "Rs. 4,999.00",
+        "category": "Blazer",
+        "description": "Slim fit blazer for formal occasions.",
+        "image_link": "https://image.hm.com/assets/hm/men/blazer.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.slim-fit-blazer.html",
+        "fabric_details": "Polyester blend",
+        "other_details": "Tailored fit"
+    },
+    {
+        "name": "Relaxed Fit Flannel shirt",
+        "price": "Rs. 2,299.00",
+        "category": "Shirt",
+        "description": "Flannel shirt offering warmth and comfort.",
+        "image_link": "https://image.hm.com/assets/hm/men/flannel-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.flannel-shirt.html",
+        "fabric_details": "Cotton flannel",
+        "other_details": "Checked pattern"
+    },
+    {
+        "name": "Cotton Jersey T-shirt",
+        "price": "Rs. 699.00",
+        "category": "T-shirt",
+        "description": "Basic cotton jersey T-shirt suitable for everyday wear.",
+        "image_link": "https://image.hm.com/assets/hm/men/jersey-tshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.jersey-tshirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Regular fit"
+    },
+    {
+        "name": "Relaxed Fit Tailored trousers",
+        "price": "Rs. 2,999.00",
+        "category": "Trousers",
+        "description": "Tailored trousers with relaxed fit and pleated design.",
+        "image_link": "https://image.hm.com/assets/hm/men/tailored-trousers.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.1275651004.html",
+        "fabric_details": "Polyester blend",
+        "other_details": "Formal wear"
+    },
+    {
+        "name": "Oversized Cotton sweatshirt",
+        "price": "Rs. 1,999.00",
+        "category": "Sweatshirt",
+        "description": "Oversized sweatshirt designed for casual comfort.",
+        "image_link": "https://image.hm.com/assets/hm/men/oversized-sweatshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.oversized-sweatshirt.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Ribbed trims"
+    },
+    {
+        "name": "Slim Fit Jeans",
+        "price": "Rs. 2,499.00",
+        "category": "Jeans",
+        "description": "Slim fit jeans offering modern styling.",
+        "image_link": "https://image.hm.com/assets/hm/men/slim-jeans.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.slim-fit-jeans.html",
+        "fabric_details": "Cotton denim",
+        "other_details": "Slim silhouette"
+    },
+    {
+        "name": "Regular Fit Cotton cardigan",
+        "price": "Rs. 2,299.00",
+        "category": "Cardigan",
+        "description": "Cotton cardigan ideal for layering.",
+        "image_link": "https://image.hm.com/assets/hm/men/cardigan.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cardigan.html",
+        "fabric_details": "Cotton",
+        "other_details": "Button closure"
+    },
+    {
+        "name": "Relaxed Fit Printed shirt",
+        "price": "Rs. 1,999.00",
+        "category": "Shirt",
+        "description": "Printed shirt offering casual styling.",
+        "image_link": "https://image.hm.com/assets/hm/men/printed-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.printed-shirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Relaxed silhouette"
+    },
+    {
+        "name": "Cotton Twill jacket",
+        "price": "Rs. 3,999.00",
+        "category": "Jacket",
+        "description": "Durable twill jacket suitable for everyday wear.",
+        "image_link": "https://image.hm.com/assets/hm/men/twill-jacket.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.twill-jacket.html",
+        "fabric_details": "Cotton twill",
+        "other_details": "Button front"
+    },
+    {
+        "name": "Regular Fit Sweatpants",
+        "price": "Rs. 1,799.00",
+        "category": "Sweatpants",
+        "description": "Comfortable sweatpants with elastic waistband.",
+        "image_link": "https://image.hm.com/assets/hm/men/sweatpants.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.sweatpants.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Relaxed Fit Cotton vest",
+        "price": "Rs. 599.00",
+        "category": "Vest",
+        "description": "Sleeveless cotton vest designed for layering.",
+        "image_link": "https://image.hm.com/assets/hm/men/vest.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cotton-vest.html",
+        "fabric_details": "Cotton",
+        "other_details": "Basic essential"
+    },
+    {
+        "name": "Loose Fit Sports T-shirt",
+        "price": "Rs. 999.00",
+        "category": "Sportswear",
+        "description": "Sports T-shirt with breathable construction.",
+        "image_link": "https://image.hm.com/assets/hm/men/sports-tshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.sports-tshirt.html",
+        "fabric_details": "Polyester blend",
+        "other_details": "Workout wear"
+    },
+    {
+        "name": "Regular Fit Bomber jacket",
+        "price": "Rs. 4,499.00",
+        "category": "Jacket",
+        "description": "Bomber jacket featuring classic styling.",
+        "image_link": "https://image.hm.com/assets/hm/men/bomber-jacket.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.bomber-jacket.html",
+        "fabric_details": "Polyester",
+        "other_details": "Zip closure"
+    },
+    {
+        "name": "Cotton Poplin shirt",
+        "price": "Rs. 1,799.00",
+        "category": "Shirt",
+        "description": "Poplin shirt offering smooth texture.",
+        "image_link": "https://image.hm.com/assets/hm/men/poplin-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.poplin-shirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Formal styling"
+    },
+    {
+        "name": "Relaxed Fit Knit sweater",
+        "price": "Rs. 2,499.00",
+        "category": "Sweater",
+        "description": "Knit sweater designed for warmth and comfort.",
+        "image_link": "https://image.hm.com/assets/hm/men/knit-sweater.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.knit-sweater.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Long sleeves"
+    },
+    {
+        "name": "Cotton Cargo shorts",
+        "price": "Rs. 1,799.00",
+        "category": "Shorts",
+        "description": "Cargo shorts featuring utility pockets.",
+        "image_link": "https://image.hm.com/assets/hm/men/cargo-shorts.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cargo-shorts.html",
+        "fabric_details": "Cotton",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Slim Fit Oxford shirt",
+        "price": "Rs. 1,999.00",
+        "category": "Shirt",
+        "description": "Oxford shirt offering tailored silhouette.",
+        "image_link": "https://image.hm.com/assets/hm/men/oxford-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.oxford-shirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Button-down collar"
+    },
+    {
+        "name": "Loose Fit Track pants",
+        "price": "Rs. 1,999.00",
+        "category": "Track pants",
+        "description": "Track pants designed for sports and casual wear.",
+        "image_link": "https://image.hm.com/assets/hm/men/trackpants.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.trackpants.html",
+        "fabric_details": "Polyester blend",
+        "other_details": "Elastic waistband"
+    }
+]

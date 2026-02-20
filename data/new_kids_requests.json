@@ -1,0 +1,292 @@
+[
+    {
+        "name": "Printed cotton T-shirt",
+        "price": "Rs. 399.00",
+        "category": "T-shirt",
+        "description": "Soft cotton T-shirt with printed motif and comfortable regular fit.",
+        "image_link": "https://image.hm.com/assets/hm/kids/printed-tshirt-1.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.printed-cotton-tshirt.html",
+        "fabric_details": "Cotton 100%",
+        "other_details": "Short sleeves, breathable fabric"
+    },
+    {
+        "name": "Appliquéd hole-knit dress",
+        "price": "Rs. 1,499.00",
+        "category": "Dress",
+        "description": "Dress featuring decorative appliqué and breathable knit design.",
+        "image_link": "https://image.hm.com/assets/hm/kids/hole-knit-dress.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.hole-knit-dress.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Lightweight summer dress"
+    },
+    {
+        "name": "Cotton denim shirt",
+        "price": "Rs. 1,499.00",
+        "category": "Shirt",
+        "description": "Denim shirt with buttons down the front and chest pocket.",
+        "image_link": "https://image.hm.com/assets/hm/kids/denim-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cotton-denim-shirt.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Classic denim styling"
+    },
+    {
+        "name": "Printed flutter-sleeved top",
+        "price": "Rs. 399.00",
+        "category": "Top",
+        "description": "Flutter sleeve top with printed pattern and relaxed fit.",
+        "image_link": "https://image.hm.com/assets/hm/kids/flutter-top.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.flutter-top.html",
+        "fabric_details": "Cotton",
+        "other_details": "Lightweight design"
+    },
+    {
+        "name": "2-piece T-shirt and sweatshorts set",
+        "price": "Rs. 1,499.00",
+        "category": "Set",
+        "description": "Matching set including printed T-shirt and elastic waist sweatshorts.",
+        "image_link": "https://image.hm.com/assets/hm/kids/tshirt-short-set.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.tshirt-short-set.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Complete outfit"
+    },
+    {
+        "name": "5-pack cotton jersey shorts",
+        "price": "Rs. 1,999.00",
+        "category": "Shorts",
+        "description": "Multipack cotton jersey shorts with elastic waistband.",
+        "image_link": "https://image.hm.com/assets/hm/kids/jersey-shorts.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.jersey-shorts.html",
+        "fabric_details": "Cotton",
+        "other_details": "Multipack value set"
+    },
+    {
+        "name": "Loose-fit denim shirt",
+        "price": "Rs. 1,499.00",
+        "category": "Shirt",
+        "description": "Loose-fit denim shirt with dropped shoulders and chest pocket.",
+        "image_link": "https://image.hm.com/assets/hm/kids/loose-denim-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.1314119001.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Turn-down collar and front buttons"
+    },
+    {
+        "name": "Denim dress",
+        "price": "Rs. 1,999.00",
+        "category": "Dress",
+        "description": "Soft denim dress with round neckline and flutter sleeves.",
+        "image_link": "https://image.hm.com/assets/hm/kids/denim-dress.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.1316462001.html",
+        "fabric_details": "Cotton, Lyocell blend",
+        "other_details": "Broderie anglaise detailing"
+    },
+    {
+        "name": "Shirt dress",
+        "price": "Rs. 2,299.00",
+        "category": "Dress",
+        "description": "Soft woven shirt dress with puff sleeves and scalloped collar.",
+        "image_link": "https://image.hm.com/assets/hm/kids/shirt-dress.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.1316459003.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Buttons down front"
+    },
+    {
+        "name": "3-piece dressy set",
+        "price": "Rs. 2,999.00",
+        "category": "Set",
+        "description": "Formal set with shirt, waistcoat, and bow tie.",
+        "image_link": "https://image.hm.com/assets/hm/kids/dressy-set.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.1166050010.html",
+        "fabric_details": "Woven fabric",
+        "other_details": "Includes adjustable bow tie"
+    },
+    {
+        "name": "Printed sweatshirt",
+        "price": "Rs. 1,499.00",
+        "category": "Sweatshirt",
+        "description": "Printed sweatshirt designed for comfort and warmth.",
+        "image_link": "https://image.hm.com/assets/hm/kids/sweatshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.printed-sweatshirt.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Long sleeves"
+    },
+    {
+        "name": "Cotton muslin resort shirt",
+        "price": "Rs. 1,299.00",
+        "category": "Shirt",
+        "description": "Resort shirt made from soft cotton muslin fabric.",
+        "image_link": "https://image.hm.com/assets/hm/kids/muslin-shirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.muslin-shirt.html",
+        "fabric_details": "Cotton muslin",
+        "other_details": "Breathable material"
+    },
+    {
+        "name": "5-pack cotton jersey joggers",
+        "price": "Rs. 2,999.00",
+        "category": "Joggers",
+        "description": "Multipack joggers with elastic waist for everyday comfort.",
+        "image_link": "https://image.hm.com/assets/hm/kids/joggers.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.joggers.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Multipack"
+    },
+    {
+        "name": "Linen trousers",
+        "price": "Rs. 1,499.00",
+        "category": "Trousers",
+        "description": "Lightweight linen trousers ideal for warm weather.",
+        "image_link": "https://image.hm.com/assets/hm/kids/linen-trousers.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.linen-trousers.html",
+        "fabric_details": "Linen blend",
+        "other_details": "Elastic waistband"
+    },
+    {
+        "name": "Motif-detail cotton cap",
+        "price": "Rs. 999.00",
+        "category": "Accessories",
+        "description": "Cotton cap featuring printed motif and adjustable strap.",
+        "image_link": "https://image.hm.com/assets/hm/kids/cap.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cotton-cap.html",
+        "fabric_details": "Cotton",
+        "other_details": "Adjustable fit"
+    },
+    {
+        "name": "Printed cotton leggings",
+        "price": "Rs. 799.00",
+        "category": "Leggings",
+        "description": "Stretchable cotton leggings with printed pattern.",
+        "image_link": "https://image.hm.com/assets/hm/kids/leggings.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.leggings.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Elastic waist"
+    },
+    {
+        "name": "Appliquéd T-shirt",
+        "price": "Rs. 799.00",
+        "category": "T-shirt",
+        "description": "T-shirt featuring appliqué detailing.",
+        "image_link": "https://image.hm.com/assets/hm/kids/applique-tshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.applique-tshirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Soft fabric"
+    },
+    {
+        "name": "Oversized printed T-shirt",
+        "price": "Rs. 699.00",
+        "category": "T-shirt",
+        "description": "Oversized T-shirt with printed motif.",
+        "image_link": "https://image.hm.com/assets/hm/kids/oversized-tshirt.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.oversized-tshirt.html",
+        "fabric_details": "Cotton",
+        "other_details": "Loose fit"
+    },
+    {
+        "name": "Cotton muslin shorts",
+        "price": "Rs. 999.00",
+        "category": "Shorts",
+        "description": "Muslin shorts with elastic waist.",
+        "image_link": "https://image.hm.com/assets/hm/kids/muslin-shorts.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.muslin-shorts.html",
+        "fabric_details": "Cotton",
+        "other_details": "Lightweight"
+    },
+    {
+        "name": "Printed dress",
+        "price": "Rs. 1,799.00",
+        "category": "Dress",
+        "description": "Printed cotton dress with flared hem.",
+        "image_link": "https://image.hm.com/assets/hm/kids/printed-dress.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.printed-dress.html",
+        "fabric_details": "Cotton",
+        "other_details": "Short sleeves"
+    },
+    {
+        "name": "Cotton cardigan",
+        "price": "Rs. 1,999.00",
+        "category": "Cardigan",
+        "description": "Soft cotton cardigan with front buttons.",
+        "image_link": "https://image.hm.com/assets/hm/kids/cardigan.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cardigan.html",
+        "fabric_details": "Cotton",
+        "other_details": "Layering essential"
+    },
+    {
+        "name": "Printed pyjama set",
+        "price": "Rs. 1,499.00",
+        "category": "Sleepwear",
+        "description": "Printed cotton pyjama set.",
+        "image_link": "https://image.hm.com/assets/hm/kids/pyjama-set.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.pyjama-set.html",
+        "fabric_details": "Cotton",
+        "other_details": "Comfort fit"
+    },
+    {
+        "name": "Denim jeans",
+        "price": "Rs. 1,999.00",
+        "category": "Jeans",
+        "description": "Durable denim jeans designed for everyday wear.",
+        "image_link": "https://image.hm.com/assets/hm/kids/jeans.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.jeans.html",
+        "fabric_details": "Cotton denim",
+        "other_details": "Classic fit"
+    },
+    {
+        "name": "Printed hoodie",
+        "price": "Rs. 1,799.00",
+        "category": "Hoodie",
+        "description": "Hoodie featuring printed design.",
+        "image_link": "https://image.hm.com/assets/hm/kids/hoodie.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.hoodie.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Warm fleece interior"
+    },
+    {
+        "name": "Cotton polo shirt",
+        "price": "Rs. 999.00",
+        "category": "Polo",
+        "description": "Cotton polo shirt with ribbed collar.",
+        "image_link": "https://image.hm.com/assets/hm/kids/polo.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.polo.html",
+        "fabric_details": "Cotton",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Cargo trousers",
+        "price": "Rs. 1,999.00",
+        "category": "Trousers",
+        "description": "Cargo trousers with utility pockets.",
+        "image_link": "https://image.hm.com/assets/hm/kids/cargo.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.cargo.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Elastic waist"
+    },
+    {
+        "name": "Winter jacket",
+        "price": "Rs. 3,499.00",
+        "category": "Jacket",
+        "description": "Warm padded winter jacket.",
+        "image_link": "https://image.hm.com/assets/hm/kids/jacket.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.jacket.html",
+        "fabric_details": "Polyester",
+        "other_details": "Insulated"
+    },
+    {
+        "name": "Knit sweater",
+        "price": "Rs. 1,799.00",
+        "category": "Sweater",
+        "description": "Soft knit sweater designed for warmth.",
+        "image_link": "https://image.hm.com/assets/hm/kids/sweater.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.sweater.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Comfort fit"
+    },
+    {
+        "name": "Matching outfit set",
+        "price": "Rs. 2,299.00",
+        "category": "Set",
+        "description": "Matching outfit set with coordinated pieces.",
+        "image_link": "https://image.hm.com/assets/hm/kids/outfit-set.jpg",
+        "url": "https://www2.hm.com/en_in/productpage.outfit-set.html",
+        "fabric_details": "Cotton blend",
+        "other_details": "Full outfit"
+    }
+]

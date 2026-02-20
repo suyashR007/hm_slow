@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites - H&M</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Your saved favourites.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/new_header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Styling for favourites content to match H&M look */
+        #main-content {
+            padding: 40px 48px;
+            /* Adjusted padding */
+            max-width: 1280px;
+            /* Wider max-width */
+            margin: 0 auto;
+            min-height: 50vh;
+            text-align: left;
+            /* Default left alignment */
+        }
+
+        .ziVe h1 {
+            font-size: 32px;
+            /* Adjusted size */
+            font-weight: 900;
+            /* Extra bold */
+            margin-bottom: 30px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: normal;
+        }
+
+        .c30e4c {
+            text-align: left;
+        }
+
+        .ea26fa h2 {
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #222;
+        }
+
+        .a5007a p {
+            margin-bottom: 30px;
+            color: #222;
+            font-size: 16px;
+        }
+
+        .a5007a button {
+            background-color: #fff;
+            color: #222;
+            border: 1px solid #222;
+            padding: 14px 45px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .a5007a button:hover {
+            background-color: #f3f3f3;
+        }
+
+        /* Breadcrumb styling */
+        .c0c1fc {
+            margin-top: 60px;
+            font-size: 11px;
+            margin-bottom: 20px;
+        }
+
+        .fbe151 {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 5px;
+            color: #767676;
+            text-transform: uppercase;
+        }
+
+        .fbe151 a {
+            text-decoration: none;
+            color: #767676;
+        }
+
+        .fbe151 a:hover {
+            text-decoration: underline;
+        }
+
+        .fbe151 .cd03d7 {
+            margin: 0 4px;
+        }
+
+        .fbe151 .a0246e {
+            font-weight: 400;
+            color: #222;
+            /* Active/Current page darker */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Announcement Banner -->
+        <div class="bc6fab"><button class="dd03d0 a61730" aria-controls="site-wide-banner-dropdown"
+                aria-expanded="false" aria-haspopup="true" id="site-wide-banner-trigger" tabindex="0"
+                data-testid="site-wide-banner-trigger">
+                <p class="cd03d7 f410d2 c57cda a33eb0">TIMELESS STYLES FOR YOUR DAILY ROTATION</p>
+                <div class="acaf5a"><svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="dc277c">
+                        <path d="M8.75 7.25V0h-1.5v7.25H0v1.5h7.25V16h1.5V8.75H16v-1.5H8.75Z"></path>
+                    </svg></div>
+            </button>
+            <div class="db5a1f ced3c4" id="site-wide-banner-dropdown" tabindex="-1" role="listbox">
+                <a class="e9e520 d50276" href="pages/men.html" title="Men">Men</a>
+                <a class="e9e520 d50276" href="pages/women.html" title="Women">Women</a>
+                <a class="e9e520 d50276" href="pages/kids.html" title="Kids">Kids</a>
+                <a class="e9e520 d50276" href="pages/home.html" title="Home">Home</a>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="header-nav" aria-label="Primary navigation">
+            <!-- Logo -->
+            <a href="index.html" class="logo" aria-label="H&M">
+                <svg viewBox="0 0 200 132" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="desktop-hm-logo">
+                    <title id="desktop-hm-logo">H&amp;M</title>
+                    <path
+                        d="M94.378.062c-1.39-.335-4.266.748-7.295 1.888-2.33.877-4.749 1.788-6.65 2.113-1.389.238-2.72 1.72-3.178 2.767a1250.033 1250.033 0 0 0-18.713 45.388 476.105 476.105 0 0 0-24.188 4.794c6.503-16.72 13.092-33.208 19.519-49.08 3.162-7.81-5.162-8.547-8.392-.63l-.206.503c-4.237 10.392-11.984 29.386-20.54 51.47A516.167 516.167 0 0 0 4.483 64.68c-5.146 1.486-5.368 2.857-3.14 5.944.689.955 1.776 1.326 2.805 1.677.823.281 1.61.55 2.125 1.094.646.682 1.236 1.392 1.819 2.093 2.132 2.563 4.16 5.001 8.383 5.452-4.803 12.82-9.594 26.039-13.933 38.768-2.724 7.99 5.039 9.625 8.021 1.171 4.808-13.629 9.883-27.425 15.086-41.179 3.688-.857 11.837-2.621 20.163-4.424l.005-.001 4.377-.948c-7.706 21.094-12.772 37.117-14.68 44.914-.323 1.324.114 2.128.436 2.719.043.079.083.154.12.226 1.246 1.816 2.463 2.795 3.763 3.841 1.406 1.131 2.907 2.339 4.647 4.768.91 1.275 3.94 1.962 4.978-1.175 7.127-21.543 14.46-41.755 21.305-59.876 2.841-.622 7.956-1.856 11.09-6.527 3.483-5.194 5.414-6.474 6.699-7.325.766-.508 1.302-.863 1.8-1.805 1.673-3.163.566-6.134-5.377-5.4 0 0-2.244.16-6.384.632 2.77-7.133 5.395-13.81 7.815-19.968v-.003c3.331-8.476 6.275-15.967 8.68-22.305 1.407-3.71 1.595-6.426-.708-6.98ZM140.484 4.007c7.256-3.577 10.858-3.1 10.936.512.101 4.608-.566 10.686-1.06 15.187l-.03.274c-.899 8.195-2 15.89-3.081 23.444-2.157 15.077-4.233 29.59-4.461 46.388 11.859-30.703 21.808-52.042 34.61-78.329 3.133-6.437 5.391-6.997 7.787-7.592.717-.178 1.446-.359 2.215-.701 13.017-5.792 13.505-2.234 11.804 4.838-6.317 26.244-22.455 108.852-24.927 121.571-.717 3.68-4.71 2.121-5.753.681-2.057-2.843-4.229-4.444-5.957-5.718-2.165-1.596-3.634-2.679-3.309-5.049 2.904-21.207 13.357-74.414 16.082-86.953-13.902 28.484-28.308 64.09-35.704 84.278-1.572 4.287-4.426 3.973-6.206.836-.978-1.722-2.315-3.115-3.629-4.483-2.049-2.133-4.041-4.207-4.529-7.378-1.647-10.726.058-27.747 1.67-43.833.876-8.743 1.724-17.21 1.991-24.24-7.564 21.805-20.265 64.144-25.828 83.273-2.301 7.915-9.936 6.623-7.907-1.091 8.456-32.102 26.663-88.878 34.549-109.296 1.316-3.407 4.146-4.31 7.119-5.26 1.213-.388 2.45-.783 3.618-1.359Z"
+                        fill="#E50010"></path>
+                    <path
+                        d="M85.55 97.56a42.278 42.278 0 0 1 1.561-1.44c3.569-3.093 6.977-.025 3.449 5.204a59.27 59.27 0 0 1-2.557 3.526c.446 1.271.844 2.365 1.16 3.176 1.825 4.678-2.966 5.851-4.51 1.976a88.444 88.444 0 0 1-.42-1.078c-2.913 2.58-6.28 4.204-9.88 3.085-5.92-1.842-7.427-10.178-1.899-16.6 2.218-2.577 3.887-4.365 5.282-5.793-.42-1.375-.76-2.528-.983-3.335-.718-2.6-1.366-5.63 1.236-8.719 4.88-5.79 16.2-.65 10.474 8.264-1.38 2.147-2.992 4.175-4.674 6.231a530.665 530.665 0 0 0 1.761 5.503Zm-7.04 1.149c-2.912 3.998-1.188 5.421.975 4.097a17.54 17.54 0 0 0 2.036-1.486 406.179 406.179 0 0 1-1.524-4.577 75.337 75.337 0 0 0-1.488 1.966Zm3.303-13.187a53.206 53.206 0 0 0 1.546-1.67c3.605-4.07-3.522-5.773-1.881.452.092.351.207.764.335 1.218Z"
+                        fill="#E50010"></path>
+                </svg>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="nav-links">
+                <a href="pages/women.html" class="nav-link">Ladies</a>
+                <a href="pages/men.html" class="nav-link">Men</a>
+                <a href="pages/kids.html" class="nav-link">Kids</a>
+                <a href="pages/home.html" class="nav-link">Home</a>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="header-actions">
+                <button class="header-action" aria-label="Open search">
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.823 10.883a5.5 5.5 0 1 1 1.06-1.06l4.72 4.72-1.06 1.06-4.72-4.72ZM10.5 6.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
+                        </path>
+                    </svg>
+                    <span>Search</span>
+                </button>
+                <button class="header-action" aria-label="Sign in" id="signin-trigger">
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-1.5 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z M8 9.5c-1.888 0-3.826.201-5.319.855-.755.33-1.43.793-1.918 1.435C.268 12.444 0 13.24 0 14.17V16h1.5v-1.83c0-.626.174-1.098.458-1.473.292-.384.732-.708 1.325-.968C4.487 11.202 6.174 11 8 11c1.833 0 3.518.182 4.721.7.591.254 1.03.574 1.319.96.283.375.46.859.46 1.511V16H16v-1.829c0-.948-.265-1.755-.761-2.414-.49-.65-1.168-1.11-1.925-1.436C11.82 9.678 9.88 9.5 8 9.5Z">
+                        </path>
+                    </svg>
+                    <span>Sign in</span>
+                </button>
+                <a href="favourites.html" class="header-action" aria-label="Favourites" id="nav-favourites">
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path
+                            d="M8.697 2.253a4.278 4.278 0 0 1 6.05 6.05L8 15.05 1.253 8.304a4.278 4.278 0 0 1 6.05-6.05L8 2.948l.696-.696Zm4.99 1.06a2.778 2.778 0 0 0-3.93 0L8.003 5.07 6.243 3.315a2.779 2.779 0 0 0-3.93 3.928L8 12.928l5.686-5.686a2.778 2.778 0 0 0 0-3.928Z">
+                        </path>
+                    </svg>
+                    <span>Favourites</span>
+                    <span class="wishlist-count" id="wishlist-count">0</span>
+                </a>
+                <a href="pages/cart.html" class="header-action" aria-label="Shopping bag"><span class="cart-count"
+                        style="display:none;">0</span>
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M8 0C6.928 0 5.92.298 5.16.75c-.704.42-1.411 1.115-1.411 2V4.5L0 4.501V15h16V4.5h-3.75V2.75c0-.893-.7-1.59-1.41-2.01C10.08.29 9.072 0 8 0Zm2.75 6v3h1.5V6h2.25v7.5h-13V6h2.25v3h1.5V6h5.5Zm0-1.5V2.75c0-.08-.107-.383-.674-.72C9.557 1.724 8.816 1.5 8 1.5c-.808 0-1.55.228-2.07.539-.577.343-.68.648-.68.711V4.5h5.5Z">
+                        </path>
+                    </svg>
+                    <span>Shopping bag</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="ziVe">
+        <h1 class="d03240 fa2b7a __4k9j">FAVOURITES</h1>
+        <div class="c30e4c f41ca0">
+            <div class="ea26fa">
+                <h2 class="d03240 c01eda" aria-live="polite" aria-atomic="true" id="fav-item-count">0 ITEMS</h2>
+            </div>
+
+            <!-- Empty state (shown when no items) -->
+            <div id="fav-empty" class="fav-empty-state">
+                <svg class="fav-empty-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                    <path
+                        d="M8.697 2.253a4.278 4.278 0 0 1 6.05 6.05L8 15.05 1.253 8.304a4.278 4.278 0 0 1 6.05-6.05L8 2.948l.696-.696Zm4.99 1.06a2.778 2.778 0 0 0-3.93 0L8.003 5.07 6.243 3.315a2.779 2.779 0 0 0-3.93 3.928L8 12.928l5.686-5.686a2.778 2.778 0 0 0 0-3.928Z">
+                    </path>
+                </svg>
+                <p class="cd03d7 f410d2 d376f3">Tap the heart icon on items to save them here.</p>
+                <a href="index.html" class="btn-explore">EXPLORE H&amp;M</a>
+            </div>
+
+            <!-- Product grid (shown when items exist) -->
+            <div id="fav-grid" class="fav-grid" style="display:none;"></div>
+
+            <div role="region" aria-live="polite">
+                <p class="bb4b14" aria-live="polite"></p>
+            </div>
+        </div>
+        <nav class="c0c1fc __7cwR" aria-label="Breadcrumb">
+            <ol class="fbe151 ff5ea6">
+                <li class="f9b060"><a class="e9e520 c9f767" href="index.html">HM.COM</a><span
+                        class="cd03d7 a88295 dbea32" role="presentation">/</span></li>
+                <li class="f9b060 b4d9b8"><a class="e9e520 c9f767 a0246e" data-testid="selected-breadcrumb"
+                        href="favourites.html" aria-current="page">FAVOURITES</a></li>
+            </ol>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <style>
+            /* Footer specific styles for Favourites page to match reference */
+            .footer h4 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+            }
+
+            .footer-links li a {
+                text-transform: uppercase;
+                font-size: 12px;
+                color: #222;
+            }
+
+            .footer-links li a:hover {
+                text-decoration: underline;
+            }
+
+            .link.read-more {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 13px;
+                text-decoration: underline;
+                color: #222;
+            }
+
+            .footer-top {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        </style>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h4>Shop</h4>
+                        <ul class="footer-links">
+                            <li><a href="pages/women.html">Ladies</a></li>
+                            <li><a href="pages/men.html">Men</a></li>
+                            <li><a href="pages/kids.html">Baby</a></li>
+                            <li><a href="pages/kids.html">Kids</a></li>
+                            <li><a href="pages/home.html">H&M HOME</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="footer-column">
+                        <p class="mb-4 text-sm text-gray-600">Sign up now and be the first to know about exclusive
+                            offers, latest fashion news & style tips!</p>
+                        <a href="#" class="link read-more">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container" style="justify-content: center; flex-direction: column; text-align: center;">
+
+
+                <div style="margin-top: 20px;">
+                    <h2 style="color: #E50010; font-weight: bold; font-size: 24px;">H&M</h2>
+                    <p style="font-size: 11px; margin-top: 5px;">INDIA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFavourites();
+            // Listen for storage changes in other tabs
+            window.addEventListener('storage', (e) => {
+                if (e.key === 'hm_wishlist') renderFavourites();
+            });
+        });
+
+        // Helper for colors
+        const colorNameToHex = (color) => {
+            if (!color) return '#ccc';
+            const c = color.toLowerCase().replace(/[^a-z]/g, '');
+            const map = {
+                'black': '#000000', 'white': '#ffffff', 'red': '#e50010', 'blue': '#0000ff',
+                'green': '#008000', 'yellow': '#ffff00', 'pink': '#ffc0cb', 'beige': '#f5f5dc',
+                'gray': '#808080', 'grey': '#808080', 'brown': '#a52a2a', 'navy': '#000080',
+                'khaki': '#f0e68c', 'orange': '#ffa500', 'purple': '#800080', 'gold': '#ffd700',
+                'silver': '#c0c0c0', 'darkblue': '#00008b', 'lightblue': '#add8e6',
+                'darkgreen': '#006400', 'lightgreen': '#90ee90', 'offwhite': '#f8f8f8',
+                'darkgrey': '#a9a9a9', 'lightgrey': '#d3d3d3', 'cream': '#fffdd0',
+                'darkbrown': '#654321', 'denimblue': '#1560bd', 'lightdenimblue': '#6fa3d6',
+                'darkdustypink': '#c68e95', 'paleyellow': '#fdffb6', 'burgundy': '#800020'
+            };
+            return map[c] || color;
+        };
+
+        function renderFavourites() {
+            if (typeof Wishlist === 'undefined') return;
+
+            const items = Wishlist.getAll();
+            const emptyEl = document.getElementById('fav-empty');
+            const gridEl = document.getElementById('fav-grid');
+            const countEl = document.getElementById('fav-item-count');
+
+            if (countEl) countEl.textContent = items.length + ' ITEM' + (items.length !== 1 ? 'S' : '');
+
+            if (items.length === 0) {
+                if (emptyEl) emptyEl.style.display = '';
+                if (gridEl) gridEl.style.display = 'none';
+                return;
+            }
+
+            if (emptyEl) emptyEl.style.display = 'none';
+            if (gridEl) {
+                gridEl.style.display = 'grid';
+                // matches main product grid: grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8
+                gridEl.className = 'grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8';
+            }
+
+            gridEl.innerHTML = items.map(item => {
+                // Price logic
+                let priceHtml = `<p class="text-[13px] font-bold text-black">${item.price}</p>`;
+                if (item.originalPrice) {
+                    priceHtml = `
+                        <div class="flex items-center gap-2">
+                            <p class="text-[13px] font-bold text-[#e50010]">${item.price}</p>
+                            <p class="text-[11px] text-gray-500 line-through">${item.originalPrice}</p>
+                        </div>
+                     `;
+                }
+
+                // Color swatches
+                let colorHtml = '';
+                if (item.colors && item.colors.length > 0) {
+                    const maxColors = 4;
+                    const showColors = item.colors.slice(0, maxColors);
+                    const moreCount = item.colors.length - maxColors;
+
+                    const dots = showColors.map(c => {
+                        const bg = colorNameToHex(c);
+                        return `<span class="w-2.5 h-2.5 rounded-full border border-gray-300 inline-block mr-1" style="background-color: ${bg};" title="${c}"></span>`;
+                    }).join('');
+
+                    const more = moreCount > 0 ? `<span class="text-[10px] text-gray-500">+${moreCount}</span>` : '';
+                    colorHtml = `<div class="flex items-center mt-1">${dots}${more}</div>`;
+                }
+
+                // Image
+                let image = (item.image_list && item.image_list.length > 0) ? item.image_list[0] : item.image;
+                // Fix relative paths if they start with ../ (since we are in root)
+                if (image && image.startsWith('../')) {
+                    image = image.substring(3);
+                }
+
+                // For Favourites, the heart is logically 'active' (filled). Clicking it removes item.
+                return `
+                <div class="group block relative">
+                    <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
+                        <a href="pages/product.html?id=${item.id}" class="block h-full">
+                            <img src="${image}" alt="${item.name}" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                        </a>
+                        <!-- Active Heart Button -->
+                        <button class="fav-remove-btn absolute top-2 right-2 bg-white rounded-full p-2 shadow-sm hover:scale-110 transition-transform z-10 active" 
+                                data-product-id="${item.id}" aria-label="Remove from favourites">
+                            <svg class="heart-fill w-4 h-4 text-[#e50010]" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                               <path d="m8 13.99 6.217-6.217a3.528 3.528 0 0 0-4.99-4.99L8.001 4.01 6.773 2.784a3.528 3.528 0 1 0-4.99 4.99L8 13.988Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="text-left space-y-0.5">
+                        <a href="pages/product.html?id=${item.id}">
+                            <h3 class="text-[13px] text-black font-normal hover:underline truncate">${item.name}</h3>
+                        </a>
+                        ${priceHtml}
+                        ${colorHtml}
+                    </div>
+                </div>
+                `;
+            }).join('');
+
+            // Bind remove buttons
+            gridEl.querySelectorAll('.fav-remove-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = btn.dataset.productId;
+                    Wishlist.remove(id);
+                    renderFavourites(); // Re-render to update list
+                });
+            });
+        }
+    </script>
+    <div class="banner-overlay" id="banner-overlay"></div>
+    <!-- Sign In Modal -->
+    <div id="signin-modal-overlay" class="modal-overlay">
+        <div role="dialog" aria-modal="true" data-modal-name="modal-heading" class="eb4023 aed9e3 a8d785 fab022 cbf196"
+            aria-labelledby="modal-heading">
+            <div class="c31ce8">
+                <h4 class="d03240 c01eda f125ce" id="modal-heading">Sign in</h4>
+                <button class="f43d1c bff633 d65212 e07c27 a3fc87" id="signin-close" aria-disabled="false" type="button"
+                    tabindex="0">
+                    <span class="f82cce">
+                        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                            <path
+                                d="M8.00011 6.9375L3.04 2L2 3.06L6.93945 7.99816L2 12.96L3.04 14L8.00011 9.05882L12.96 14L14 12.96L9.06077 7.99816L14 3.04L12.96 2L8.00011 6.9375Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span></span>
+                    <span class="bb4b14" aria-live="polite" style="display:none;">general.close</span>
+                </button>
+            </div>
+            <div class="c89f86">
+                <div class="be4643">
+                    <form class="a17a30" novalidate="">
+                        <h2 class="d03240 b6cb73">Sign in with your email or sign up to become an H&amp;M member.</h2>
+                        <div class="d51b27 cfb235">
+                            <label class="bdfbd2 f0606f" for="email">Email<span class="f3bd65"
+                                    aria-hidden="true">&nbsp;*</span></label>
+                            <div class="b9e637 b73850">
+                                <input id="email" placeholder="Email" class="e4df27" required="" aria-required="true"
+                                    inputmode="email" aria-invalid="false" type="text" name="email">
+                            </div>
+                            <div class=""></div>
+                        </div>
+                        <div class="c22a9c">
+                            <button class="c11902 bdddd7 dfd320 f2c3b5" aria-disabled="false"
+                                type="submit"><span></span>Continue</button>
+                            <div class="d03927">
+                                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                                    xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                                    <path fill-rule="evenodd"
+                                        d="M7.25 12.75V10h1.5v2.75h-1.5Z M13.25 6.75v-1.5a5.25 5.25 0 1 0-10.5 0v1.5H1V16h14V6.75h-1.75ZM8 1.5a3.75 3.75 0 0 0-3.75 3.75v1.5h7.5v-1.5A3.75 3.75 0 0 0 8 1.5Zm-5.5 13V8.25h11v6.25h-11Z">
+                                    </path>
+                                </svg>
+                                <span class="cd03d7 a88295 d08f5a">All data is kept secure</span>
+                            </div>
+                        </div>
+                        <div class="b77e94">
+                            <a href="#" target="_self" rel="noreferrer"
+                                class="fe3070 ad7ed4 da0ca4 cee3df cb7681 b85685">H&amp;M Membership</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

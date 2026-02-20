@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/new_header.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
     <style>
         /* Home page specific styles */
         .stage-teaser {
@@ -281,77 +283,63 @@
 </head>
 
 <body>
-<!-- Header -->
-<header class="header">
-    <!-- Announcement Banner -->
-    <div class="header-banner">
-        <p>The season's new arrivals are all here</p>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="header-nav" aria-label="Primary navigation">
-        <!-- Logo -->
-        <a href="../index.html" class="logo" aria-label="H&M">
-            <svg viewBox="0 0 200 132" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="desktop-hm-logo">
-                <title id="desktop-hm-logo">H&amp;M</title>
-                <path
-                    d="M94.378.062c-1.39-.335-4.266.748-7.295 1.888-2.33.877-4.749 1.788-6.65 2.113-1.389.238-2.72 1.72-3.178 2.767a1250.033 1250.033 0 0 0-18.713 45.388 476.105 476.105 0 0 0-24.188 4.794c6.503-16.72 13.092-33.208 19.519-49.08 3.162-7.81-5.162-8.547-8.392-.63l-.206.503c-4.237 10.392-11.984 29.386-20.54 51.47A516.167 516.167 0 0 0 4.483 64.68c-5.146 1.486-5.368 2.857-3.14 5.944.689.955 1.776 1.326 2.805 1.677.823.281 1.61.55 2.125 1.094.646.682 1.236 1.392 1.819 2.093 2.132 2.563 4.16 5.001 8.383 5.452-4.803 12.82-9.594 26.039-13.933 38.768-2.724 7.99 5.039 9.625 8.021 1.171 4.808-13.629 9.883-27.425 15.086-41.179 3.688-.857 11.837-2.621 20.163-4.424l.005-.001 4.377-.948c-7.706 21.094-12.772 37.117-14.68 44.914-.323 1.324.114 2.128.436 2.719.043.079.083.154.12.226 1.246 1.816 2.463 2.795 3.763 3.841 1.406 1.131 2.907 2.339 4.647 4.768.91 1.275 3.94 1.962 4.978-1.175 7.127-21.543 14.46-41.755 21.305-59.876 2.841-.622 7.956-1.856 11.09-6.527 3.483-5.194 5.414-6.474 6.699-7.325.766-.508 1.302-.863 1.8-1.805 1.673-3.163.566-6.134-5.377-5.4 0 0-2.244.16-6.384.632 2.77-7.133 5.395-13.81 7.815-19.968v-.003c3.331-8.476 6.275-15.967 8.68-22.305 1.407-3.71 1.595-6.426-.708-6.98ZM140.484 4.007c7.256-3.577 10.858-3.1 10.936.512.101 4.608-.566 10.686-1.06 15.187l-.03.274c-.899 8.195-2 15.89-3.081 23.444-2.157 15.077-4.233 29.59-4.461 46.388 11.859-30.703 21.808-52.042 34.61-78.329 3.133-6.437 5.391-6.997 7.787-7.592.717-.178 1.446-.359 2.215-.701 13.017-5.792 13.505-2.234 11.804 4.838-6.317 26.244-22.455 108.852-24.927 121.571-.717 3.68-4.71 2.121-5.753.681-2.057-2.843-4.229-4.444-5.957-5.718-2.165-1.596-3.634-2.679-3.309-5.049 2.904-21.207 13.357-74.414 16.082-86.953-13.902 28.484-28.308 64.09-35.704 84.278-1.572 4.287-4.426 3.973-6.206.836-.978-1.722-2.315-3.115-3.629-4.483-2.049-2.133-4.041-4.207-4.529-7.378-1.647-10.726.058-27.747 1.67-43.833.876-8.743 1.724-17.21 1.991-24.24-7.564 21.805-20.265 64.144-25.828 83.273-2.301 7.915-9.936 6.623-7.907-1.091 8.456-32.102 26.663-88.878 34.549-109.296 1.316-3.407 4.146-4.31 7.119-5.26 1.213-.388 2.45-.783 3.618-1.359Z"
-                    fill="#E50010"></path>
-                <path
-                    d="M85.55 97.56a42.278 42.278 0 0 1 1.561-1.44c3.569-3.093 6.977-.025 3.449 5.204a59.27 59.27 0 0 1-2.557 3.526c.446 1.271.844 2.365 1.16 3.176 1.825 4.678-2.966 5.851-4.51 1.976a88.444 88.444 0 0 1-.42-1.078c-2.913 2.58-6.28 4.204-9.88 3.085-5.92-1.842-7.427-10.178-1.899-16.6 2.218-2.577 3.887-4.365 5.282-5.793-.42-1.375-.76-2.528-.983-3.335-.718-2.6-1.366-5.63 1.236-8.719 4.88-5.79 16.2-.65 10.474 8.264-1.38 2.147-2.992 4.175-4.674 6.231a530.665 530.665 0 0 0 1.761 5.503Zm-7.04 1.149c-2.912 3.998-1.188 5.421.975 4.097a17.54 17.54 0 0 0 2.036-1.486 406.179 406.179 0 0 1-1.524-4.577 75.337 75.337 0 0 0-1.488 1.966Zm3.303-13.187a53.206 53.206 0 0 0 1.546-1.67c3.605-4.07-3.522-5.773-1.881.452.092.351.207.764.335 1.218Z"
-                    fill="#E50010"></path>
-            </svg>
-        </a>
-
-        <!-- Nav Links -->
-        <div class="nav-links">
-            <a href="women.html" class="nav-link">Ladies</a>
-            <a href="men.html" class="nav-link">Men</a>
-            <a href="kids.html" class="nav-link">Kids</a>
-            <a href="home.html" class="nav-link active">Home</a>
+    <!-- Header -->
+    <header class="header">
+        <!-- Announcement Banner -->
+        <div class="header-banner">
+            <p>The season's new arrivals are all here</p>
         </div>
 
-        <!-- Action Icons -->
-        <div class="header-actions">
-            <button class="header-action" aria-label="Open search">
-                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M9.823 10.883a5.5 5.5 0 1 1 1.06-1.06l4.72 4.72-1.06 1.06-4.72-4.72ZM10.5 6.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
-                    </path>
-                </svg>
-                <span>Search</span>
-            </button>
-            <button class="header-action" aria-label="Sign in">
-                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M12 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-1.5 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z M8 9.5c-1.888 0-3.826.201-5.319.855-.755.33-1.43.793-1.918 1.435C.268 12.444 0 13.24 0 14.17V16h1.5v-1.83c0-.626.174-1.098.458-1.473.292-.384.732-.708 1.325-.968C4.487 11.202 6.174 11 8 11c1.833 0 3.518.182 4.721.7.591.254 1.03.574 1.319.96.283.375.46.859.46 1.511V16H16v-1.829c0-.948-.265-1.755-.761-2.414-.49-.65-1.168-1.11-1.925-1.436C11.82 9.678 9.88 9.5 8 9.5Z">
-                    </path>
-                </svg>
-                <span>Sign in</span>
-            </button>
-            <a href="#" class="header-action" aria-label="Favourites">
-                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+        <!-- Main Navigation -->
+        <nav class="header-nav" aria-label="Primary navigation">
+            <!-- Logo -->
+            <a href="../index.html" class="logo" aria-label="H&M">
+                <svg viewBox="0 0 200 132" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="desktop-hm-logo">
+                    <title id="desktop-hm-logo">H&amp;M</title>
                     <path
-                        d="M8.697 2.253a4.278 4.278 0 0 1 6.05 6.05L8 15.05 1.253 8.304a4.278 4.278 0 0 1 6.05-6.05L8 2.948l.696-.696Zm4.99 1.06a2.778 2.778 0 0 0-3.93 0L8.003 5.07 6.243 3.315a2.779 2.779 0 0 0-3.93 3.928L8 12.928l5.686-5.686a2.778 2.778 0 0 0 0-3.928Z">
-                    </path>
+                        d="M94.378.062c-1.39-.335-4.266.748-7.295 1.888-2.33.877-4.749 1.788-6.65 2.113-1.389.238-2.72 1.72-3.178 2.767a1250.033 1250.033 0 0 0-18.713 45.388 476.105 476.105 0 0 0-24.188 4.794c6.503-16.72 13.092-33.208 19.519-49.08 3.162-7.81-5.162-8.547-8.392-.63l-.206.503c-4.237 10.392-11.984 29.386-20.54 51.47A516.167 516.167 0 0 0 4.483 64.68c-5.146 1.486-5.368 2.857-3.14 5.944.689.955 1.776 1.326 2.805 1.677.823.281 1.61.55 2.125 1.094.646.682 1.236 1.392 1.819 2.093 2.132 2.563 4.16 5.001 8.383 5.452-4.803 12.82-9.594 26.039-13.933 38.768-2.724 7.99 5.039 9.625 8.021 1.171 4.808-13.629 9.883-27.425 15.086-41.179 3.688-.857 11.837-2.621 20.163-4.424l.005-.001 4.377-.948c-7.706 21.094-12.772 37.117-14.68 44.914-.323 1.324.114 2.128.436 2.719.043.079.083.154.12.226 1.246 1.816 2.463 2.795 3.763 3.841 1.406 1.131 2.907 2.339 4.647 4.768.91 1.275 3.94 1.962 4.978-1.175 7.127-21.543 14.46-41.755 21.305-59.876 2.841-.622 7.956-1.856 11.09-6.527 3.483-5.194 5.414-6.474 6.699-7.325.766-.508 1.302-.863 1.8-1.805 1.673-3.163.566-6.134-5.377-5.4 0 0-2.244.16-6.384.632 2.77-7.133 5.395-13.81 7.815-19.968v-.003c3.331-8.476 6.275-15.967 8.68-22.305 1.407-3.71 1.595-6.426-.708-6.98ZM140.484 4.007c7.256-3.577 10.858-3.1 10.936.512.101 4.608-.566 10.686-1.06 15.187l-.03.274c-.899 8.195-2 15.89-3.081 23.444-2.157 15.077-4.233 29.59-4.461 46.388 11.859-30.703 21.808-52.042 34.61-78.329 3.133-6.437 5.391-6.997 7.787-7.592.717-.178 1.446-.359 2.215-.701 13.017-5.792 13.505-2.234 11.804 4.838-6.317 26.244-22.455 108.852-24.927 121.571-.717 3.68-4.71 2.121-5.753.681-2.057-2.843-4.229-4.444-5.957-5.718-2.165-1.596-3.634-2.679-3.309-5.049 2.904-21.207 13.357-74.414 16.082-86.953-13.902 28.484-28.308 64.09-35.704 84.278-1.572 4.287-4.426 3.973-6.206.836-.978-1.722-2.315-3.115-3.629-4.483-2.049-2.133-4.041-4.207-4.529-7.378-1.647-10.726.058-27.747 1.67-43.833.876-8.743 1.724-17.21 1.991-24.24-7.564 21.805-20.265 64.144-25.828 83.273-2.301 7.915-9.936 6.623-7.907-1.091 8.456-32.102 26.663-88.878 34.549-109.296 1.316-3.407 4.146-4.31 7.119-5.26 1.213-.388 2.45-.783 3.618-1.359Z"
+                        fill="#E50010"></path>
+                    <path
+                        d="M85.55 97.56a42.278 42.278 0 0 1 1.561-1.44c3.569-3.093 6.977-.025 3.449 5.204a59.27 59.27 0 0 1-2.557 3.526c.446 1.271.844 2.365 1.16 3.176 1.825 4.678-2.966 5.851-4.51 1.976a88.444 88.444 0 0 1-.42-1.078c-2.913 2.58-6.28 4.204-9.88 3.085-5.92-1.842-7.427-10.178-1.899-16.6 2.218-2.577 3.887-4.365 5.282-5.793-.42-1.375-.76-2.528-.983-3.335-.718-2.6-1.366-5.63 1.236-8.719 4.88-5.79 16.2-.65 10.474 8.264-1.38 2.147-2.992 4.175-4.674 6.231a530.665 530.665 0 0 0 1.761 5.503Zm-7.04 1.149c-2.912 3.998-1.188 5.421.975 4.097a17.54 17.54 0 0 0 2.036-1.486 406.179 406.179 0 0 1-1.524-4.577 75.337 75.337 0 0 0-1.488 1.966Zm3.303-13.187a53.206 53.206 0 0 0 1.546-1.67c3.605-4.07-3.522-5.773-1.881.452.092.351.207.764.335 1.218Z"
+                        fill="#E50010"></path>
                 </svg>
-                <span>Favourites</span>
             </a>
-            <a href="cart.html" class="header-action" aria-label="Shopping bag"><span class="cart-count" style="display:none;">0</span>
-                <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M8 0C6.928 0 5.92.298 5.16.75c-.704.42-1.411 1.115-1.411 2V4.5L0 4.501V15h16V4.5h-3.75V2.75c0-.893-.7-1.59-1.41-2.01C10.08.29 9.072 0 8 0Zm2.75 6v3h1.5V6h2.25v7.5h-13V6h2.25v3h1.5V6h5.5Zm0-1.5V2.75c0-.08-.107-.383-.674-.72C9.557 1.724 8.816 1.5 8 1.5c-.808 0-1.55.228-2.07.539-.577.343-.68.648-.68.711V4.5h5.5Z">
-                    </path>
-                </svg>
-                <span>Shopping bag</span>
-            </a>
-        </div>
-    </nav>
-</header>
+
+            <!-- Nav Links -->
+            <div class="nav-links">
+                <a href="women.html" class="nav-link">Ladies</a>
+                <a href="men.html" class="nav-link">Men</a>
+                <a href="kids.html" class="nav-link">Kids</a>
+                <a href="home.html" class="nav-link active">Home</a>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="header-actions">
+                <button class="header-action" aria-label="Open search" id="search-trigger">
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M9.823 10.883a5.5 5.5 0 1 1 1.06-1.06l4.72 4.72-1.06 1.06-4.72-4.72ZM10.5 6.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
+                        </path>
+                    </svg>
+                    <span>Search</span>
+                </button>
+
+
+                <a href="cart.html" class="header-action" aria-label="Shopping bag"><span class="cart-count"
+                        style="display:none;">0</span>
+                    <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M8 0C6.928 0 5.92.298 5.16.75c-.704.42-1.411 1.115-1.411 2V4.5L0 4.501V15h16V4.5h-3.75V2.75c0-.893-.7-1.59-1.41-2.01C10.08.29 9.072 0 8 0Zm2.75 6v3h1.5V6h2.25v7.5h-13V6h2.25v3h1.5V6h5.5Zm0-1.5V2.75c0-.08-.107-.383-.674-.72C9.557 1.724 8.816 1.5 8 1.5c-.808 0-1.55.228-2.07.539-.577.343-.68.648-.68.711V4.5h5.5Z">
+                        </path>
+                    </svg>
+                    <span>Shopping bag</span>
+                </a>
+            </div>
+        </nav>
+    </header>
 
     <main id="main-content">
 
@@ -366,7 +354,7 @@
             </picture>
             <div class="teaser-content">
                 <h2>The Mediterranean table</h2>
-                <a href="#" class="shop-link">
+                <a href="#featured-products" class="shop-link">
                     Shop now
                     <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                         <path d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
@@ -384,7 +372,7 @@
                     alt="Bedding">
                 <div class="teaser-content">
                     <h2>Bedding</h2>
-                    <a href="#" class="shop-link">
+                    <a href="#featured-products" class="shop-link">
                         Shop now
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path
@@ -400,7 +388,7 @@
                     alt="Kids' room spring vibes">
                 <div class="teaser-content">
                     <h2>Kids' room spring vibes</h2>
-                    <a href="#" class="shop-link">
+                    <a href="#featured-products" class="shop-link">
                         Shop now
                         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path
@@ -417,14 +405,6 @@
         <section class="new-in-section">
             <div class="new-in-header">
                 <h2>New In</h2>
-                <a href="#" class="view-all-link">
-                    View all
-                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor">
-                        <path d="M16 8 8.122.121l-1.06 1.06 6.067 6.069H0v1.5h13.13L7.06 14.818l1.06 1.06L16.002 8Z">
-                        </path>
-                    </svg>
-                </a>
             </div>
             <div class="new-in-scroll" id="new-in-scroll">
                 <!-- Dynamically loaded from products data -->
@@ -440,7 +420,7 @@
                         alt="Bedroom">
                     <div class="room-info">
                         <h2>Bedroom</h2>
-                        <span class="explore-link">Explore</span>
+
                     </div>
                 </a>
                 <a href="#" class="room-card">
@@ -449,7 +429,7 @@
                         alt="Dining Room">
                     <div class="room-info">
                         <h2>Dining Room</h2>
-                        <span class="explore-link">Explore</span>
+
                     </div>
                 </a>
                 <a href="#" class="room-card">
@@ -458,7 +438,7 @@
                         alt="Living Room">
                     <div class="room-info">
                         <h2>Living Room</h2>
-                        <span class="explore-link">Explore</span>
+
                     </div>
                 </a>
                 <a href="#" class="room-card">
@@ -467,14 +447,14 @@
                         alt="Bathroom">
                     <div class="room-info">
                         <h2>Bathroom</h2>
-                        <span class="explore-link">Explore</span>
+
                     </div>
                 </a>
             </div>
         </section>
 
         <!-- Featured Products from Data -->
-        <section class="home-products-section">
+        <section class="home-products-section" id="featured-products">
             <div class="section-header">
                 <h2>Featured Products</h2>
                 <a href="#" class="view-all-link"
@@ -487,27 +467,30 @@
                     </svg>
                 </a>
             </div>
-            <div class="product-grid" id="home-product-grid">
-                <!-- Products will be loaded dynamically -->
+            <div class="product-grid grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8" id="home-product-grid">
+                <!-- Dynamically loaded from products data -->
             </div>
+
         </section>
 
         <!-- SEO Section -->
-        <section class="seo-section">
-            <h3>Home décor</h3>
-            <p>Level up your interior aesthetics with our home décor range. Whether you've moved into a new home, or
-                you want to breathe new life into your existing living space, our collection has every room in the house
-                covered. Our furniture edit offers stunning side tables and comfy lounge chairs, plus there's an array
-                of
-                chic lighting to create a calming ambience. Looking for those finishing touches? Check out our beautiful
-                <a href="#">bed linen</a>, and top it off by scrolling for decorative
-                <a href="#">cushions and cushion covers</a>, or create textured layers with blankets and throws. When it
-                comes to decorations, add scented candles to your bathroom, give your favorite plants a place to call
-                home in our chic plant pots, or experiment with wall hangings and elegant glassware. Whether your
-                preferred style is minimalistic or bold, we've got something to suit every taste in our home décor
-                range.
-            </p>
-        </section>
+        <!-- SEO Text -->
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+            <div class="mt-24 border-t pt-4 text-xs text-gray-500" style="margin-top: 100px;">
+                <h2 class="text-xs font-bold text-gray-800 uppercase mb-2">Home décor</h2>
+                <p class="mb-4 text-xs leading-relaxed">Level up your interior aesthetics with our home décor range.
+                    Whether you've moved into a new home, or you want to breathe new life into your existing living
+                    space, our collection has every room in the house covered. Our furniture edit offers stunning side
+                    tables and comfy lounge chairs, plus there’s an array of chic lighting to create a calming ambience.
+                    Looking for those finishing touches? Check out our beautiful bed linen, and top it off by scrolling
+                    for decorative cushions and cushion covers, or create textured layers with blankets and throws. When
+                    it comes to decorations, add scented candles to your bathroom, give your favorite plants a place to
+                    call home in our chic plant pots, or experiment with wall hangings and elegant glassware. Whether
+                    your preferred style is minimalistic or bold, we've got something to suit every taste in our home
+                    décor range.</p>
+                <a href="home.html" class="font-bold text-gray-800 hover:underline text-xs">HM.com/Home</a>
+            </div>
+        </div>
 
     </main>
 
@@ -528,29 +511,9 @@
                         <ul class="footer-links">
                             <li><a href="women.html">Ladies</a></li>
                             <li><a href="men.html">Men</a></li>
+                            <li><a href="kids.html">Baby</a></li>
                             <li><a href="kids.html">Kids</a></li>
-                            <li><a href="home.html">Home</a></li>
-                            <li><a href="#">Beauty</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Corporate Info</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Career at H&M</a></li>
-                            <li><a href="#">About H&M group</a></li>
-                            <li><a href="#">Sustainability</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Help</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">My H&M</a></li>
-                            <li><a href="#">Find a store</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="home.html">H&M HOME</a></li>
                         </ul>
                     </div>
                 </div>
@@ -558,14 +521,75 @@
         </div>
 
         <div class="footer-bottom">
-            <div class="container text-center">
-                <p>&copy; 2025 H&M Hennes & Mauritz. All rights reserved.</p>
-            </div>
+
         </div>
     </footer>
 
+    <div class="banner-overlay" id="banner-overlay"></div>
+    <!-- Sign In Modal -->
+
+    <!-- Search Modal -->
+    <div id="search-modal-overlay" class="modal-overlay">
+        <div role="dialog" aria-modal="true" data-modal-name="search-drawer" class="eb4023 cf7e23 ad18ed b42beb e6af43"
+            aria-labelledby="search-drawer">
+            <div class="c37ef6 b85dec">
+                <span id="search-drawer" class="bb4b14" aria-live="polite"></span>
+                <form role="search" class="a2a4cc">
+                    <input type="search" class="c8516e" placeholder="Search" id="site-search"
+                        data-elid="search-drawer-input" minlength="2" name="site-search" autocapitalize="none"
+                        autocomplete="off" maxlength="200" aria-label="Search bar, enter term">
+                    <button class="f43d1c bff633 d65212 e07c27 a848a0" aria-disabled="false" type="submit"
+                        data-elid="search-drawer-search-button">
+                        <span class="f82cce">
+                            <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                                <path fill-rule="evenodd"
+                                    d="M9.823 10.883a5.5 5.5 0 1 1 1.06-1.06l4.72 4.72-1.06 1.06-4.72-4.72ZM10.5 6.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span></span>
+                        <span class="bb4b14" aria-live="polite">Search</span>
+                    </button>
+                    <button class="c1561c e07c27 c20f04 a2fba7" aria-disabled="false" type="button"
+                        data-elid="search-clear-button" aria-label="Clear search">
+                        <span></span>
+                        <span aria-hidden="true">Clear</span>
+                    </button>
+                    <div class="d3fdd2" aria-live="polite"></div>
+                </form>
+                <button class="f43d1c bff633 d65212 e07c27" aria-disabled="false" type="button" tabindex="0"
+                    id="search-close">
+                    <span class="f82cce">
+                        <svg role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                            <path
+                                d="M8.00011 6.9375L3.04 2L2 3.06L6.93945 7.99816L2 12.96L3.04 14L8.00011 9.05882L12.96 14L14 12.96L9.06077 7.99816L14 3.04L12.96 2L8.00011 6.9375Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span></span>
+                    <span class="bb4b14" aria-live="polite">Close</span>
+                </button>
+            </div>
+            <div class="bfe0f1" tabindex="-1" data-testid="navigation-panel">
+                <div class="a147f7">
+                    <section aria-labelledby="popular-searches-heading">
+                        <h2 class="d03240 b6cb73 b33a87 c825e4" id="popular-searches-heading">Popular searches</h2>
+                        <ul class="c2c252">
+                            <li class="ae2d5c"><a class="e9e520" href="women.html" tabindex="0">Ladies Jacket Edit
+                                    ’25</a></li>
+                            <li class="ae2d5c"><a class="e9e520" href="men.html" tabindex="0">Shirt Men</a></li>
+                            <li class="ae2d5c"><a class="e9e520" href="kids.html" tabindex="0">Sweatshirts Kids</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../js/products-data.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/wishlist.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Load New In items from products data
@@ -584,35 +608,49 @@
                 });
             }
 
-            // Load Featured Products grid
-            const productGrid = document.getElementById('home-product-grid');
-            if (window.productsData && window.productsData.products && window.productsData.products.home) {
+            // Load Featured Products
+            const homeGrid = document.getElementById('home-product-grid');
+            if (homeGrid && window.productsData && window.productsData.products && window.productsData.products.home) {
+                // Clear existing content if any (though we made it empty in HTML)
+                homeGrid.innerHTML = '';
+
                 const homeProducts = window.productsData.products.home;
+
                 homeProducts.forEach(product => {
-                    const card = document.createElement('div');
-                    card.className = 'product-card';
-                    card.onclick = () => { window.location.href = `product.html?id=${product.id}`; };
-                    card.innerHTML = `
-                        <div class="product-image-container">
-                            <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
-                            <div class="product-actions">
-                                <button class="product-action-btn" aria-label="Add to favourites">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                    const productEl = document.createElement('div');
+                    productEl.className = 'group block relative';
+
+                    const inWishlist = typeof Wishlist !== 'undefined' && Wishlist.has(product.id);
+                    const activeClass = inWishlist ? ' active' : '';
+
+                    // SVGs - remove 'hidden' class from fill, let CSS handle it
+                    const heartOutline = `<svg class="heart-outline w-4 h-4 text-black" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M8.697 2.253a4.278 4.278 0 0 1 6.05 6.05L8 15.05 1.253 8.304a4.278 4.278 0 0 1 6.05-6.05L8 2.948l.696-.696Zm4.99 1.06a2.778 2.778 0 0 0-3.93 0L8.003 5.07 6.243 3.315a2.779 2.779 0 0 0-3.93 3.928L8 12.928l5.686-5.686a2.778 2.778 0 0 0 0-3.928Z"></path></svg>`;
+                    const heartFill = `<svg class="heart-fill w-4 h-4 text-[#e50010]" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="m8 13.99 6.217-6.217a3.528 3.528 0 0 0-4.99-4.99L8.001 4.01 6.773 2.784a3.528 3.528 0 1 0-4.99 4.99L8 13.988Z"></path></svg>`;
+
+                    productEl.innerHTML = `
+                        <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] mb-3 relative">
+                            <a href="product.html?id=${product.id}" class="block h-full">
+                                <img src="${product.image}" loading="lazy" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </a>
+                            <button class="wishlist-btn${activeClass} absolute bottom-2 right-2 hover:scale-110 transition-transform z-10" data-product-id="${product.id}" aria-label="Add to favourites">
+                                ${heartOutline}
+                                ${heartFill}
+                            </button>
                         </div>
-                        <div class="product-info">
-                            <p class="product-brand">${product.brand || 'H&M Home'}</p>
-                            <h3 class="product-name">${product.name}</h3>
-                            <div class="product-price">
-                                <span class="price-current">${product.price}</span>
-                            </div>
+                        <div class="text-left space-y-0.5">
+                            <a href="product.html?id=${product.id}" class="no-underline">
+                                <h3 class="text-[13px] text-black font-normal uppercase hover:underline truncate">${product.name}</h3>
+                            </a>
+                            <p class="text-[13px] font-bold text-black">${product.price}</p>
                         </div>
                     `;
-                    productGrid.appendChild(card);
+                    homeGrid.appendChild(productEl);
                 });
+
+                // Bind buttons
+                if (typeof Wishlist !== 'undefined') {
+                    Wishlist.bindHeartButtons(homeGrid);
+                }
             }
         });
     </script>

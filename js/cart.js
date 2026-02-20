@@ -31,64 +31,40 @@ const DEFAULT_CART_ITEMS = [
 const DELIVERY_FEE = 149;
 
 // Recommendation products
-const RECO_PRODUCTS = [
-    {
-        name: 'Loose Fit Boxy-style t-shirt',
-        price: 'Rs.1,499.00',
-        image: 'https://image.hm.com/assets/hm/da/b0/dab03dbdbff49edb6e3c0b523c3b9ae4f6e19bb2.jpg?imwidth=362',
-        badge: 'New Arrival',
-        link: 'product.html'
-    },
-    {
-        name: 'Relaxed Fit Cotton chinos',
-        price: 'Rs.2,299.00',
-        image: 'https://image.hm.com/assets/hm/6e/a7/6ea75b37c9bed973eface04f149371968335889d.jpg?imwidth=362',
-        badge: 'New Arrival',
-        link: 'product.html'
-    },
-    {
-        name: 'Relaxed Fit Oxford shirt',
-        price: 'Rs.1,999.00',
-        image: 'https://image.hm.com/assets/hm/16/e5/16e56d6fd08059be58bda64f9e9159ee42f04e13.jpg?imwidth=362',
-        badge: 'New Arrival',
-        link: 'product.html'
-    },
-    {
-        name: 'Loose Fit Rugby sweatshirt',
-        price: 'Rs.2,299.00',
-        image: 'https://image.hm.com/assets/hm/4b/7c/4b7c57236c7b3e36dde892b505828c86bf394607.jpg?imwidth=362',
-        badge: 'New Arrival',
-        link: 'product.html'
-    },
-    {
-        name: 'Slim Fit Textured jersey polo shirt',
-        price: 'Rs.1,999.00',
-        image: 'https://image.hm.com/assets/hm/cd/e2/cde26ed6f45b87fd60eba979e9fbd964ad5fa46a.jpg?imwidth=362',
-        badge: 'New Arrival',
-        link: 'product.html'
-    },
-    {
-        name: '3-pack Regular Fit T-shirts',
-        price: 'Rs.1,299.00',
-        image: 'https://image.hm.com/assets/hm/bb/3b/bb3b1313b94f0db23fa8a8c19aad9fe1ec8095a2.jpg?imwidth=362',
-        badge: '',
-        link: 'product.html'
-    },
-    {
-        name: 'Regular Jeans',
-        price: 'Rs.2,299.00',
-        image: 'https://image.hm.com/assets/hm/8c/a3/8ca33ace134a38aa1b964263b4ab5ad3dc67f0e0.jpg?imwidth=362',
-        badge: '',
-        link: 'product.html'
-    },
-    {
-        name: 'Relaxed jeans',
-        price: 'Rs.1,999.00',
-        image: 'https://image.hm.com/assets/hm/f9/19/f9196c11b94c59edbfe0612c342aef54fa0139b8.jpg?imwidth=362',
-        badge: '',
-        link: 'product.html'
+// Recommendation products
+let RECO_PRODUCTS = [];
+
+if (typeof window.productsData !== 'undefined' && window.productsData.products) {
+    try {
+        // Flatten all categories
+        const allProducts = Object.values(window.productsData.products).flat();
+
+        // Shuffle and pick 6
+        const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+        RECO_PRODUCTS = shuffled.slice(0, 6).map(p => ({
+            name: p.name,
+            price: p.price,
+            image: p.image,
+            badge: p.badges && p.badges.length ? p.badges[0] : '',
+            link: `product.html?id=${p.id}`
+        }));
+    } catch (e) {
+        console.error('Error selecting random products:', e);
     }
-];
+}
+
+// Fallback if data not available
+if (RECO_PRODUCTS.length === 0) {
+    RECO_PRODUCTS = [
+        {
+            name: 'Loose Fit Boxy-style t-shirt',
+            price: 'Rs.1,499.00',
+            image: 'https://image.hm.com/assets/hm/da/b0/dab03dbdbff49edb6e3c0b523c3b9ae4f6e19bb2.jpg?imwidth=362',
+            badge: 'New Arrival',
+            link: 'product.html'
+        }
+    ];
+}
 
 // ---- State ----
 function getCart() {

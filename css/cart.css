@@ -8,22 +8,26 @@
 }
 
 .cart-page h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: 0;
-    margin: 32px 0 16px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin: 32px 0 24px;
 }
 
 /* Info Banner */
 .cart-banner {
-    background-color: #f4eddd;
-    text-align: center;
-    padding: 10px 16px;
-    font-size: 0.8125rem;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 0.75rem;
     color: var(--hm-black);
     margin-bottom: 24px;
-    border-radius: 2px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 /* Two-column layout */
@@ -246,23 +250,13 @@
 }
 
 .sidebar-discount-header h2 {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.sidebar-add-btn {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    cursor: pointer;
     font-size: 0.875rem;
-    font-family: var(--font-family-primary);
-    color: var(--hm-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.sidebar-add-btn:hover {
-    color: var(--hm-gray-600);
-}
+
 
 /* Order Summary Table */
 .order-summary-table {
@@ -311,7 +305,8 @@
     border: none;
     padding: 14px 24px;
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
     cursor: pointer;
     font-family: var(--font-family-primary);
@@ -323,24 +318,7 @@
     background-color: #333;
 }
 
-.signin-btn {
-    width: 100%;
-    background: #fff;
-    color: var(--hm-black);
-    border: 1px solid var(--hm-black);
-    padding: 12px 24px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: var(--font-family-primary);
-    transition: all var(--transition-fast);
-    margin-bottom: 20px;
-}
 
-.signin-btn:hover {
-    background-color: var(--hm-black);
-    color: #fff;
-}
 
 /* Payment Icons */
 .payment-icons {
@@ -367,26 +345,9 @@
     margin-bottom: 12px;
 }
 
-.cart-fine-print a {
-    color: var(--hm-black);
-    text-decoration: underline;
-}
 
-.cart-fine-print a:hover {
-    color: var(--hm-gray-600);
-}
 
-.delivery-info-btn {
-    background: none;
-    border: none;
-    text-decoration: underline;
-    font-size: 0.8125rem;
-    cursor: pointer;
-    font-family: var(--font-family-primary);
-    color: var(--hm-black);
-    margin-top: 8px;
-    padding: 0;
-}
+
 
 /* ========== Recommendations Carousel ========== */
 .reco-section {
@@ -563,19 +524,24 @@
 
 /* Empty Cart */
 .cart-empty {
-    text-align: center;
-    padding: 64px 16px;
+    text-align: left;
+    /* Screenshot implies left align or center? Usually H&M is left aligned for messages in empty state? No, centered? */
+    /* Screenshot: "YOUR SHOPPING BAG IS EMPTY." is left aligned under the line? 
+       Actually, "YOUR SHOPPING BAG IS EMPTY" is left aligned. */
+    text-align: left;
+    padding: 48px 0;
 }
 
 .cart-empty h2 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .cart-empty p {
     font-size: 0.875rem;
-    color: var(--hm-gray-500);
+    color: var(--hm-black);
     margin-bottom: 24px;
 }
 

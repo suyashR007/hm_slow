@@ -422,6 +422,11 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     console.log('H&M Website loaded successfully!');
 
+    // Initialize Wishlist buttons on static content
+    if (typeof Wishlist !== 'undefined') {
+        Wishlist.bindHeartButtons(document);
+    }
+
     // Show welcome message for returning users
     const hasVisited = localStorage.getItem('hasVisited');
     if (!hasVisited) {
@@ -434,3 +439,103 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export cart for global access
 window.cart = cart;
+
+// Header Banner Dropdown Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const bannerTrigger = document.getElementById('site-wide-banner-trigger');
+    const bannerDropdown = document.getElementById('site-wide-banner-dropdown');
+    const bannerOverlay = document.getElementById('banner-overlay');
+
+    if (bannerTrigger && bannerDropdown) {
+        bannerTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isExpanded = bannerTrigger.getAttribute('aria-expanded') === 'true';
+
+            // Toggle state
+            if (isExpanded) {
+                bannerTrigger.setAttribute('aria-expanded', 'false');
+                bannerDropdown.classList.remove('show');
+                if (bannerOverlay) bannerOverlay.classList.remove('show');
+            } else {
+                bannerTrigger.setAttribute('aria-expanded', 'true');
+                bannerDropdown.classList.add('show');
+                if (bannerOverlay) bannerOverlay.classList.add('show');
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (bannerDropdown && bannerDropdown.classList.contains('show') &&
+                !bannerDropdown.contains(e.target) &&
+                !bannerTrigger.contains(e.target)) {
+
+                bannerDropdown.classList.remove('show');
+                bannerTrigger.setAttribute('aria-expanded', 'false');
+                if (bannerOverlay) bannerOverlay.classList.remove('show');
+            }
+        });
+    }
+});
+
+
+
+// Search Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const searchTrigger = document.getElementById('search-trigger');
+    const searchModal = document.getElementById('search-modal-overlay');
+    // The user provided HTML has a generic close button, let's try to find it or expect an ID to be added
+    // We will add id="search-close" to the button in the HTML injection step
+    const searchClose = document.getElementById('search-close');
+
+    // Also handle the clear button if needed, but primarily open/close
+
+    if (searchTrigger && searchModal) {
+        searchTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            searchModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            // Focus input
+            const input = searchModal.querySelector('input[type="search"]');
+            if (input) setTimeout(() => input.focus(), 100);
+        });
+
+        if (searchClose) {
+            searchClose.addEventListener('click', () => {
+                searchModal.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+        }
+
+        searchModal.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                searchModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
+
+// Global Search Handler
+document.addEventListener('submit', (e) => {
+    const form = e.target;
+    // Check if it's a search form (role="search" or contains search input)
+    if (form.getAttribute('role') === 'search' || form.querySelector('input[type="search"]')) {
+        e.preventDefault();
+        const input = form.querySelector('input[type="search"]') || form.querySelector('input[name="q"]') || form.querySelector('#site-search');
+        if (input) {
+            const query = input.value.trim();
+            if (query) {
+                // Determine target URL based on current location
+                const currentPath = window.location.pathname;
+                let targetUrl = 'search.html';
+
+                // Check if likely in root directory (not in pages/)
+                if (!currentPath.includes('/pages/')) {
+                    targetUrl = 'pages/search.html';
+                }
+
+                window.location.href = `${targetUrl}?q=${encodeURIComponent(query)}`;
+            }
+        }
+    }
+});

@@ -42,13 +42,15 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4px;
-    /* Minimal gap */
 }
 
 @media (min-width: 768px) {
     .product-image-grid {
         grid-template-columns: 1fr 1fr;
-        /* 2 columns for images */
+    }
+
+    .product-image-grid.single-image {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -68,35 +70,42 @@ body {
 
 @media (min-width: 1024px) {
     .product-details-sticky {
-        position: sticky;
-        top: 8rem;
-        /* Account for header */
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-        padding-right: 1rem;
-        /* For scrollbar */
-        scrollbar-width: thin;
+        /* Removed sticky and scroll behavior as requested */
+        position: static;
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
     }
 }
 
 /* Typography & Elements */
 .product-title {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    /* 24px */
+    font-size: 1.125rem;
     font-weight: 500;
-    /* Regular/Medium */
+    text-transform: uppercase;
     letter-spacing: 0.5px;
     margin: 0;
     line-height: 1.2;
     max-width: 85%;
-    /* Leave room for heart icon */
 }
 
 .product-price {
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.5px;
+}
+
+.product-price.sale {
+    color: var(--hm-red);
+}
+
+.product-original-price {
+    font-size: 1rem;
+    color: var(--hm-gray-600);
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-left: 8px;
 }
 
 .product-discount {
@@ -111,6 +120,7 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--hm-black);
+    text-transform: uppercase;
 }
 
 /* Reviews */
@@ -134,18 +144,22 @@ body {
 
 /* Options */
 .color-option {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 1px solid var(--hm-gray-200);
+    width: 60px;
+    height: 90px;
+    border-radius: 0;
+    border: 1px solid transparent;
     position: relative;
     cursor: pointer;
     transition: all 0.2s;
+    background-size: cover;
+    background-position: center;
+    background-color: #f4f4f4;
+    /* Fallback */
 }
 
 .color-option.selected {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--hm-black);
-    border-color: transparent;
+    box-shadow: none;
+    border: 1px solid var(--hm-black);
 }
 
 .size-grid {
@@ -178,12 +192,36 @@ body {
 }
 
 .size-option.disabled {
-    color: var(--hm-gray-200);
-    border-color: var(--hm-gray-200);
+    color: #666;
+    /* Even darker gray */
+    border-color: #ccc;
     cursor: not-allowed;
-    background: #fafafa;
+    background: #eaeaea;
+    /* Light gray background for contrast */
     text-decoration: line-through;
+    font-weight: 500;
+    opacity: 1;
     /* Optional */
+}
+
+/* Error States */
+.size-selector-error {
+    border: 1px solid var(--hm-red);
+    padding: 2px;
+    /* Adds a bit of space so border isn't flush if needed, or remove if direct on buttons */
+    /* If applied to container, might need adjustment */
+}
+
+.size-error-message {
+    color: var(--hm-red);
+    font-size: 0.875rem;
+    margin-top: 6px;
+    display: none;
+    font-weight: 400;
+}
+
+.size-error-message.show {
+    display: block;
 }
 
 /* Buttons */
@@ -283,4 +321,35 @@ body {
 /* Utilities */
 .hidden {
     display: none;
+}
+
+.heart-fill {
+    fill: var(--hm-red) !important;
+    color: var(--hm-red) !important;
+}
+
+/* Spacing Utilities */
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+/* Add spacing between size grid and add button specifically if needed */
+.size-grid {
+    margin-bottom: 24px;
 }

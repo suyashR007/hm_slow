@@ -1,0 +1,242 @@
+[
+    {
+        "name": "Relaxed Fit Linen-blend shirt",
+        "price": "Rs. 2,299.00",
+        "category": "Shirt",
+        "description": "Relaxed fit shirt made from breathable linen-blend fabric suitable for warm weather.",
+        "fabric_details": "Linen blend",
+        "other_details": "Premium Selection; relaxed silhouette"
+    },
+    {
+        "name": "Loose Fit T-shirt",
+        "price": "Rs. 999.00",
+        "category": "T-shirt",
+        "description": "Loose-fit T-shirt designed for casual comfort with modern streetwear styling.",
+        "fabric_details": "Cotton",
+        "other_details": "Multiple color options"
+    },
+    {
+        "name": "Regular Fit Sports vest top with DryMove™",
+        "price": "Rs. 799.00",
+        "category": "Sportswear",
+        "description": "Sports vest with DryMove™ technology to wick moisture away from skin.",
+        "fabric_details": "Polyester blend",
+        "other_details": "Designed for training"
+    },
+    {
+        "name": "Original Straight Jeans",
+        "price": "Rs. 2,699.00",
+        "category": "Jeans",
+        "description": "Straight-leg jeans featuring classic denim styling and durable construction.",
+        "fabric_details": "Cotton denim",
+        "other_details": "Regular waist"
+    },
+    {
+        "name": "Regular Fit sweatshorts",
+        "price": "Rs. 999.00",
+        "category": "Shorts",
+        "description": "Comfortable sweatshorts designed with elastic waistband and relaxed fit.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Slim Fit Polo shirt",
+        "price": "Rs. 799.00",
+        "category": "Polo shirt",
+        "description": "Slim-fit polo shirt with ribbed collar and classic button placket.",
+        "fabric_details": "Cotton",
+        "other_details": "Smart casual styling"
+    },
+    {
+        "name": "Loose Fit Printed T-shirt",
+        "price": "Rs. 799.00",
+        "category": "T-shirt",
+        "description": "Printed T-shirt featuring graphic designs and loose fit styling.",
+        "fabric_details": "Cotton",
+        "other_details": "Streetwear design"
+    },
+    {
+        "name": "Relaxed Fit Linen-blend trousers",
+        "price": "Rs. 2,999.00",
+        "category": "Trousers",
+        "description": "Relaxed-fit trousers made from linen-blend fabric for breathable comfort.",
+        "fabric_details": "Linen blend",
+        "other_details": "Premium Selection"
+    },
+    {
+        "name": "Relaxed Fit Oxford shirt",
+        "price": "Rs. 1,999.00",
+        "category": "Shirt",
+        "description": "Oxford shirt featuring classic collar and relaxed silhouette.",
+        "fabric_details": "Cotton",
+        "other_details": "Formal and casual wear"
+    },
+    {
+        "name": "Regular Fit Oxford shirt",
+        "price": "Rs. 1,799.00",
+        "category": "Shirt",
+        "description": "Regular fit Oxford shirt designed for versatile styling.",
+        "fabric_details": "Cotton",
+        "other_details": "Multiple colors"
+    },
+    {
+        "name": "Relaxed Fit Cotton shirt",
+        "price": "Rs. 2,299.00",
+        "category": "Shirt",
+        "description": "Cotton shirt offering breathable comfort and relaxed fit.",
+        "fabric_details": "Cotton",
+        "other_details": "Checked pattern"
+    },
+    {
+        "name": "Slim Fit Easy-iron shirt",
+        "price": "Rs. 1,499.00",
+        "category": "Shirt",
+        "description": "Easy-iron shirt designed for low maintenance and slim silhouette.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Wrinkle resistant"
+    },
+    {
+        "name": "Loose Straight Jeans",
+        "price": "Rs. 2,699.00",
+        "category": "Jeans",
+        "description": "Loose straight jeans offering relaxed silhouette and modern styling.",
+        "fabric_details": "Cotton denim",
+        "other_details": "Multiple washes"
+    },
+    {
+        "name": "Relaxed Fit Twill trousers",
+        "price": "Rs. 2,499.00",
+        "category": "Trousers",
+        "description": "Twill trousers featuring relaxed fit and modern tailoring.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Loose Fit Tailored trousers",
+        "price": "Rs. 2,999.00",
+        "category": "Trousers",
+        "description": "Tailored trousers with loose fit for contemporary formal styling.",
+        "fabric_details": "Polyester blend",
+        "other_details": "Formal wear"
+    },
+    {
+        "name": "Loose Fit Rugby sweatshirt",
+        "price": "Rs. 1,999.00",
+        "category": "Sweatshirt",
+        "description": "Rugby sweatshirt featuring loose fit and classic sports styling.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Athleisure wear"
+    },
+    {
+        "name": "Relaxed Fit Cotton flannel shirt",
+        "price": "Rs. 2,299.00",
+        "category": "Shirt",
+        "description": "Flannel shirt offering warmth and relaxed styling.",
+        "fabric_details": "Cotton flannel",
+        "other_details": "Checked pattern"
+    },
+    {
+        "name": "Workwear jacket",
+        "price": "Rs. 3,999.00",
+        "category": "Jacket",
+        "description": "Workwear jacket with durable construction and functional design.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Utility styling"
+    },
+    {
+        "name": "Slim Fit Single-breasted jacket",
+        "price": "Rs. 4,999.00",
+        "category": "Jacket",
+        "description": "Single-breasted jacket designed for formal occasions.",
+        "fabric_details": "Polyester blend",
+        "other_details": "Slim fit tailoring"
+    },
+    {
+        "name": "Slim Fit Suit trousers",
+        "price": "Rs. 2,999.00",
+        "category": "Formal trousers",
+        "description": "Slim fit trousers designed for formal wear and professional styling.",
+        "fabric_details": "Polyester blend",
+        "other_details": "Formal styling"
+    },
+    {
+        "name": "Loose Fit Boxy-style T-shirt",
+        "price": "Rs. 799.00",
+        "category": "T-shirt",
+        "description": "Boxy-style T-shirt offering oversized silhouette.",
+        "fabric_details": "Cotton",
+        "other_details": "Streetwear style"
+    },
+    {
+        "name": "Relaxed Fit Cotton chinos",
+        "price": "Rs. 2,299.00",
+        "category": "Chinos",
+        "description": "Cotton chinos designed for casual and business casual styling.",
+        "fabric_details": "Cotton",
+        "other_details": "Relaxed fit"
+    },
+    {
+        "name": "Slim Fit Textured jersey polo shirt",
+        "price": "Rs. 1,499.00",
+        "category": "Polo",
+        "description": "Textured polo shirt with slim fit silhouette.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Textured fabric"
+    },
+    {
+        "name": "Loose Fit Sweatshirt",
+        "price": "Rs. 1,499.00",
+        "category": "Sweatshirt",
+        "description": "Sweatshirt designed for everyday comfort and relaxed styling.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Relaxed Fit Short-sleeved Oxford shirt",
+        "price": "Rs. 1,799.00",
+        "category": "Shirt",
+        "description": "Short-sleeved Oxford shirt for warm weather styling.",
+        "fabric_details": "Cotton",
+        "other_details": "Relaxed fit"
+    },
+    {
+        "name": "Loose Fit Hoodie",
+        "price": "Rs. 1,999.00",
+        "category": "Hoodie",
+        "description": "Loose-fit hoodie designed for casual wear.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Athleisure styling"
+    },
+    {
+        "name": "Slim Fit Cotton shirt",
+        "price": "Rs. 1,799.00",
+        "category": "Shirt",
+        "description": "Slim fit cotton shirt offering tailored silhouette.",
+        "fabric_details": "Cotton",
+        "other_details": "Formal wear"
+    },
+    {
+        "name": "Relaxed Fit Cargo trousers",
+        "price": "Rs. 2,999.00",
+        "category": "Cargo trousers",
+        "description": "Cargo trousers featuring utility pockets.",
+        "fabric_details": "Cotton blend",
+        "other_details": "Utility styling"
+    },
+    {
+        "name": "Denim jacket",
+        "price": "Rs. 3,499.00",
+        "category": "Jacket",
+        "description": "Classic denim jacket designed for layering.",
+        "fabric_details": "Cotton denim",
+        "other_details": "Casual wear"
+    },
+    {
+        "name": "Regular Fit Cotton T-shirt",
+        "price": "Rs. 699.00",
+        "category": "T-shirt",
+        "description": "Regular fit cotton T-shirt designed for everyday wear.",
+        "fabric_details": "Cotton",
+        "other_details": "Basic essential"
+    }
+]

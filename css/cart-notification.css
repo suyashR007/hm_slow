@@ -1,0 +1,121 @@
+/* Cart Notification Popup */
+.cart-notification {
+    position: fixed;
+    top: 80px;
+    /* Below header */
+    right: 20px;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 16px;
+    border: 1px solid #e4e4e4;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cart-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.notification-content {
+    display: flex;
+    gap: 16px;
+}
+
+.notification-image {
+    width: 100px;
+    height: 150px;
+    /* Portrait aspect ratio */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.notification-details {
+    flex-grow: 1;
+    font-size: 0.875rem;
+    /* 14px */
+}
+
+.notification-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.notification-price {
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.notification-meta {
+    margin: 4px 0;
+    color: #222;
+    font-size: 0.8125rem;
+    /* 13px */
+}
+
+.notification-meta span {
+    color: #767676;
+    margin-left: 4px;
+}
+
+.notification-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #767676;
+}
+
+.notification-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-view-cart {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #222;
+    color: #222;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-view-cart:hover {
+    background-color: #f4f4f4;
+}
+
+.btn-checkout-mini {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid #222;
+    transition: opacity 0.2s;
+}
+
+.btn-checkout-mini:hover {
+    opacity: 0.9;
+}

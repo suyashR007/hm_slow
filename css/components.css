@@ -2,7 +2,8 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1001;
+  /* Increased to be above overlay (990) */
   background-color: var(--hm-white);
 }
 
@@ -155,7 +156,7 @@
   height: 20px;
 }
 
-.header-action span:not(.cart-count) {
+.header-action span:not(.cart-count):not(.wishlist-count) {
   display: none;
 }
 
@@ -650,4 +651,90 @@
 
 .newsletter-btn:hover {
   background-color: var(--hm-dark-red);
+}
+
+/* Header Banner - Obfuscated Classes from H&M */
+.bc6fab {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bc6fab button.dd03d0 {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.cd03d7.f410d2 {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.acaf5a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.dc277c {
+  fill: currentColor;
+  width: 12px;
+  height: 12px;
+}
+
+/* ── Filter Tags ────────────────────────────── */
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--hm-gray-100, #f4f4f4);
+  border: 1px solid var(--hm-gray-300, #ddd);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--hm-black, #222);
+  text-transform: capitalize;
+}
+
+.filter-tag-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--hm-gray-600, #666);
+  padding: 0;
+}
+
+.filter-tag-remove:hover {
+  color: var(--hm-red, #e50010);
+}
+
+.filter-clear-all {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--hm-red, #e50010);
+  text-decoration: underline;
+  padding: 4px 8px;
+}
+
+/* Color swatch selected state */
+.color-swatch.selected {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--hm-black, #222);
 }
