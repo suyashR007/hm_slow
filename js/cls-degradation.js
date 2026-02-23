@@ -1,85 +1,21 @@
 /**
- * CLS Degradation Script — Target: CLS > 2.5
+ * CLS Degradation Script
+ * Causes Cumulative Layout Shift (CLS) > 0.25 WITHOUT adding any
+ * new visible UI elements. Works by shifting existing elements
+ * AFTER they become visible on screen.
  *
- * Strategy:
- * CLS = Σ (impact_fraction × distance_fraction) for each layout shift.
- * To exceed 2.5 we need many large shifts of visible, in-viewport elements.
- *
- * Key technique: Insert a transparent (but visible to layout) spacer div at
- * the top of <body>. When its height pulses from 0 → Npx → 0, every element
- * below it shifts. Because those elements ARE visible, each shift counts for CLS.
- * The spacer itself is transparent so the user never sees it.
- *
- * Additionally: strip image dimension attributes so images cause reflow on load,
- * and remove aspect-ratio containers so images have no reserved space.
+ * Key insight: CLS only counts shifts of VISIBLE elements.
+ * performance-delay.js reveals sections starting at ~4000ms,
+ * so our shifts must fire AFTER that to be counted.
  */
 
 (function () {
     'use strict';
 
-    // ── Helper: force a layout shift by changing margin on the first
-    //    visible element in the page. This pushes all siblings below it. ──
-
-    /**
-     * Shift all visible content by adding temporary margin to the header.
-     * We use marginTop on <header> (which is visible) rather than a hidden
-     * spacer, because CLS only measures shifts of VISIBLE elements.
-     */
-    function shiftVisibleContent(amount) {
-        // Find main visible containers that, when shifted, push other
-        // visible content down. Header is always visible.
-        var header = document.querySelector('header, .header');
-        if (!header) return;
-
-        header.style.transition = 'none';
-        header.style.marginTop = amount + 'px';
-        // Force synchronous layout
-        void header.offsetHeight;
-
-        // After two animation frames, snap back (causes second shift)
-        requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-                header.style.marginTop = '0px';
-                void header.offsetHeight;
-            });
-        });
-    }
-
-    /**
-     * Shift content by dynamically inserting a full-width colored bar
-     * (matches background so it's invisible) then removing it.
-     * The bar is opacity:0.01 (nearly invisible but visible to CLS).
-     */
-    function insertPhantomBar(height) {
-        var bar = document.createElement('div');
-        bar.style.cssText =
-            'width:100%;height:' + height + 'px;' +
-            'opacity:0.01;background:#fff;' +
-            'position:relative;z-index:-1;' +
-            'pointer-events:none;margin:0;padding:0;';
-        bar.setAttribute('aria-hidden', 'true');
-
-        // Insert at the very beginning of body
-        if (document.body.firstChild) {
-            document.body.insertBefore(bar, document.body.firstChild);
-        } else {
-            document.body.appendChild(bar);
-        }
-
-        // Force layout
-        void bar.offsetHeight;
-
-        // Remove after next frame — this shifts everything back up
-        requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-                if (bar.parentNode) {
-                    bar.parentNode.removeChild(bar);
-                }
-            });
-        });
-    }
-
-    // ── Strip image dimensions so images reflow on load ──
+    // ── 1. Strip image dimensions immediately ───────────────────────
+    // Without width/height, images reflow when they load.
+    // The aspect-ratio containers may prevent some of this,
+    // but standalone images will still shift.
     function stripImageDimensions() {
         var images = document.querySelectorAll('img[width][height]');
         for (var i = 0; i < images.length; i++) {
@@ -91,197 +27,177 @@
     // Run immediately during parse
     stripImageDimensions();
 
-    // ── Inject CSS that removes all space reservations for images ──
-    function injectAntiReservationCSS() {
-        var style = document.createElement('style');
-        style.textContent = [
-            // Remove aspect-ratio containers
-            '[class*="aspect-"] { aspect-ratio: auto !important; min-height: 0 !important; }',
-            // Make images auto-height
-            'img { height: auto !important; }',
-            // Remove hero min-height
-            '.hero { min-height: auto !important; }',
-        ].join('\n');
-        document.head.appendChild(style);
-    }
-
-    // ── Main init after DOM ready ──
+    // ── After DOM ready, schedule shifts timed to section reveals ───
     function initShifts() {
-        injectAntiReservationCSS();
-        stripImageDimensions();
 
-        // ═══════════════════════════════════════════════
-        // WAVE 1: Immediate shifts (200-1500ms)
-        // The header and above-fold content are visible.
-        // ═══════════════════════════════════════════════
-        setTimeout(function () { shiftVisibleContent(200); }, 200);
-        setTimeout(function () { insertPhantomBar(250); }, 500);
-        setTimeout(function () { shiftVisibleContent(300); }, 800);
-        setTimeout(function () { insertPhantomBar(200); }, 1100);
-        setTimeout(function () { shiftVisibleContent(250); }, 1400);
+        // performance-delay.js reveals sections at: 4000 + index * 1200 ms
+        // We need our shifts to happen AFTER sections are visible.
 
-        // ═══════════════════════════════════════════════
-        // WAVE 2: Mid-load shifts (2000-3500ms)
-        // ═══════════════════════════════════════════════
-        setTimeout(function () { insertPhantomBar(300); }, 2000);
-        setTimeout(function () { shiftVisibleContent(350); }, 2400);
-        setTimeout(function () { insertPhantomBar(280); }, 2800);
-        setTimeout(function () { shiftVisibleContent(320); }, 3200);
+        // ── 2. Shift header banner AFTER it becomes visible ─────────
+        // The header-banner is usually visible quickly.
+        // Add extra padding, wait, then snap it back.
+        setTimeout(function () {
+            var banner = document.querySelector('.header-banner');
+            if (banner) {
+                banner.style.transition = 'none';
+                banner.style.paddingTop = '24px';
+                banner.style.paddingBottom = '24px';
+                // Snap back after a frame
+                setTimeout(function () {
+                    banner.style.paddingTop = '';
+                    banner.style.paddingBottom = '';
+                }, 80);
+            }
+        }, 4200); // After first section reveal
 
-        // ═══════════════════════════════════════════════
-        // WAVE 3: After sections revealed (4000-6000ms)
-        // performance-delay.js reveals sections ~4000ms
-        // ═══════════════════════════════════════════════
-        setTimeout(function () { insertPhantomBar(350); }, 4000);
-        setTimeout(function () { shiftVisibleContent(300); }, 4400);
-        setTimeout(function () { insertPhantomBar(250); }, 4800);
+        // ── 3. Shift hero dimensions after it becomes visible ───────
+        setTimeout(function () {
+            var hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transition = 'none';
+                hero.style.marginBottom = '50px';
+                setTimeout(function () {
+                    hero.style.marginBottom = '';
+                }, 80);
+            }
+        }, 4500);
 
-        // Shift product grids (now visible)
+        // ── 4. Shift product grid layout after visible ──────────────
+        // Temporarily switch to 2 columns then back to 4
         setTimeout(function () {
             var grids = document.querySelectorAll('.product-grid');
             for (var i = 0; i < grids.length; i++) {
                 (function (grid) {
                     grid.style.transition = 'none';
                     grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-                    void grid.offsetHeight;
-                    requestAnimationFrame(function () {
+                    setTimeout(function () {
                         grid.style.gridTemplateColumns = '';
-                    });
+                    }, 80);
                 })(grids[i]);
             }
-        }, 5200);
+        }, 5500); // After product grid section reveals
 
-        setTimeout(function () { shiftVisibleContent(280); }, 5500);
-        setTimeout(function () { insertPhantomBar(320); }, 5800);
-
-        // ═══════════════════════════════════════════════
-        // WAVE 4: Late shifts (6000-8000ms)
-        // ═══════════════════════════════════════════════
-        setTimeout(function () { insertPhantomBar(300); }, 6200);
-        setTimeout(function () { shiftVisibleContent(350); }, 6600);
-        setTimeout(function () { insertPhantomBar(280); }, 7000);
-        setTimeout(function () { shiftVisibleContent(250); }, 7400);
-        setTimeout(function () { insertPhantomBar(400); }, 7800);
-
-        // ═══════════════════════════════════════════════
-        // WAVE 5: Very late (8000-12000ms)
-        // ═══════════════════════════════════════════════
-        setTimeout(function () { shiftVisibleContent(300); }, 8500);
-        setTimeout(function () { insertPhantomBar(350); }, 9000);
-        setTimeout(function () { shiftVisibleContent(280); }, 9500);
-        setTimeout(function () { insertPhantomBar(300); }, 10000);
-        setTimeout(function () { shiftVisibleContent(350); }, 10500);
-        setTimeout(function () { insertPhantomBar(250); }, 11000);
-        setTimeout(function () { shiftVisibleContent(300); }, 11500);
-
-        // ═══════════════════════════════════════════════
-        // CONTINUOUS: Recurring shift pulse every 600ms
-        // Each adds ~0.05-0.15 to CLS.
-        // 50 pulses × ~0.1 avg = ~5.0 CLS contribution
-        // ═══════════════════════════════════════════════
-        var count = 0;
-        var maxPulses = 50;
-        var interval = setInterval(function () {
-            count++;
-            if (count > maxPulses) {
-                clearInterval(interval);
-                return;
+        // ── 5. Shift container widths ───────────────────────────────
+        setTimeout(function () {
+            var containers = document.querySelectorAll('.container');
+            for (var c = 0; c < Math.min(containers.length, 4); c++) {
+                (function (container) {
+                    container.style.transition = 'none';
+                    container.style.paddingLeft = '40px';
+                    container.style.paddingRight = '40px';
+                    setTimeout(function () {
+                        container.style.paddingLeft = '';
+                        container.style.paddingRight = '';
+                    }, 80);
+                })(containers[c]);
             }
-            // Alternate between techniques
-            if (count % 2 === 0) {
-                var amounts = [200, 280, 320, 250, 350, 300, 400, 220, 260, 340];
-                shiftVisibleContent(amounts[count % amounts.length]);
-            } else {
-                var barHeights = [250, 300, 280, 350, 320, 200, 380, 270, 310, 240];
-                insertPhantomBar(barHeights[count % barHeights.length]);
+        }, 5000);
+
+        // ── 6. Shift section spacing (visible sections only) ────────
+        setTimeout(function () {
+            var sections = document.querySelectorAll('section.slow-section-visible');
+            for (var s = 0; s < sections.length; s++) {
+                (function (section, idx) {
+                    section.style.transition = 'none';
+                    section.style.paddingTop = '35px';
+                    section.style.paddingBottom = '35px';
+                    setTimeout(function () {
+                        section.style.paddingTop = '';
+                        section.style.paddingBottom = '';
+                    }, 80);
+                })(sections[s], s);
             }
-        }, 600);
+        }, 6000);
 
-        // ═══════════════════════════════════════════════
-        // ELEMENT-SPECIFIC SHIFTS
-        // ═══════════════════════════════════════════════
-
-        // Shift nav links
+        // ── 7. Nav link spacing shift (header is always visible) ────
         setTimeout(function () {
             var navLinks = document.querySelectorAll('.nav-link');
             for (var n = 0; n < navLinks.length; n++) {
                 (function (link) {
                     link.style.transition = 'none';
-                    link.style.padding = '15px 30px';
-                    void link.offsetHeight;
-                    requestAnimationFrame(function () {
-                        link.style.padding = '';
-                    });
+                    var origPad = link.style.padding;
+                    link.style.padding = '10px 20px';
+                    setTimeout(function () {
+                        link.style.padding = origPad;
+                    }, 80);
                 })(navLinks[n]);
             }
-        }, 3000);
+        }, 4300);
 
-        // Shift containers
+        // ── 8. Heading margin shifts after visible ──────────────────
         setTimeout(function () {
-            var containers = document.querySelectorAll('.container');
-            for (var c = 0; c < Math.min(containers.length, 6); c++) {
-                (function (container, delay) {
-                    setTimeout(function () {
-                        container.style.transition = 'none';
-                        container.style.paddingTop = '60px';
-                        void container.offsetHeight;
-                        requestAnimationFrame(function () {
-                            container.style.paddingTop = '';
-                        });
-                    }, delay);
-                })(containers[c], c * 400);
-            }
-        }, 5000);
-
-        // Shift headings
-        setTimeout(function () {
-            var headings = document.querySelectorAll('h1, h2, h3');
+            var headings = document.querySelectorAll('h1, h2');
             for (var h = 0; h < headings.length; h++) {
-                (function (heading, delay) {
-                    setTimeout(function () {
+                (function (heading) {
+                    // Only shift if element is currently in viewport
+                    var rect = heading.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top < window.innerHeight) {
                         heading.style.transition = 'none';
-                        heading.style.marginBottom = '60px';
-                        void heading.offsetHeight;
-                        requestAnimationFrame(function () {
-                            heading.style.marginBottom = '';
-                        });
-                    }, delay);
-                })(headings[h], h * 300);
+                        var origMB = heading.style.marginBottom;
+                        heading.style.marginBottom = '30px';
+                        setTimeout(function () {
+                            heading.style.marginBottom = origMB;
+                        }, 80);
+                    }
+                })(headings[h]);
             }
-        }, 6000);
+        }, 5800);
 
-        // Shift hero section
+        // ── 9. Second wave: shift again after more sections visible ─
         setTimeout(function () {
-            var hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transition = 'none';
-                hero.style.marginBottom = '150px';
-                void hero.offsetHeight;
-                requestAnimationFrame(function () {
-                    hero.style.marginBottom = '';
-                });
+            // Shift hero content positioning
+            var heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.transition = 'none';
+                heroContent.style.bottom = '25%';
+                setTimeout(function () {
+                    heroContent.style.bottom = '';
+                }, 80);
             }
-        }, 4500);
 
-        // Shift footer
+            // Shift the campaign/category section
+            var categoryCards = document.querySelectorAll('.category-card, .aspect-\\[2\\/3\\]');
+            for (var i = 0; i < Math.min(categoryCards.length, 4); i++) {
+                (function (card) {
+                    card.style.transition = 'none';
+                    card.style.marginBottom = '20px';
+                    setTimeout(function () {
+                        card.style.marginBottom = '';
+                    }, 80);
+                })(categoryCards[i]);
+            }
+        }, 7000);
+
+        // ── 10. Third wave: more shifts for higher CLS ──────────────
         setTimeout(function () {
+            // Shift footer up
             var footer = document.querySelector('.footer, footer');
             if (footer) {
                 footer.style.transition = 'none';
-                footer.style.marginTop = '100px';
-                void footer.offsetHeight;
-                requestAnimationFrame(function () {
+                footer.style.marginTop = '40px';
+                setTimeout(function () {
                     footer.style.marginTop = '';
-                });
+                }, 80);
             }
-        }, 7500);
 
-        // Strip image dimensions repeatedly for dynamically loaded content
+            // Re-shift grids
+            var grids = document.querySelectorAll('.product-grid');
+            for (var i = 0; i < grids.length; i++) {
+                (function (grid) {
+                    grid.style.transition = 'none';
+                    grid.style.gap = '30px';
+                    setTimeout(function () {
+                        grid.style.gap = '';
+                    }, 80);
+                })(grids[i]);
+            }
+        }, 8000);
+
+        // ── 11. Keep stripping image dimensions from dynamic content ─
         setTimeout(stripImageDimensions, 100);
         setTimeout(stripImageDimensions, 2000);
         setTimeout(stripImageDimensions, 4000);
         setTimeout(stripImageDimensions, 6000);
-        setTimeout(stripImageDimensions, 8000);
     }
 
     if (document.readyState === 'loading') {
