@@ -168,11 +168,11 @@
                 <div class="group block relative">
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] relative">
                         <a href="product.html?id=1398657123" class="block h-full">
-                            <img src="../images/products/kids/1398657123.jpg" alt="2-piece T-shirt and sweatshorts set"
+                            <img src="../images/products/kids/1398657123.jpg" alt="Printed Pyjama Set"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </a>
                         <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
-                            data-product-id="1398657123" data-name="2-piece T-shirt and sweatshorts set"
+                            data-product-id="1398657123" data-name="Printed Pyjama Set"
                             data-price="Rs. 1,499.00" data-image="../images/products/kids/1398657123.jpg"
                             aria-label="Add to favourites" id="btn-1398657123">
                             <svg class="heart-outline w-4 h-4 text-black" width="18" height="18" viewBox="0 0 16 16"
@@ -194,11 +194,11 @@
                 <div class="group block relative">
                     <div class="aspect-[2/3] w-full overflow-hidden bg-[#f4f4f4] relative">
                         <a href="product.html?id=1303084007" class="block h-full">
-                            <img src="../images/products/kids/1303084007.jpg" alt="Motif-detail wide leg jeans"
+                            <img src="../images/products/kids/1303084007.jpg" alt="Relaxed Fit Cargo Trousers"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </a>
                         <button class="wishlist-btn absolute top-2 right-2 hover:scale-110 transition-transform z-10"
-                            data-product-id="1303084007" data-name="Motif-detail wide leg jeans"
+                            data-product-id="1303084007" data-name="Relaxed Fit Cargo Trousers"
                             data-price="Rs. 1,899.00" data-image="../images/products/kids/1303084007.jpg"
                             aria-label="Add to favourites" id="btn-1303084007">
                             <svg class="heart-outline w-4 h-4 text-black" width="18" height="18" viewBox="0 0 16 16"
@@ -441,6 +441,34 @@
             if (typeof Wishlist !== 'undefined') {
                 Wishlist.bindHeartButtons(document);
             }
+        });
+    </script>
+
+    <!-- Mid-page Sale Banner: injects after 4 Season Favourites photos after 20s to cause CLS -->
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                // Avoid duplicate injection
+                if (document.getElementById('kids-mid-sale-banner')) return;
+
+                // Find the Kids' Clothing section (which is right after the 4 photos)
+                // by locating kids-product-grid and going to its parent section
+                var grid = document.getElementById('kids-product-grid');
+                if (!grid) return;
+
+                var kidsSection = grid.closest('section');
+                if (!kidsSection) return;
+
+                // Create the banner in the same format as the spring-sale-banner (footer CLS)
+                var midBanner = document.createElement('div');
+                midBanner.id = 'kids-mid-sale-banner';
+                midBanner.className = 'mid-sale-banner slow-section-visible';
+                midBanner.textContent = '\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38';
+
+                // Insert the banner right before the Kids' Clothing section
+                kidsSection.parentNode.insertBefore(midBanner, kidsSection);
+
+            }, 20000); // 20 seconds after load — causes CLS
         });
     </script>
 </body>

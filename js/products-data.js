@@ -116,7 +116,7 @@ window.productsData = {
             },
             {
                 "id": "w-new-006",
-                "name": "Wide High Jeans",
+                "name": "Relaxed Fit Cargo Trousers",
                 "brand": "H&M",
                 "price": "Rs. 2,699.00",
                 "image": "https://image.hm.com/assets/hm/9b/41/9b41a6e848b1bcb9a34176756d00e75398d1c6ec.jpg?imwidth=1536",
@@ -131,7 +131,7 @@ window.productsData = {
                 "colors": [
                     "denim-blue"
                 ],
-                "description": "Wide High Jeans - Denim blue",
+                "description": "Relaxed Fit Cargo Trousers - Denim blue",
                 "image_list": [
                     "https://image.hm.com/assets/hm/9b/41/9b41a6e848b1bcb9a34176756d00e75398d1c6ec.jpg?imwidth=1536"
                 ],
@@ -139,7 +139,7 @@ window.productsData = {
             },
             {
                 "id": "w-new-007",
-                "name": "Pointelle jersey top",
+                "name": "Rib-Knit Vest Top",
                 "brand": "H&M",
                 "price": "Rs. 1,299.00",
                 "image": "https://image.hm.com/assets/hm/a4/95/a4952445500de1545ef5948cc57265dc6fd43f19.jpg?imwidth=1536",
@@ -154,7 +154,7 @@ window.productsData = {
                 "colors": [
                     "pale-yellow"
                 ],
-                "description": "Pointelle jersey top - Pale yellow",
+                "description": "Rib-Knit Vest Top - Pale yellow",
                 "image_list": [
                     "https://image.hm.com/assets/hm/a4/95/a4952445500de1545ef5948cc57265dc6fd43f19.jpg?imwidth=1536"
                 ],
@@ -292,7 +292,7 @@ window.productsData = {
             },
             {
                 "id": "1204910001",
-                "name": "Cotton blouse",
+                "name": "Oversized Bomber Jacket",
                 "brand": "H&M",
                 "price": "Rs. 399.00",
                 "image": "https://image.hm.com/assets/hm/1d/ea/1dead8d29a943b69975b3e45337fe34aa51fdd90.jpg?imwidth=2160",
@@ -394,7 +394,7 @@ window.productsData = {
             },
             {
                 "id": "149500000",
-                "name": "Oversized cotton shirt",
+                "name": "Regular Fit Cotton Shorts",
                 "brand": "H&M",
                 "price": "Rs.1,999.00",
                 "image": "../images/products/women/149500000.jpg",
@@ -443,13 +443,13 @@ window.productsData = {
             },
             {
                 "id": "149500002",
-                "name": "Ribbed tank top",
+                "name": "High-Waist Tailored Trousers",
                 "brand": "H&M",
                 "price": "Rs.799.00",
                 "image": "../images/products/women/149500002.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/00/35/00354aa6395607211a7045dc81dedad5dc20e385.jpg",
                 "category": "Top",
-                "description": "Soft ribbed tank top with fitted silhouette.",
+                "description": "Soft High-Waist Tailored Trousers with fitted silhouette.",
                 "composition": "Cotton blend",
                 "fit": "Sleeveless",
                 "sizes": [
@@ -466,7 +466,7 @@ window.productsData = {
             },
             {
                 "id": "149500003",
-                "name": "Floral chiffon dress",
+                "name": "Wide-Leg Cotton Trousers",
                 "brand": "H&M",
                 "price": "Rs.2,999.00",
                 "image": "../images/products/women/149500003.jpg",
@@ -584,7 +584,7 @@ window.productsData = {
             },
             {
                 "id": "149500008",
-                "name": "Cropped denim jacket",
+                "name": "Slim Fit Chinos",
                 "brand": "H&M",
                 "price": "Rs.3,499.00",
                 "image": "../images/products/women/149500008.jpg",
@@ -630,7 +630,7 @@ window.productsData = {
             },
             {
                 "id": "149500010",
-                "name": "Tailored blazer",
+                "name": "Crepe Wrap Dress",
                 "brand": "H&M",
                 "price": "Rs.4,999.00",
                 "image": "../images/products/women/149500010.jpg",
@@ -774,7 +774,7 @@ window.productsData = {
             },
             {
                 "id": "149500016",
-                "name": "Cotton poplin skirt",
+                "name": "Straight-Leg Suit Trousers",
                 "brand": "H&M",
                 "price": "Rs.1,999.00",
                 "image": "../images/products/women/149500016.jpg",
@@ -820,13 +820,13 @@ window.productsData = {
             },
             {
                 "id": "149500018",
-                "name": "Tailored shorts",
+                "name": "Jersey A-Line Dress",
                 "brand": "H&M",
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500018.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/0a/1b/0a1bd48b295ee99956b52b9b52f82f9157ddb35c.jpg",
                 "category": "Shorts",
-                "description": "Tailored shorts with pleated front.",
+                "description": "Jersey A-Line Dress with pleated front.",
                 "composition": "Polyester blend",
                 "fit": "High waist",
                 "sizes": [
@@ -866,7 +866,7 @@ window.productsData = {
             },
             {
                 "id": "149500020",
-                "name": "Fitted blazer dress",
+                "name": "Paperbag-Waist Trousers",
                 "brand": "H&M",
                 "price": "Rs.3,999.00",
                 "image": "../images/products/women/149500020.jpg",
@@ -892,13 +892,13 @@ window.productsData = {
             },
             {
                 "id": "149500021",
-                "name": "Cotton sweatshirt",
+                "name": "Slim Mom High Jeans",
                 "brand": "H&M",
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500021.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/97/9d/979db801c281aecb265c09c12b5d8fc91fe70ccd.jpg",
                 "category": "Sweatshirt",
-                "description": "Soft cotton sweatshirt with relaxed fit.",
+                "description": "Soft Slim Mom High Jeans with relaxed fit.",
                 "composition": "Cotton blend",
                 "fit": "Long sleeves",
                 "sizes": [
@@ -915,7 +915,7 @@ window.productsData = {
             },
             {
                 "id": "149500022",
-                "name": "Wide-leg linen trousers",
+                "name": "Fine-Knit Cardigan",
                 "brand": "H&M",
                 "price": "Rs.2,499.00",
                 "image": "../images/products/women/149500022.jpg",
@@ -961,13 +961,13 @@ window.productsData = {
             },
             {
                 "id": "149500024",
-                "name": "Quilted jacket",
+                "name": "Rhinestone Hair Clip",
                 "brand": "H&M",
                 "price": "Rs.4,499.00",
                 "image": "../images/products/women/149500024.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/04/32/04323357e093e1cd75941fbfcc5ac87a5c2d1229.jpg",
                 "category": "Jacket",
-                "description": "Lightweight quilted jacket.",
+                "description": "Lightweight Rhinestone Hair Clip.",
                 "composition": "Polyester",
                 "fit": "Insulated",
                 "sizes": [
@@ -984,7 +984,7 @@ window.productsData = {
             },
             {
                 "id": "149500025",
-                "name": "Pleated trousers",
+                "name": "Pleated Satin Skirt",
                 "brand": "H&M",
                 "price": "Rs.2,699.00",
                 "image": "../images/products/women/149500025.jpg",
@@ -1033,13 +1033,13 @@ window.productsData = {
             },
             {
                 "id": "149500027",
-                "name": "Cotton blouse",
+                "name": "Oversized Bomber Jacket",
                 "brand": "H&M",
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500027.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/c7/52/c752dea90749bd95d4843e656224788b07ca8553.jpg",
                 "category": "Blouse",
-                "description": "Cotton blouse with puff sleeves.",
+                "description": "Oversized Bomber Jacket with puff sleeves.",
                 "composition": "Cotton",
                 "fit": "Button closure",
                 "sizes": [
@@ -1318,7 +1318,7 @@ window.productsData = {
             },
             {
                 "id": "1308044606",
-                "name": "Regular Fit Sports vest top with DryMove\u2122",
+                "name": "Regular Fit Oxford Shirt",
                 "brand": "H&M",
                 "price": "Rs. 799.00",
                 "category": "Sportswear",
@@ -2324,7 +2324,7 @@ window.productsData = {
             },
             {
                 "id": "1398657105",
-                "name": "Oversized Cotton sweatshirt",
+                "name": "Oversized Slim Mom High Jeans",
                 "price": "Rs. 1,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
@@ -2404,7 +2404,7 @@ window.productsData = {
             },
             {
                 "id": "1398657110",
-                "name": "Regular Fit Sweatpants",
+                "name": "Relaxed Fit Linen Shirt",
                 "price": "Rs. 1,799.00",
                 "cat_name": "Men",
                 "main_category": "men",
@@ -2675,7 +2675,7 @@ window.productsData = {
             },
             {
                 "id": "1303084007",
-                "name": "Motif-detail wide leg jeans",
+                "name": "Relaxed Fit Cargo Trousers",
                 "brand": "H&M",
                 "price": "Rs. 1,899.00",
                 "image": "../images/products/kids/1303084007.jpg",
@@ -2957,7 +2957,7 @@ window.productsData = {
             },
             {
                 "id": "1398657123",
-                "name": "2-piece T-shirt and sweatshorts set",
+                "name": "Printed Pyjama Set",
                 "price": "Rs. 1,499.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
@@ -2989,13 +2989,13 @@ window.productsData = {
             },
             {
                 "id": "1398657125",
-                "name": "Loose-fit denim shirt",
+                "name": "Printed Jersey Top",
                 "price": "Rs. 1,499.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
                 "category": "Shirt",
                 "image": "../images/products/kids/1398657125.jpg",
-                "description": "Loose-fit denim shirt with dropped shoulders and chest pocket.",
+                "description": "Printed Jersey Top with dropped shoulders and chest pocket.",
                 "color": "Various",
                 "composition": "Cotton blend",
                 "link": "https://www2.hm.com/en_in/productpage.1314119001.html",
@@ -3005,13 +3005,13 @@ window.productsData = {
             },
             {
                 "id": "1398657126",
-                "name": "Denim dress",
+                "name": "Patterned Cotton Dress",
                 "price": "Rs. 1,999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
                 "category": "Dress",
                 "image": "../images/products/kids/1398657126.jpg",
-                "description": "Soft denim dress with round neckline and flutter sleeves.",
+                "description": "Soft Patterned Cotton Dress with round neckline and flutter sleeves.",
                 "color": "Various",
                 "composition": "Cotton, Lyocell blend",
                 "link": "https://www2.hm.com/en_in/productpage.1316462001.html",
@@ -3021,13 +3021,13 @@ window.productsData = {
             },
             {
                 "id": "1398657127",
-                "name": "Shirt dress",
+                "name": "Animal Print Sweatshirt",
                 "price": "Rs. 2,299.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
                 "category": "Dress",
                 "image": "../images/products/kids/1398657127.jpg",
-                "description": "Soft woven shirt dress with puff sleeves and scalloped collar.",
+                "description": "Soft woven Animal Print Sweatshirt with puff sleeves and scalloped collar.",
                 "color": "Various",
                 "composition": "Cotton blend",
                 "link": "https://www2.hm.com/en_in/productpage.1316459003.html",
@@ -3117,7 +3117,7 @@ window.productsData = {
             },
             {
                 "id": "1398657133",
-                "name": "Printed cotton leggings",
+                "name": "Tulle-Trimmed Skirt",
                 "price": "Rs. 799.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
@@ -3261,13 +3261,13 @@ window.productsData = {
             },
             {
                 "id": "1398657142",
-                "name": "Cotton polo shirt",
+                "name": "Padded Puffer Jacket",
                 "price": "Rs. 999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
                 "category": "Polo",
                 "image": "../images/products/kids/1398657142.jpg",
-                "description": "Cotton polo shirt with ribbed collar.",
+                "description": "Padded Puffer Jacket with ribbed collar.",
                 "color": "Various",
                 "composition": "Cotton",
                 "link": "https://www2.hm.com/en_in/productpage.polo.html",
@@ -3325,13 +3325,13 @@ window.productsData = {
             },
             {
                 "id": "1398657146",
-                "name": "Matching outfit set",
+                "name": "Printed Pyjama Set",
                 "price": "Rs. 2,299.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
                 "category": "Set",
                 "image": "../images/products/kids/1398657146.jpg",
-                "description": "Matching outfit set with coordinated pieces.",
+                "description": "Printed Pyjama Set with coordinated pieces.",
                 "color": "Various",
                 "composition": "Cotton blend",
                 "link": "https://www2.hm.com/en_in/productpage.outfit-set.html",

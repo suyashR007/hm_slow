@@ -40,7 +40,7 @@
         "other_details": "Lightweight design"
     },
     {
-        "name": "2-piece T-shirt and sweatshorts set",
+        "name": "Printed Pyjama Set",
         "price": "Rs. 1,499.00",
         "category": "Set",
         "description": "Matching set including printed T-shirt and elastic waist sweatshorts.",
@@ -60,30 +60,30 @@
         "other_details": "Multipack value set"
     },
     {
-        "name": "Loose-fit denim shirt",
+        "name": "Printed Jersey Top",
         "price": "Rs. 1,499.00",
         "category": "Shirt",
-        "description": "Loose-fit denim shirt with dropped shoulders and chest pocket.",
+        "description": "Printed Jersey Top with dropped shoulders and chest pocket.",
         "image_link": "https://image.hm.com/assets/hm/kids/loose-denim-shirt.jpg",
         "url": "https://www2.hm.com/en_in/productpage.1314119001.html",
         "fabric_details": "Cotton blend",
         "other_details": "Turn-down collar and front buttons"
     },
     {
-        "name": "Denim dress",
+        "name": "Patterned Cotton Dress",
         "price": "Rs. 1,999.00",
         "category": "Dress",
-        "description": "Soft denim dress with round neckline and flutter sleeves.",
+        "description": "Soft Patterned Cotton Dress with round neckline and flutter sleeves.",
         "image_link": "https://image.hm.com/assets/hm/kids/denim-dress.jpg",
         "url": "https://www2.hm.com/en_in/productpage.1316462001.html",
         "fabric_details": "Cotton, Lyocell blend",
         "other_details": "Broderie anglaise detailing"
     },
     {
-        "name": "Shirt dress",
+        "name": "Animal Print Sweatshirt",
         "price": "Rs. 2,299.00",
         "category": "Dress",
-        "description": "Soft woven shirt dress with puff sleeves and scalloped collar.",
+        "description": "Soft woven Animal Print Sweatshirt with puff sleeves and scalloped collar.",
         "image_link": "https://image.hm.com/assets/hm/kids/shirt-dress.jpg",
         "url": "https://www2.hm.com/en_in/productpage.1316459003.html",
         "fabric_details": "Cotton blend",
@@ -150,7 +150,7 @@
         "other_details": "Adjustable fit"
     },
     {
-        "name": "Printed cotton leggings",
+        "name": "Tulle-Trimmed Skirt",
         "price": "Rs. 799.00",
         "category": "Leggings",
         "description": "Stretchable cotton leggings with printed pattern.",
@@ -240,10 +240,10 @@
         "other_details": "Warm fleece interior"
     },
     {
-        "name": "Cotton polo shirt",
+        "name": "Padded Puffer Jacket",
         "price": "Rs. 999.00",
         "category": "Polo",
-        "description": "Cotton polo shirt with ribbed collar.",
+        "description": "Padded Puffer Jacket with ribbed collar.",
         "image_link": "https://image.hm.com/assets/hm/kids/polo.jpg",
         "url": "https://www2.hm.com/en_in/productpage.polo.html",
         "fabric_details": "Cotton",
@@ -280,10 +280,10 @@
         "other_details": "Comfort fit"
     },
     {
-        "name": "Matching outfit set",
+        "name": "Printed Pyjama Set",
         "price": "Rs. 2,299.00",
         "category": "Set",
-        "description": "Matching outfit set with coordinated pieces.",
+        "description": "Printed Pyjama Set with coordinated pieces.",
         "image_link": "https://image.hm.com/assets/hm/kids/outfit-set.jpg",
         "url": "https://www2.hm.com/en_in/productpage.outfit-set.html",
         "fabric_details": "Cotton blend",

@@ -449,3 +449,34 @@
             });
         });
     </script>
+
+    <!-- Mid-page Sale Banner: injects after 8th product card after 20s to cause CLS -->
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var grid = document.getElementById('men-product-grid');
+                if (!grid) return;
+
+                // Avoid duplicate injection
+                if (document.getElementById('men-mid-sale-banner')) return;
+
+                // CategoryFilter renders cards with class 'group block relative'
+                var cards = grid.querySelectorAll('.group.block.relative');
+                if (cards.length < 8) return;
+
+                // Create the banner in the same format as the spring-sale-banner (footer CLS)
+                var midBanner = document.createElement('div');
+                midBanner.id = 'men-mid-sale-banner';
+                midBanner.className = 'mid-sale-banner slow-section-visible';
+                midBanner.textContent = '\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38';
+
+                // Insert after the 8th card (index 7) — before the 9th card
+                var ninthCard = cards[8];
+                if (ninthCard) {
+                    grid.insertBefore(midBanner, ninthCard);
+                } else {
+                    grid.appendChild(midBanner);
+                }
+            }, 20000); // 20 seconds after load — causes CLS
+        });
+    </script>

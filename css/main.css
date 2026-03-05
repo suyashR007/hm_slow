@@ -873,3 +873,24 @@ h6 {
 .product-image-blend {
   mix-blend-mode: multiply;
 }
+
+/* Mid-page Sale Banner — same format as spring-sale-banner (footer CLS) */
+.mid-sale-banner {
+  display: block !important;
+  width: 100% !important;
+  background-color: #E50010 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  padding: 56px 20px !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  min-height: 60px !important;
+  grid-column: 1 / -1 !important;
+  z-index: 1 !important;
+}

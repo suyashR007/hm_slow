@@ -659,6 +659,31 @@
             }
         });
     </script>
+
+    <!-- Mid-page Sale Banner: injects after the 2 teaser photos after 20s to cause CLS -->
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                // Avoid duplicate injection
+                if (document.getElementById('home-mid-sale-banner')) return;
+
+                // The 2 photos are inside .two-teaser-grid
+                var twoTeaserGrid = document.querySelector('.two-teaser-grid');
+                if (!twoTeaserGrid) return;
+
+                // Create the banner in the same format as the spring-sale-banner (footer CLS)
+                var midBanner = document.createElement('div');
+                midBanner.id = 'home-mid-sale-banner';
+                // Add slow-section-visible to prevent performance-delay.js from hiding it with opacity: 0
+                midBanner.className = 'mid-sale-banner slow-section-visible';
+                midBanner.textContent = '\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38';
+
+                // insertAdjacentElement is most reliable for placing after an element
+                twoTeaserGrid.insertAdjacentElement('afterend', midBanner);
+
+            }, 20000); // 20 seconds after load — causes CLS
+        });
+    </script>
 </body>
 
 </html>
