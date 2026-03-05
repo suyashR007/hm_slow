@@ -40,7 +40,7 @@
         "other_details": "Lightweight design"
     },
     {
-        "name": "Printed Pyjama Set",
+        "name": "2-piece Printed Top and Skirt Set",
         "price": "Rs. 1,499.00",
         "category": "Set",
         "description": "Matching set including printed T-shirt and elastic waist sweatshorts.",
@@ -80,17 +80,17 @@
         "other_details": "Broderie anglaise detailing"
     },
     {
-        "name": "Animal Print Sweatshirt",
+        "name": "Animal Print Jersey Dress",
         "price": "Rs. 2,299.00",
         "category": "Dress",
-        "description": "Soft woven Animal Print Sweatshirt with puff sleeves and scalloped collar.",
+        "description": "Soft woven Animal Print Jersey Dress with puff sleeves and scalloped collar.",
         "image_link": "https://image.hm.com/assets/hm/kids/shirt-dress.jpg",
         "url": "https://www2.hm.com/en_in/productpage.1316459003.html",
         "fabric_details": "Cotton blend",
         "other_details": "Buttons down front"
     },
     {
-        "name": "3-piece dressy set",
+        "name": "2-piece Cotton Top and Skirt Set",
         "price": "Rs. 2,999.00",
         "category": "Set",
         "description": "Formal set with shirt, waistcoat, and bow tie.",
@@ -210,7 +210,7 @@
         "other_details": "Layering essential"
     },
     {
-        "name": "Printed pyjama set",
+        "name": "2-piece Printed Top and Skirt Set",
         "price": "Rs. 1,499.00",
         "category": "Sleepwear",
         "description": "Printed cotton pyjama set.",
@@ -230,7 +230,7 @@
         "other_details": "Classic fit"
     },
     {
-        "name": "Printed hoodie",
+        "name": "Padded Bomber Jacket",
         "price": "Rs. 1,799.00",
         "category": "Hoodie",
         "description": "Hoodie featuring printed design.",
@@ -280,10 +280,10 @@
         "other_details": "Comfort fit"
     },
     {
-        "name": "Printed Pyjama Set",
+        "name": "2-piece Printed Top and Skirt Set",
         "price": "Rs. 2,299.00",
         "category": "Set",
-        "description": "Printed Pyjama Set with coordinated pieces.",
+        "description": "2-piece Printed Top and Skirt Set with coordinated pieces.",
         "image_link": "https://image.hm.com/assets/hm/kids/outfit-set.jpg",
         "url": "https://www2.hm.com/en_in/productpage.outfit-set.html",
         "fabric_details": "Cotton blend",
