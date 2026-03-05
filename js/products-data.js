@@ -8,7 +8,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,299.00",
                 "image": "https://image.hm.com/assets/hm/22/03/2203091a6f38ee637f6090805ffe4f5bc1b4a296.jpg?imwidth=1536",
-                "category": "shirts",
+                "category": "Shirt",
                 "badges": [
                     "New"
                 ],
@@ -34,7 +34,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 2,299.00",
                 "image": "https://image.hm.com/assets/hm/06/27/0627dc40c3970e264821174164787d51d81b95df.jpg?imwidth=1536",
-                "category": "accessories",
+                "category": "Accessories",
                 "badges": [
                     "New"
                 ],
@@ -53,7 +53,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 799.00",
                 "image": "https://image.hm.com/assets/hm/17/58/1758ac081351609bdae70b953b266762066f8e09.jpg?imwidth=1536",
-                "category": "accessories",
+                "category": "Accessories",
                 "badges": [
                     "New"
                 ],
@@ -72,7 +72,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,499.00",
                 "image": "https://image.hm.com/assets/hm/d9/30/d930bfe7972ec249e0ec2ecf26fd6c76ec1512fd.jpg?imwidth=1536",
-                "category": "shorts",
+                "category": "Trousers",
                 "badges": [
                     "New"
                 ],
@@ -98,7 +98,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 999.00",
                 "image": "https://image.hm.com/assets/hm/7f/9e/7f9e3a8efa426ee31be352f8a8f12b4bc0636f3c.jpg?imwidth=1536",
-                "category": "tops",
+                "category": "Other",
                 "sizes": [
                     "XS",
                     "S",
@@ -120,7 +120,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 2,699.00",
                 "image": "https://image.hm.com/assets/hm/9b/41/9b41a6e848b1bcb9a34176756d00e75398d1c6ec.jpg?imwidth=1536",
-                "category": "jeans",
+                "category": "Trousers",
                 "sizes": [
                     "24",
                     "26",
@@ -143,7 +143,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,299.00",
                 "image": "https://image.hm.com/assets/hm/a4/95/a4952445500de1545ef5948cc57265dc6fd43f19.jpg?imwidth=1536",
-                "category": "tops",
+                "category": "Knitwear",
                 "sizes": [
                     "XS",
                     "S",
@@ -166,7 +166,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,999.00",
                 "image": "https://image.hm.com/assets/hm/d9/df/d9dfdbca5188fafad98ea12b81f0a7471475cbba.jpg?imwidth=1536",
-                "category": "hoodies",
+                "category": "Sweatshirt",
                 "sizes": [
                     "XS",
                     "S",
@@ -188,7 +188,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 2,499.00",
                 "image": "https://image.hm.com/assets/hm/51/12/51123bf1e02e16a1448530e651e5aecd7f4fa9e3.jpg?imwidth=1536",
-                "category": "dresses",
+                "category": "Dress",
                 "sizes": [
                     "XS",
                     "S",
@@ -211,7 +211,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 2,999.00",
                 "image": "https://image.hm.com/assets/hm/7a/e0/7ae03afb95709bdd030c05e5263ae5c817357540.jpg?imwidth=1536",
-                "category": "shoes",
+                "category": "Other",
                 "sizes": [
                     "36",
                     "37",
@@ -235,7 +235,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,499.00",
                 "image": "https://image.hm.com/assets/hm/87/e9/87e98a4af565a7bc4c4d7232a02a047dcd6c2915.jpg?imwidth=1536",
-                "category": "trousers",
+                "category": "Trousers",
                 "sizes": [
                     "XS",
                     "S",
@@ -259,7 +259,7 @@ window.productsData = {
                 "brand": "H&M",
                 "price": "Rs. 1,799.00",
                 "image": "https://image.hm.com/assets/hm/38/10/381017ac1843f99bcb70743daf6ee66dd873c358.jpg?imwidth=1536",
-                "category": "tops",
+                "category": "Top",
                 "sizes": [
                     "XS",
                     "S",
@@ -286,7 +286,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/3a/13/3a13f806a4117015088e2de4f06e7a356db69866.jpg?imwidth=2160",
                     "https://image.hm.com/assets/hm/b6/3a/b63a78fd24527dec36a7bba769dec42623fcec26.jpg?imwidth=2160"
                 ],
-                "category": "Jackets",
+                "category": "Jacket",
                 "description": "Jacket in twill with a stand collar, buttons down the front and welt side pockets. Yoke with gathers at the front and back and long puff sleeves with buttoned cuffs. Unlined.",
                 "art_no": "1319269005"
             },
@@ -300,7 +300,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/1d/ea/1dead8d29a943b69975b3e45337fe34aa51fdd90.jpg?imwidth=2160",
                     "https://image.hm.com/assets/hm/1d/ea/1dead8d29a943b69975b3e45337fe34aa51fdd90.jpg?imwidth=2160"
                 ],
-                "category": "Blouses",
+                "category": "Top",
                 "description": "Loose-fit blouse in an airy cotton weave with a collar and a V-shaped opening at the front. Cap sleeves and a yoke with gathers at the back. Rounded hem.",
                 "art_no": "1204910001"
             },
@@ -314,7 +314,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/03/55/035526b06aae8837881ab3aba6368cf1715e8888.jpg?imwidth=2160",
                     "https://image.hm.com/assets/hm/03/55/035526b06aae8837881ab3aba6368cf1715e8888.jpg?imwidth=2160"
                 ],
-                "category": "Jackets",
+                "category": "Jacket",
                 "description": "Jacket in cotton twill featuring a collar with a throat latch and a zip down the front. Buttoned epaulettes, an open yoke at the back and long sleeves with buttoned cuffs. Welt side pockets with storm flaps, and buttoned tabs at the hem for an adjustable fit. Lined.",
                 "art_no": "1318386001"
             },
@@ -328,7 +328,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/1e/6a/1e6ad3d33ac4b0c91fa63fe4ba012c7166cdaf33.jpg?imwidth=2160",
                     "https://image.hm.com/assets/hm/1e/6a/1e6ad3d33ac4b0c91fa63fe4ba012c7166cdaf33.jpg?imwidth=2160"
                 ],
-                "category": "Dresses",
+                "category": "Dress",
                 "description": "Short, fitted dress in a sturdy weave featuring a V-neckline at the front and back, wide shoulder straps with pleats at the front, and shaping darts at the waist for a figure-hugging silhouette. Concealed zip at the back. Lined.",
                 "art_no": "1310302001"
             },
@@ -342,7 +342,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/47/b3/47b3c301dcad90df9c97f81d3b6be7052ee4199f.jpg?imwidth=2160",
                     "https://image.hm.com/assets/hm/47/b3/47b3c301dcad90df9c97f81d3b6be7052ee4199f.jpg?imwidth=2160"
                 ],
-                "category": "Skirts",
+                "category": "Skirt",
                 "description": "Knee-length, A-line skirt in cotton denim featuring a regular waist with a zip at one side, front pockets with a zip and a box pleat at the front and back.",
                 "art_no": "1330550001"
             },
@@ -399,7 +399,7 @@ window.productsData = {
                 "price": "Rs.1,999.00",
                 "image": "../images/products/women/149500000.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/90/98/90983852d51b87230793a6fca316a1f249aa15be.jpg",
-                "category": "Shirt",
+                "category": "Trousers",
                 "description": "Oversized shirt in crisp cotton with dropped shoulders and button-down front.",
                 "composition": "Cotton 100%",
                 "fit": "Relaxed fit, long sleeves",
@@ -448,7 +448,7 @@ window.productsData = {
                 "price": "Rs.799.00",
                 "image": "../images/products/women/149500002.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/00/35/00354aa6395607211a7045dc81dedad5dc20e385.jpg",
-                "category": "Top",
+                "category": "Trousers",
                 "description": "Soft High-Waist Tailored Trousers with fitted silhouette.",
                 "composition": "Cotton blend",
                 "fit": "Sleeveless",
@@ -471,7 +471,7 @@ window.productsData = {
                 "price": "Rs.2,999.00",
                 "image": "../images/products/women/149500003.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/98/e9/98e91b3940487c2888e60a7415b2864a49296a6c.jpg",
-                "category": "Dress",
+                "category": "Trousers",
                 "description": "Flowy chiffon dress with floral print and fitted waist.",
                 "composition": "Polyester 100%",
                 "fit": "Midi length",
@@ -517,7 +517,7 @@ window.productsData = {
                 "price": "Rs.2,299.00",
                 "image": "../images/products/women/149500005.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/9b/21/9b21a172b4ce4a78648ec68df406eaa58186ebd8.jpg",
-                "category": "Cardigan",
+                "category": "Knitwear",
                 "description": "Soft knit cardigan with button closure.",
                 "composition": "Viscose blend",
                 "fit": "Regular fit",
@@ -566,7 +566,7 @@ window.productsData = {
                 "price": "Rs.1,499.00",
                 "image": "../images/products/women/149500007.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/f7/7e/f77e757e10b3873c3a65830fef749a2b7f057b27.jpg",
-                "category": "Bodysuit",
+                "category": "Knitwear",
                 "description": "Stretch cotton bodysuit with snap fasteners.",
                 "composition": "Cotton, Elastane",
                 "fit": "Fitted silhouette",
@@ -589,7 +589,7 @@ window.productsData = {
                 "price": "Rs.3,499.00",
                 "image": "../images/products/women/149500008.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/a2/45/a2456130ae8b3bed484e3743692bf8f2af6e7546.jpg",
-                "category": "Jacket",
+                "category": "Trousers",
                 "description": "Cropped jacket in rigid denim.",
                 "composition": "Cotton denim",
                 "fit": "Button closure",
@@ -612,7 +612,7 @@ window.productsData = {
                 "price": "Rs.999.00",
                 "image": "../images/products/women/149500009.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/39/fa/39fa2aabd90621b5709847787d66990377de2edf.jpg",
-                "category": "T-shirt",
+                "category": "Knitwear",
                 "description": "Loose-fit T-shirt with printed graphic.",
                 "composition": "Cotton",
                 "fit": "Oversized fit",
@@ -635,7 +635,7 @@ window.productsData = {
                 "price": "Rs.4,999.00",
                 "image": "../images/products/women/149500010.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/30/22/3022015867ab82f8ef652f7dc9e4cd2fff0cc5fe.jpg",
-                "category": "Blazer",
+                "category": "Dress",
                 "description": "Single-breasted blazer with structured shoulders.",
                 "composition": "Polyester blend",
                 "fit": "Formal wear",
@@ -707,7 +707,7 @@ window.productsData = {
                 "price": "Rs.1,299.00",
                 "image": "../images/products/women/149500013.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/92/47/9247c2ae24884b141395d0589c3cc3a2eb4d162f.jpg",
-                "category": "Top",
+                "category": "Knitwear",
                 "description": "Fitted Knit Top with ribbed texture.",
                 "composition": "Viscose blend",
                 "fit": "Fitted",
@@ -779,7 +779,7 @@ window.productsData = {
                 "price": "Rs.1,999.00",
                 "image": "../images/products/women/149500016.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/aa/08/aa0833bbf6ee1347dc5a1e876ddd21570c8b98f5.jpg",
-                "category": "Skirt",
+                "category": "Trousers",
                 "description": "Poplin skirt with gathered waist.",
                 "composition": "Cotton",
                 "fit": "Midi length",
@@ -802,7 +802,7 @@ window.productsData = {
                 "price": "Rs.2,199.00",
                 "image": "../images/products/women/149500017.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/3e/e8/3ee8f8580fea1952704b222a58d86132f6a659e0.jpg",
-                "category": "Hoodie",
+                "category": "Sweatshirt",
                 "description": "Oversized hoodie with drawstring hood.",
                 "composition": "Cotton blend",
                 "fit": "Relaxed fit",
@@ -825,7 +825,7 @@ window.productsData = {
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500018.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/0a/1b/0a1bd48b295ee99956b52b9b52f82f9157ddb35c.jpg",
-                "category": "Shorts",
+                "category": "Dress",
                 "description": "Jersey A-Line Dress with pleated front.",
                 "composition": "Polyester blend",
                 "fit": "High waist",
@@ -871,7 +871,7 @@ window.productsData = {
                 "price": "Rs.3,999.00",
                 "image": "../images/products/women/149500020.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/65/e0/65e0508f7548de212809e68fcab942fb17149d95.jpg",
-                "category": "Dress",
+                "category": "Trousers",
                 "description": "Blazer-inspired dress with structured fit.",
                 "composition": "Polyester blend",
                 "fit": "Formal wear",
@@ -897,7 +897,7 @@ window.productsData = {
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500021.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/97/9d/979db801c281aecb265c09c12b5d8fc91fe70ccd.jpg",
-                "category": "Sweatshirt",
+                "category": "Jeans",
                 "description": "Soft Slim Mom High Jeans with relaxed fit.",
                 "composition": "Cotton blend",
                 "fit": "Long sleeves",
@@ -920,7 +920,7 @@ window.productsData = {
                 "price": "Rs.2,499.00",
                 "image": "../images/products/women/149500022.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/5e/f0/5ef03ef9683b0432cedd031b3e4b6d7bb7f1bd4e.jpg",
-                "category": "Trousers",
+                "category": "Knitwear",
                 "description": "Lightweight linen trousers.",
                 "composition": "Linen blend",
                 "fit": "Breathable",
@@ -943,7 +943,7 @@ window.productsData = {
                 "price": "Rs.999.00",
                 "image": "../images/products/women/149500023.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/91/4e/914efd7f15beed12088fba29c5ae4feb35026e86.jpg",
-                "category": "Top",
+                "category": "Knitwear",
                 "description": "Fitted knit crop top.",
                 "composition": "Viscose blend",
                 "fit": "Short length",
@@ -966,7 +966,7 @@ window.productsData = {
                 "price": "Rs.4,499.00",
                 "image": "../images/products/women/149500024.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/04/32/04323357e093e1cd75941fbfcc5ac87a5c2d1229.jpg",
-                "category": "Jacket",
+                "category": "Accessories",
                 "description": "Lightweight Rhinestone Hair Clip.",
                 "composition": "Polyester",
                 "fit": "Insulated",
@@ -989,7 +989,7 @@ window.productsData = {
                 "price": "Rs.2,699.00",
                 "image": "../images/products/women/149500025.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/82/9c/829c935f8c41ee18758719f434b90be06b0e989d.jpg",
-                "category": "Trousers",
+                "category": "Skirt",
                 "description": "Pleated front trousers.",
                 "composition": "Polyester blend",
                 "fit": "Formal wear",
@@ -1015,7 +1015,7 @@ window.productsData = {
                 "price": "Rs.2,499.00",
                 "image": "../images/products/women/149500026.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/2a/76/2a7690f5b0c28ad810513d39daf7f9405fa7ffb5.jpg",
-                "category": "Dress",
+                "category": "Trousers",
                 "description": "Relaxed Fit Wide Trousers.",
                 "composition": "Viscose",
                 "fit": "Regular fit",
@@ -1038,7 +1038,7 @@ window.productsData = {
                 "price": "Rs.1,799.00",
                 "image": "../images/products/women/149500027.jpg",
                 "original_image_url": "https://image.hm.com/assets/hm/c7/52/c752dea90749bd95d4843e656224788b07ca8553.jpg",
-                "category": "Blouse",
+                "category": "Top",
                 "description": "Cotton Poplin Blouse with puff sleeves.",
                 "composition": "Cotton",
                 "fit": "Button closure",
@@ -1088,7 +1088,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/men/1318123001.jpg"
                 ],
-                "category": "T-shirts & Tops",
+                "category": "Top",
                 "description": "Slim-fit polo shirt in cotton piqu\u00e9 with collar, button placket and short sleeves.",
                 "colors": [
                     "Black/White"
@@ -1124,7 +1124,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/men/1310165002.jpg"
                 ],
-                "category": "Shirts",
+                "category": "Shirt",
                 "description": "Oxford cotton shirt with button-down collar and relaxed fit.",
                 "colors": [
                     "Green/White"
@@ -1197,7 +1197,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/men/1318112001.jpg"
                 ],
-                "category": "Sweatshirts",
+                "category": "Sweatshirt",
                 "description": "Cotton-blend sweatshirt with loose fit and open collar.",
                 "colors": [
                     "Light grey/White"
@@ -1292,7 +1292,7 @@ window.productsData = {
                 "name": "Loose Fit T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 999.00",
-                "category": "T-shirt",
+                "category": "Top",
                 "description": "Loose-fit T-shirt designed for casual comfort with modern streetwear styling.",
                 "composition": [
                     "Cotton"
@@ -1321,7 +1321,7 @@ window.productsData = {
                 "name": "Regular Fit Crew-Neck T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 799.00",
-                "category": "Sportswear",
+                "category": "Top",
                 "description": "Sports vest with DryMove\u2122 technology to wick moisture away from skin.",
                 "composition": [
                     "Polyester blend"
@@ -1379,7 +1379,7 @@ window.productsData = {
                 "name": "Regular Fit sweatshorts",
                 "brand": "H&M",
                 "price": "Rs. 999.00",
-                "category": "Shorts",
+                "category": "Trousers",
                 "description": "Comfortable sweatshorts designed with elastic waistband and relaxed fit.",
                 "composition": [
                     "Cotton blend"
@@ -1408,7 +1408,7 @@ window.productsData = {
                 "name": "Slim Fit Polo shirt",
                 "brand": "H&M",
                 "price": "Rs. 799.00",
-                "category": "Polo shirt",
+                "category": "Top",
                 "description": "Slim-fit polo shirt with ribbed collar and classic button placket.",
                 "composition": [
                     "Cotton"
@@ -1437,7 +1437,7 @@ window.productsData = {
                 "name": "Loose Fit Printed T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 799.00",
-                "category": "T-shirt",
+                "category": "Top",
                 "description": "Printed T-shirt featuring graphic designs and loose fit styling.",
                 "composition": [
                     "Cotton"
@@ -1528,11 +1528,11 @@ window.productsData = {
             },
             {
                 "id": "1394493678",
-                "name": "Regular Fit Oxford shirt",
+                "name": "Regular Fit Crew-Neck T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 1,799.00",
-                "category": "Shirt",
-                "description": "Regular fit Oxford shirt designed for versatile styling.",
+                "category": "Top",
+                "description": "Regular Fit Crew-Neck T-shirt designed for versatile styling.",
                 "composition": [
                     "Cotton"
                 ],
@@ -1808,7 +1808,7 @@ window.productsData = {
                 "name": "Slim Fit Suit trousers",
                 "brand": "H&M",
                 "price": "Rs. 2,999.00",
-                "category": "Formal trousers",
+                "category": "Trousers",
                 "description": "Slim fit trousers designed for formal wear and professional styling.",
                 "composition": [
                     "Polyester blend"
@@ -1833,7 +1833,7 @@ window.productsData = {
                 "name": "Loose Fit Boxy-style T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 799.00",
-                "category": "T-shirt",
+                "category": "Top",
                 "description": "Boxy-style T-shirt offering oversized silhouette.",
                 "composition": [
                     "Cotton"
@@ -1861,7 +1861,7 @@ window.productsData = {
                 "name": "Relaxed Fit Cotton chinos",
                 "brand": "H&M",
                 "price": "Rs. 2,299.00",
-                "category": "Chinos",
+                "category": "Trousers",
                 "description": "Cotton chinos designed for casual and business casual styling.",
                 "composition": [
                     "Cotton"
@@ -1889,7 +1889,7 @@ window.productsData = {
                 "name": "Slim Fit Textured jersey polo shirt",
                 "brand": "H&M",
                 "price": "Rs. 1,499.00",
-                "category": "Polo",
+                "category": "Top",
                 "description": "Textured polo shirt with slim fit silhouette.",
                 "composition": [
                     "Cotton blend"
@@ -1969,7 +1969,7 @@ window.productsData = {
                 "name": "Loose Fit Hoodie",
                 "brand": "H&M",
                 "price": "Rs. 1,999.00",
-                "category": "Hoodie",
+                "category": "Sweatshirt",
                 "description": "Loose-fit hoodie designed for casual wear.",
                 "composition": [
                     "Cotton blend"
@@ -2025,7 +2025,7 @@ window.productsData = {
                 "name": "Relaxed Fit Cargo trousers",
                 "brand": "H&M",
                 "price": "Rs. 2,999.00",
-                "category": "Cargo trousers",
+                "category": "Trousers",
                 "description": "Cargo trousers featuring utility pockets.",
                 "composition": [
                     "Cotton blend"
@@ -2078,7 +2078,7 @@ window.productsData = {
                 "name": "Regular Fit Cotton T-shirt",
                 "brand": "H&M",
                 "price": "Rs. 699.00",
-                "category": "T-shirt",
+                "category": "Top",
                 "description": "Regular fit cotton T-shirt designed for everyday wear.",
                 "composition": [
                     "Cotton"
@@ -2139,7 +2139,7 @@ window.productsData = {
                 "price": "Rs. 2,299.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Chinos",
+                "category": "Trousers",
                 "image": "../images/products/men/1398657093.jpg",
                 "description": "Slim fit chinos offering tailored silhouette and versatile styling.",
                 "color": "Various",
@@ -2155,7 +2155,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Hoodie",
+                "category": "Sweatshirt",
                 "image": "../images/products/men/1398657094.jpg",
                 "description": "Relaxed hoodie featuring drawstring hood and kangaroo pocket.",
                 "color": "Various",
@@ -2171,7 +2171,7 @@ window.productsData = {
                 "price": "Rs. 1,299.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Polo",
+                "category": "Top",
                 "image": "../images/products/men/1398657095.jpg",
                 "description": "Classic polo shirt with ribbed collar and button placket.",
                 "color": "Various",
@@ -2200,7 +2200,7 @@ window.productsData = {
                 "price": "Rs. 2,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Cargo trousers",
+                "category": "Other",
                 "image": "../images/products/men/1398657097.jpg",
                 "description": "Cargo trousers featuring multiple utility pockets.",
                 "color": "Various",
@@ -2232,7 +2232,7 @@ window.productsData = {
                 "price": "Rs. 1,499.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Shorts",
+                "category": "Trousers",
                 "image": "../images/products/men/1398657099.jpg",
                 "description": "Comfortable cotton shorts designed for casual wear.",
                 "color": "Various",
@@ -2264,7 +2264,7 @@ window.productsData = {
                 "price": "Rs. 4,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Blazer",
+                "category": "Jacket",
                 "image": "../images/products/men/1398657101.jpg",
                 "description": "Slim fit blazer for formal occasions.",
                 "color": "Various",
@@ -2296,7 +2296,7 @@ window.productsData = {
                 "price": "Rs. 699.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "T-shirt",
+                "category": "Top",
                 "image": "../images/products/men/1398657103.jpg",
                 "description": "Basic cotton jersey T-shirt suitable for everyday wear.",
                 "color": "Various",
@@ -2328,7 +2328,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Sweatshirt",
+                "category": "Knitwear",
                 "image": "../images/products/men/1398657105.jpg",
                 "description": "Oversized sweatshirt designed for casual comfort.",
                 "color": "Various",
@@ -2360,7 +2360,7 @@ window.productsData = {
                 "price": "Rs. 2,299.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Cardigan",
+                "category": "Knitwear",
                 "image": "../images/products/men/1398657107.jpg",
                 "description": "Cotton cardigan ideal for layering.",
                 "color": "Various",
@@ -2408,7 +2408,7 @@ window.productsData = {
                 "price": "Rs. 1,799.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Sweatpants",
+                "category": "Top",
                 "image": "../images/products/men/1398657110.jpg",
                 "description": "Comfortable sweatpants with elastic waistband.",
                 "color": "Various",
@@ -2420,11 +2420,11 @@ window.productsData = {
             },
             {
                 "id": "1398657111",
-                "name": "Regular Fit Oxford Shirt",
+                "name": "Regular Fit Crew-Neck T-shirt",
                 "price": "Rs. 599.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Vest",
+                "category": "Top",
                 "image": "../images/products/men/1398657111.jpg",
                 "description": "Sleeveless cotton vest designed for layering.",
                 "color": "Various",
@@ -2440,7 +2440,7 @@ window.productsData = {
                 "price": "Rs. 999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Sportswear",
+                "category": "Top",
                 "image": "../images/products/men/1398657112.jpg",
                 "description": "Sports T-shirt with breathable construction.",
                 "color": "Various",
@@ -2488,7 +2488,7 @@ window.productsData = {
                 "price": "Rs. 2,499.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Sweater",
+                "category": "Trousers",
                 "image": "../images/products/men/1398657115.jpg",
                 "description": "Knit sweater designed for warmth and comfort.",
                 "color": "Various",
@@ -2504,7 +2504,7 @@ window.productsData = {
                 "price": "Rs. 1,799.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Shorts",
+                "category": "Shirt",
                 "image": "../images/products/men/1398657116.jpg",
                 "description": "Cargo shorts featuring utility pockets.",
                 "color": "Various",
@@ -2520,7 +2520,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Shirt",
+                "category": "Top",
                 "image": "../images/products/men/1398657117.jpg",
                 "description": "Oxford shirt offering tailored silhouette.",
                 "color": "Various",
@@ -2536,7 +2536,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Men",
                 "main_category": "men",
-                "category": "Track pants",
+                "category": "Other",
                 "image": "../images/products/men/1398657118.jpg",
                 "description": "Track pants designed for sports and casual wear.",
                 "color": "Various",
@@ -2557,7 +2557,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/1124226019.jpg"
                 ],
-                "category": "Suit trousers",
+                "category": "Trousers",
                 "description": "Slim fit suit trousers in a cotton weave with an adjustable, elasticated waist and a zip fly with a button. Side pockets, fake back pockets with a button and legs with creases.",
                 "colors": [
                     "Light beige"
@@ -2648,7 +2648,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/0937175086.jpg"
                 ],
-                "category": "T-shirt multipack",
+                "category": "Top",
                 "description": "Short-sleeved tops in soft cotton jersey with a print motif. Longer and rounded at the back.",
                 "colors": [],
                 "composition": [
@@ -2682,7 +2682,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/1303084007.jpg"
                 ],
-                "category": "Jeans",
+                "category": "Trousers",
                 "description": "Jeans in soft cotton denim with motif details. Loose fit through the hip and thigh with wide legs. Adjustable paper bag waist, fake fly with a press-stud, diagonal front pockets and open back pockets.",
                 "colors": [
                     "Denim blue",
@@ -2727,7 +2727,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/1172232017.jpg"
                 ],
-                "category": "T-shirt multipack",
+                "category": "Top",
                 "description": "Long-sleeved T-shirts in soft, printed cotton jersey with a round, rib-trimmed neckline and a straight-cut hem.",
                 "colors": [
                     "Navy blue",
@@ -2770,7 +2770,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/1312432001.jpg"
                 ],
-                "category": "Joggers multipack",
+                "category": "Other",
                 "description": "Joggers in soft cotton twill with an elasticated, drawstring waist, side pockets and covered elastication at the hems.",
                 "colors": [
                     "Light beige",
@@ -2809,7 +2809,7 @@ window.productsData = {
                 "image_list": [
                     "../images/products/kids/1229678022.jpg"
                 ],
-                "category": "Garment set",
+                "category": "Skirt",
                 "description": "Set with a sweatshirt and a matching pair of leggings. Top in sweatshirt fabric with a soft brushed inside and an appliqu\u00e9 on the front. Round, rib-trimmed neckline, dropped shoulders and ribbing at the cuffs and hem. Leggings in soft, ribbed cotton jersey with an elasticated waist.",
                 "colors": [
                     "Light pink",
@@ -2897,7 +2897,7 @@ window.productsData = {
                 "price": "Rs. 399.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "T-shirt",
+                "category": "Top",
                 "image": "../images/products/kids/1398657119.jpg",
                 "description": "Soft cotton T-shirt with printed motif and comfortable regular fit.",
                 "color": "Various",
@@ -2961,7 +2961,7 @@ window.productsData = {
                 "price": "Rs. 1,499.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Set",
+                "category": "Skirt",
                 "image": "../images/products/kids/1398657123.jpg",
                 "description": "Matching set including printed T-shirt and elastic waist sweatshorts.",
                 "color": "Various",
@@ -2977,7 +2977,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Shorts",
+                "category": "Trousers",
                 "image": "../images/products/kids/1398657124.jpg",
                 "description": "Multipack cotton jersey shorts with elastic waistband.",
                 "color": "Various",
@@ -2993,7 +2993,7 @@ window.productsData = {
                 "price": "Rs. 1,499.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Shirt",
+                "category": "Top",
                 "image": "../images/products/kids/1398657125.jpg",
                 "description": "Printed Jersey Top with dropped shoulders and chest pocket.",
                 "color": "Various",
@@ -3041,7 +3041,7 @@ window.productsData = {
                 "price": "Rs. 2,999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Set",
+                "category": "Skirt",
                 "image": "../images/products/kids/1398657128.jpg",
                 "description": "Formal set with shirt, waistcoat, and bow tie.",
                 "color": "Various",
@@ -3073,7 +3073,7 @@ window.productsData = {
                 "price": "Rs. 2,999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Joggers",
+                "category": "Other",
                 "image": "../images/products/kids/1398657130.jpg",
                 "description": "Multipack joggers with elastic waist for everyday comfort.",
                 "color": "Various",
@@ -3121,7 +3121,7 @@ window.productsData = {
                 "price": "Rs. 799.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Leggings",
+                "category": "Skirt",
                 "image": "../images/products/kids/1398657133.jpg",
                 "description": "Stretchable cotton leggings with printed pattern.",
                 "color": "Various",
@@ -3137,7 +3137,7 @@ window.productsData = {
                 "price": "Rs. 799.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "T-shirt",
+                "category": "Top",
                 "image": "../images/products/kids/1398657134.jpg",
                 "description": "T-shirt featuring appliqu\u00e9 detailing.",
                 "color": "Various",
@@ -3153,7 +3153,7 @@ window.productsData = {
                 "price": "Rs. 699.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "T-shirt",
+                "category": "Top",
                 "image": "../images/products/kids/1398657135.jpg",
                 "description": "Oversized T-shirt with printed motif.",
                 "color": "Various",
@@ -3169,7 +3169,7 @@ window.productsData = {
                 "price": "Rs. 999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Shorts",
+                "category": "Trousers",
                 "image": "../images/products/kids/1398657136.jpg",
                 "description": "Muslin shorts with elastic waist.",
                 "color": "Various",
@@ -3201,7 +3201,7 @@ window.productsData = {
                 "price": "Rs. 1,999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Cardigan",
+                "category": "Knitwear",
                 "image": "../images/products/kids/1398657138.jpg",
                 "description": "Soft cotton cardigan with front buttons.",
                 "color": "Various",
@@ -3217,7 +3217,7 @@ window.productsData = {
                 "price": "Rs. 1,499.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Sleepwear",
+                "category": "Skirt",
                 "image": "../images/products/kids/1398657139.jpg",
                 "description": "Printed cotton pyjama set.",
                 "color": "Various",
@@ -3249,7 +3249,7 @@ window.productsData = {
                 "price": "Rs. 1,799.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Hoodie",
+                "category": "Jacket",
                 "image": "../images/products/kids/1398657141.jpg",
                 "description": "Hoodie featuring printed design.",
                 "color": "Various",
@@ -3265,7 +3265,7 @@ window.productsData = {
                 "price": "Rs. 999.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Polo",
+                "category": "Jacket",
                 "image": "../images/products/kids/1398657142.jpg",
                 "description": "Padded Puffer Jacket with ribbed collar.",
                 "color": "Various",
@@ -3313,7 +3313,7 @@ window.productsData = {
                 "price": "Rs. 1,799.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Sweater",
+                "category": "Knitwear",
                 "image": "../images/products/kids/1398657145.jpg",
                 "description": "Soft knit sweater designed for warmth.",
                 "color": "Various",
@@ -3329,7 +3329,7 @@ window.productsData = {
                 "price": "Rs. 2,299.00",
                 "cat_name": "Kids",
                 "main_category": "kids",
-                "category": "Set",
+                "category": "Skirt",
                 "image": "../images/products/kids/1398657146.jpg",
                 "description": "2-piece Printed Top and Skirt Set with coordinated pieces.",
                 "color": "Various",
@@ -3352,7 +3352,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/c7/44/c7440ee51e3758ae522904d267dfc6c4dd4cf725.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/9f/18/9f1839aa8eb1c8da9eb5896dcb3193202dbdf337.jpg?imwidth=820"
                 ],
-                "category": "Fragrance",
+                "category": "Other",
                 "description": "Reed diffuser in a glass bottle with wooden sticks for continuous fragrance.",
                 "colors": [
                     "Transparent"
@@ -3370,7 +3370,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/20/85/2085fdfe820ea6573307eba99ecd8c63c55a4b7b.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/96/09/96098a4fa31b1b8a736b1b5a3f4098414b194a48.jpg?imwidth=820"
                 ],
-                "category": "Glassware",
+                "category": "Other",
                 "description": "Glass carafe with a matching drinking glass that doubles as a lid.",
                 "colors": [
                     "Clear glass"
@@ -3388,7 +3388,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/55/f2/55f24dcef935c0b31c158b8fdc163857bf1df907.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/04/85/04851aa839ede9731ca388980cecc96d80c1095e.jpg?imwidth=820"
                 ],
-                "category": "Bathroom",
+                "category": "Accessories",
                 "description": "Soft towel cape with a hood, ideal for after bath or swim.",
                 "colors": [
                     "White"
@@ -3406,7 +3406,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/f9/a1/f9a13483655eac1bba1e6bd22234a204f03fa98c.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/cf/ae/cfaebed746211c924591b6b61abe0fb433542437.jpg?imwidth=820"
                 ],
-                "category": "Blanket",
+                "category": "Home",
                 "description": "Soft patterned fleece blanket for cosy living room or bedroom use.",
                 "colors": [
                     "Patterned"
@@ -3423,7 +3423,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/df/c7/dfc7804e65caf4101fbb450f7d6040dc246ccb97.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/b2/43/b243744d7ec00274230ac726f52b009f56d2c6ac.jpg?imwidth=820"
                 ],
-                "category": "Storage",
+                "category": "Home",
                 "description": "Cute bunny-shaped storage basket for kids' toys and accessories.",
                 "colors": [
                     "Natural"
@@ -3440,7 +3440,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/3a/8e/3a8ed45bb82d7ccc3cce996fa704078c887a2c56.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/9f/c3/9fc39fbef587f5fe028c2600b91593549cdcc834.jpg?imwidth=820"
                 ],
-                "category": "Vase",
+                "category": "Home",
                 "description": "Small textured glass vase suitable for flowers or decorative display.",
                 "colors": [
                     "Transparent"
@@ -3457,7 +3457,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/02/4b/024b081d7fdad22c909e98b5383a9041e7428892.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/cd/bc/cdbc15bede15c192ca64add3011e06ecea50f844.jpg?imwidth=820"
                 ],
-                "category": "Cushion",
+                "category": "Home",
                 "description": "Cotton canvas cushion cover with concealed zip, fits standard cushion inserts.",
                 "colors": [
                     "Natural"
@@ -3474,7 +3474,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/b3/71/b371118ce816f3456e5e77b9403c4b35120563fd.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/e3/93/e39364634e5f4b59c2000a993258e20a3234d2e3.jpg?imwidth=820"
                 ],
-                "category": "Storage",
+                "category": "Home",
                 "description": "Adorable chick-shaped storage basket, perfect for kids room organisation.",
                 "colors": [
                     "Yellow"
@@ -3491,7 +3491,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/59/95/5995b9779df18e1dbc18127899db1b46b7f44b67.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/1b/40/1b40fe1ce4374bfc83a2c60e39a28ba9fa7ef108.jpg?imwidth=820"
                 ],
-                "category": "Fragrance",
+                "category": "Other",
                 "description": "Floral reed diffuser in a tinted glass bottle with rattan sticks.",
                 "colors": [
                     "Tinted glass"
@@ -3508,7 +3508,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/ab/17/ab17dd521a08f214cae467b247a4989dfd157fb8.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/53/24/5324f7fa83daf61e7425c69b19cc4d68b078437c.jpg?imwidth=820"
                 ],
-                "category": "Storage",
+                "category": "Home",
                 "description": "Fabric storage basket with lid for organising toys and household items.",
                 "colors": [
                     "Natural"
@@ -3525,7 +3525,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/26/16/26165cc166278ad8f44ea58c975caf50b38afb8a.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/a0/e9/a0e94618600d17b9171dd62f06a4218f3b5c2fdf.jpg?imwidth=820"
                 ],
-                "category": "Bathroom",
+                "category": "Other",
                 "description": "Tufted cotton bath mat with soft texture and anti-slip backing.",
                 "colors": [
                     "Beige"
@@ -3542,7 +3542,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/2b/21/2b2140ffd5cc94c9134d300aacf7345bbba6e717.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/51/fe/51fe1db10ad214b276f3608a0a2183d91d60565c.jpg?imwidth=820"
                 ],
-                "category": "Blanket",
+                "category": "Home",
                 "description": "Lightweight linen-blend blanket for layering on beds or sofas.",
                 "colors": [
                     "Natural"
@@ -3559,7 +3559,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/d0/b1/d0b1d76b66ea322a7ee14896b351d293587431c8.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/78/06/7806986931dc5d88da32ddbe2931f03226a81645.jpg?imwidth=820"
                 ],
-                "category": "Cushion",
+                "category": "Home",
                 "description": "Luxurious cotton velvet cushion cover with concealed zip closure.",
                 "colors": [
                     "Velvet"
@@ -3576,7 +3576,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/57/c1/57c1e014ed2d6ceb6d556c40ac9dff5eaf845756.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/7f/36/7f3616c8b758e1ce696a00a604e2fcd172bc1225.jpg?imwidth=820"
                 ],
-                "category": "Candle",
+                "category": "Home",
                 "description": "Scented candle in a decorative glass holder with unique fragrance.",
                 "colors": [
                     "Glass holder"
@@ -3593,7 +3593,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/c5/c1/c5c1704bd579d98d212e4faeaf09c48df43db215.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/4e/07/4e078c705d9ad158f8fc5f8dcc40ed3b1da055ed.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Garment set",
                 "description": "Soft cotton queen bed sheet set with pillow covers included.",
                 "colors": [
                     "White"
@@ -3610,7 +3610,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/2f/cf/2fcf78454569ba85252e4a15dd0dd103a9c3a9c8.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/27/dd/27dd50641b0554291c6d012f2e27f15e3092327c.jpg?imwidth=820"
                 ],
-                "category": "Storage",
+                "category": "Home",
                 "description": "Handwoven seagrass storage basket with decorative pompom trim.",
                 "colors": [
                     "Natural"
@@ -3627,7 +3627,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/a0/bd/a0bd8611a580919cd3c18e1e93c6a4e6996656eb.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/1e/ea/1eea6efb31d461ee2cfe4e11eaa41c4d4ee5eca9.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Garment set",
                 "description": "Premium cotton king bed sheet set with matching pillow covers.",
                 "colors": [
                     "White"
@@ -3644,7 +3644,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/a2/14/a21435740db0510732c68ab6b71342e31e484404.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/e2/1d/e21d18bd28096c61311cec91f420263f61cd3daa.jpg?imwidth=820"
                 ],
-                "category": "Candle",
+                "category": "Home",
                 "description": "Set of 6 moulded tapered candles for elegant dining table decor.",
                 "colors": [
                     "Assorted"
@@ -3661,7 +3661,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/cb/0f/cb0fbebcdb2b9013be958d224cece392f87cdc98.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/a9/26/a9265700b4bb68538f1843a70820f2a81db5f470.jpg?imwidth=820"
                 ],
-                "category": "Glassware",
+                "category": "Other",
                 "description": "Tinted glass bedside carafe with matching drinking glass lid.",
                 "colors": [
                     "Tinted glass"
@@ -3678,7 +3678,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/e1/1b/e11bca718a2a9a5a608216b8725c3aefde3af40c.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/43/39/4339f106e904d4971e2f31162f8e8e6596a37305.jpg?imwidth=820"
                 ],
-                "category": "Tableware",
+                "category": "Other",
                 "description": "Set of 2 stoneware bowls with unique reactive-glaze finish.",
                 "colors": [
                     "Reactive glaze"
@@ -3695,7 +3695,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/13/a9/13a9716ba7fcb6d1aa65cca24bda29419fa83bff.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/83/bc/83bc3b3ad720eeb40adf8c8a7dc6d96047c231f9.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Garment set",
                 "description": "Cotton duvet cover set for double or king sized bed with pillow covers.",
                 "colors": [
                     "Patterned"
@@ -3712,7 +3712,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/43/64/4364bdb31572ab623c1b3775b8584ec9f9bdef43.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/3c/85/3c85b08a77f89aff6256195d3b315203671832c2.jpg?imwidth=820"
                 ],
-                "category": "Storage",
+                "category": "Other",
                 "description": "Wooden organiser box for storing accessories, stationery, or small items.",
                 "colors": [
                     "Natural wood"
@@ -3729,7 +3729,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/61/e2/61e2af063bacb10ff121f867fe4a1574b26b7a20.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/c2/37/c237e9e97980bfee7105eb886f965ee422644ae7.jpg?imwidth=820"
                 ],
-                "category": "Blanket",
+                "category": "Home",
                 "description": "Soft cotton muslin blanket, breathable and lightweight for all seasons.",
                 "colors": [
                     "Natural"
@@ -3746,7 +3746,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/66/a1/66a1f5f8e186c3a2a318368e7b05738b2b379ffa.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/40/4d/404d72a91713cfd6946a8d76cfa49275d4f75165.jpg?imwidth=820"
                 ],
-                "category": "Tableware",
+                "category": "Home",
                 "description": "Hand-painted stoneware starter plate with artisan finish, each piece unique.",
                 "colors": [
                     "Stoneware"
@@ -3763,7 +3763,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/9e/16/9e16d261984eb9dbff1914608c7b35a4804a8006.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/40/67/4067dc22d2a07e2bd509ab75595ea3b7603871b6.jpg?imwidth=820"
                 ],
-                "category": "Table linen",
+                "category": "Other",
                 "description": "Linen-blend tablecloth with a natural, textured feel for dining table styling.",
                 "colors": [
                     "Natural"
@@ -3780,7 +3780,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/88/db/88db0003c01851c869e62f5fd2125b923cafb962.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/4f/86/4f8676b943552b0414d8cc0adab32cea9fb1d14b.jpg?imwidth=820"
                 ],
-                "category": "Cushion",
+                "category": "Home",
                 "description": "Linen-blend cushion cover with a natural texture and concealed zip.",
                 "colors": [
                     "Natural linen"
@@ -3797,7 +3797,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/4f/99/4f99771db88472bbacafa460e884f7052debce90.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/6b/57/6b5731749ed611625d6d1f63248fbf474845bcbd.jpg?imwidth=820"
                 ],
-                "category": "Planter",
+                "category": "Other",
                 "description": "Large metal plant pot suitable for indoor or outdoor plants.",
                 "colors": [
                     "Metal"
@@ -3814,7 +3814,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/d5/01/d5014af33e9d93b1595bdaa54ec7b39f8aded443.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/01/aa/01aa1e9b8fd77b7e9288b53154206b0b36be6c7d.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Patterned cotton fitted sheet with elasticised edges for a snug fit.",
                 "colors": [
                     "Patterned"
@@ -3830,7 +3830,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/32/ec/32ec22e38bd923e590e8e9540fa417fa478bce02.jpg?imwidth=820"
                 ],
-                "category": "Table linen",
+                "category": "Other",
                 "description": "Set of 4 linen-blend napkins with elegant embroidery detail.",
                 "colors": [
                     "White"
@@ -3846,7 +3846,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/7d/23/7d2306901bffbcc8f53e6f98400b69635f0ad6f2.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Garment set",
                 "description": "Cotton single duvet cover set in a floral pattern with pillow cover.",
                 "colors": [
                     "Light beige/Floral"
@@ -3862,7 +3862,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/0c/1f/0c1f3003be63e31ffb00d86bad1e894a3cf70f07.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Cotton pillowcase with print motif design and envelope closure.",
                 "colors": [
                     "White/Heart"
@@ -3878,7 +3878,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/64/0e/640e19102bb6739782fdf4930d8f14f57780c387.jpg?imwidth=820"
                 ],
-                "category": "Planter",
+                "category": "Other",
                 "description": "Decorative metal plant pot in earthy tones for indoor plants.",
                 "colors": [
                     "Dark brown",
@@ -3896,7 +3896,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/f2/f3/f2f3eceb88f841b4b16f6a3c23b2698fe3adc4cf.jpg?imwidth=820"
                 ],
-                "category": "Tableware",
+                "category": "Home",
                 "description": "Elegant footed serving plate in dark brown, ideal for entertaining.",
                 "colors": [
                     "Dark brown"
@@ -3912,7 +3912,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/96/0f/960f82f2dfbc9cb3bd632acb44494a4021199e9f.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Garment set",
                 "description": "Premium cotton percale duvet cover set with a crisp, smooth feel.",
                 "colors": [
                     "Light blue/Striped",
@@ -3931,7 +3931,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/66/e8/66e8a79d042ffda6172dc30ad29d7b02ea9075d3.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Striped cotton bedspread for layering or as a standalone bed cover.",
                 "colors": [
                     "Light khaki green/Cream"
@@ -3947,7 +3947,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/1f/7e/1f7e8ecaa75a708d6375a475d873fff329431c7b.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Quilted cotton bedspread with elegant stitching detail.",
                 "colors": [
                     "White"
@@ -3963,7 +3963,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/45/b9/45b94b8d8d61d0d9a614da19ef38376a43544560.jpg?imwidth=820"
                 ],
-                "category": "Planter",
+                "category": "Other",
                 "description": "Extra-small stoneware plant pot with matching saucer, ideal for succulents.",
                 "colors": [
                     "Dark brown",
@@ -3982,7 +3982,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/a3/a8/a3a80c8cd3cacbc9b51ee9ca50bb54277a5a6a8e.jpg?imwidth=820"
                 ],
-                "category": "Planter",
+                "category": "Other",
                 "description": "Stoneware plant pot with saucer in glazed finish, suitable for medium plants.",
                 "colors": [
                     "Dark brown",
@@ -4001,7 +4001,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/f7/ac/f7ac292f82be7c2c18436f7dedef7ad914fd13ac.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Soft cotton pillowcase in pastel tones.",
                 "colors": [
                     "Pale yellow",
@@ -4018,7 +4018,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/25/84/25840b116108e5ed836951831e92070cea7efba8.jpg?imwidth=820"
                 ],
-                "category": "Bedding",
+                "category": "Other",
                 "description": "Patterned cotton fitted sheet with blue floral design.",
                 "colors": [
                     "White/Blue floral"
@@ -4035,7 +4035,7 @@ window.productsData = {
                     "https://image.hm.com/assets/hm/05/7d/057d1c8524c64441876a92be9fb4e0bc82962d83.jpg?imwidth=820",
                     "https://image.hm.com/assets/hm/84/e9/84e99fe7233be3a83256f79d755dd361e68409bb.jpg?imwidth=820"
                 ],
-                "category": "Table linen",
+                "category": "Other",
                 "description": "Patterned linen-blend tablecloth with a textured finish for dining.",
                 "colors": [
                     "Patterned"
@@ -4051,7 +4051,7 @@ window.productsData = {
                 "image_list": [
                     "https://image.hm.com/assets/hm/ad/7c/ad7c17d8acaa2519ea712986fa4f9b08489d7e9c.jpg?imwidth=820"
                 ],
-                "category": "Vase",
+                "category": "Home",
                 "description": "Textured glass vase in beige tones for decorative flower arrangements.",
                 "colors": [
                     "Transparent",

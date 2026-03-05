@@ -134,7 +134,16 @@ const CategoryFilter = (() => {
             'lingerie': 'lingerie',
         };
 
-        return catMap[lower] || lower;
+        let normalized = catMap[lower] || lower;
+
+        if (categoryKey === 'women') {
+            if (normalized === 'trousers') normalized = 'jeans & trousers';
+            if (normalized === 't-shirts & tops') normalized = 'tops & t-shirts';
+        } else if (categoryKey === 'men') {
+            if (normalized === 'tops & t-shirts') normalized = 't-shirts & tops';
+        }
+
+        return normalized;
     }
 
 
