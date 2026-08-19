@@ -139,6 +139,8 @@ const CategoryFilter = (() => {
         if (categoryKey === 'women') {
             if (normalized === 'trousers') normalized = 'jeans & trousers';
             if (normalized === 't-shirts & tops') normalized = 'tops & t-shirts';
+            if (normalized === 'shirts') normalized = 'tops & t-shirts';
+            if (normalized === 'hoodies & sweatshirts') normalized = 'knitwear';
         } else if (categoryKey === 'men') {
             if (normalized === 'tops & t-shirts') normalized = 't-shirts & tops';
         }

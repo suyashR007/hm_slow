@@ -87,7 +87,6 @@
     "fabric_details": "Cotton",
     "other_details": "Checked pattern"
   },
-
   {
     "name": "Loose Straight Jeans",
     "price": "Rs. 2,699.00",
@@ -120,14 +119,7 @@
     "fabric_details": "Cotton blend",
     "other_details": "Athleisure wear"
   },
-  {
-    "name": "Relaxed Fit Cotton flannel shirt",
-    "price": "Rs. 2,299.00",
-    "category": "Shirt",
-    "description": "Flannel shirt offering warmth and relaxed styling.",
-    "fabric_details": "Cotton flannel",
-    "other_details": "Checked pattern"
-  },
+
   {
     "name": "Workwear jacket",
     "price": "Rs. 3,999.00",
@@ -216,14 +208,7 @@
     "fabric_details": "Cotton blend",
     "other_details": "Utility styling"
   },
-  {
-    "name": "Denim jacket",
-    "price": "Rs. 3,499.00",
-    "category": "Jacket",
-    "description": "Classic denim jacket designed for layering.",
-    "fabric_details": "Cotton denim",
-    "other_details": "Casual wear"
-  },
+
   {
     "name": "Regular Fit Cotton T-shirt",
     "price": "Rs. 699.00",

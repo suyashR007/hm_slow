@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Women's Fashion - H&M</title>
-    <!-- Performance Degradation - must be first to block FCP -->
-    <script src="../js/performance-delay.js"></script>
-    <script src="../js/cls-degradation.js" defer></script>
-    <script src="../js/spring-sale-banner.js" defer></script>
-
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <meta
       name="description"
@@ -20,9 +15,31 @@
     <link rel="stylesheet" href="../css/new_header.css" />
     <link rel="stylesheet" href="../css/filters.css" />
     <link rel="stylesheet" href="../css/wishlist.css" />
+    <script src="../js/spring-sale-banner.js" defer></script>
   </head>
 
   <body>
+    <!-- Top Sale Banner - Loads instantly (no CLS) -->
+    <div
+      id="spring-sale-banner"
+      style="
+        width: 100%;
+        background: #e50010;
+        color: #fff;
+        text-align: center;
+        padding: 56px 20px;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        z-index: 9999;
+        position: relative;
+        box-sizing: border-box;
+      "
+    >
+      &#x1F338; SPRING SALE &mdash; 50% OFF &#x1F338;
+    </div>
+
     <!-- Header -->
     <header class="header">
       <!-- Announcement Banner -->
@@ -595,6 +612,9 @@
                   src="../images/products/women/149500000.jpg"
                   alt="Regular Fit Cotton Shorts"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -651,6 +671,9 @@
                   src="../images/products/women/149500001.jpg"
                   alt="Wide-leg tailored trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -707,6 +730,9 @@
                   src="../images/products/women/149500002.jpg"
                   alt="High-Waist Tailored Trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -763,6 +789,9 @@
                   src="../images/products/women/149500003.jpg"
                   alt="Wide-Leg Cotton Trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -819,6 +848,9 @@
                   src="../images/products/women/149500004.jpg"
                   alt="Straight fit ankle jeans"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -875,6 +907,9 @@
                   src="../images/products/women/149500005.jpg"
                   alt="Knit cardigan"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -931,6 +966,9 @@
                   src="../images/products/women/149500006.jpg"
                   alt="Pleated midi skirt"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -987,6 +1025,9 @@
                   src="../images/products/women/149500007.jpg"
                   alt="Rib-Knit Cardigan"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1043,6 +1084,9 @@
                   src="../images/products/women/149500008.jpg"
                   alt="Slim Fit Chinos"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1099,6 +1143,9 @@
                   src="../images/products/women/149500009.jpg"
                   alt="Fine-Knit Wool Sweater"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1155,6 +1202,9 @@
                   src="../images/products/women/149500010.jpg"
                   alt="Crepe Wrap Dress"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1211,6 +1261,9 @@
                   src="../images/products/women/149500011.jpg"
                   alt="Wrap dress"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1267,6 +1320,9 @@
                   src="../images/products/women/149500012.jpg"
                   alt="Cargo trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1323,6 +1379,9 @@
                   src="../images/products/women/149500013.jpg"
                   alt="Fitted Knit Top"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1379,6 +1438,9 @@
                   src="../images/products/women/149500014.jpg"
                   alt="Wide-leg jeans"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1435,6 +1497,9 @@
                   src="../images/products/women/149500015.jpg"
                   alt="Long knit dress"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1491,6 +1556,9 @@
                   src="../images/products/women/149500016.jpg"
                   alt="Straight-Leg Suit Trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1547,6 +1615,9 @@
                   src="../images/products/women/149500017.jpg"
                   alt="Oversized hoodie"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1603,6 +1674,9 @@
                   src="../images/products/women/149500018.jpg"
                   alt="Jersey A-Line Dress"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1659,6 +1733,9 @@
                   src="../images/products/women/149500019.jpg"
                   alt="Sequined Mini Skirt"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1715,6 +1792,9 @@
                   src="../images/products/women/149500020.jpg"
                   alt="Paperbag-Waist Trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1771,6 +1851,9 @@
                   src="../images/products/women/149500021.jpg"
                   alt="Slim Mom High Jeans"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1827,6 +1910,9 @@
                   src="../images/products/women/149500022.jpg"
                   alt="Fine-Knit Cardigan"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1883,6 +1969,9 @@
                   src="../images/products/women/149500023.jpg"
                   alt="Knit crop top"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1939,6 +2028,9 @@
                   src="../images/products/women/149500024.jpg"
                   alt="Rhinestone Hair Clip"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -1995,6 +2087,9 @@
                   src="../images/products/women/149500025.jpg"
                   alt="Pleated Satin Skirt"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -2051,6 +2146,9 @@
                   src="../images/products/women/149500026.jpg"
                   alt="Relaxed Fit Wide Trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -2107,6 +2205,9 @@
                   src="../images/products/women/149500027.jpg"
                   alt="Cotton Poplin Blouse"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -2163,6 +2264,9 @@
                   src="../images/products/women/149500028.jpg"
                   alt="Straight tailored trousers"
                   class="product-image"
+                  width="400"
+                  height="600"
+                  loading="lazy"
                 />
                 <div class="product-badges"><span class="badge">New</span></div>
                 <div class="product-actions">
@@ -2263,7 +2367,6 @@
                 <li><a href="men.html">Men</a></li>
                 <li><a href="kids.html">Baby</a></li>
                 <li><a href="kids.html">Kids</a></li>
-                <li><a href="home.html">H&M HOME</a></li>
               </ul>
             </div>
           </div>
@@ -2413,38 +2516,26 @@
           categoryKey: "women",
           gridId: "women-product-grid",
         });
-      });
-    </script>
 
-    <!-- Mid-page Sale Banner: injects after 8th product card after 10s to cause CLS -->
-    <script>
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          var grid = document.getElementById("women-product-grid");
-          if (!grid) return;
-
-          // Avoid duplicate injection
-          if (document.getElementById("women-mid-sale-banner")) return;
-
-          // CategoryFilter renders cards with class 'group block relative'
+        // Fast-loading mid-page sale banner
+        var grid = document.getElementById("women-product-grid");
+        if (grid) {
           var cards = grid.querySelectorAll(".group.block.relative");
-          if (cards.length < 8) return;
+          if (cards.length >= 8) {
+            var midBanner = document.createElement("div");
+            midBanner.id = "women-mid-sale-banner";
+            midBanner.className = "mid-sale-banner";
+            midBanner.textContent =
+              "\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38";
 
-          // Create the banner in the same format as the spring-sale-banner (footer CLS)
-          var midBanner = document.createElement("div");
-          midBanner.id = "women-mid-sale-banner";
-          midBanner.className = "mid-sale-banner slow-section-visible";
-          midBanner.textContent =
-            "\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38";
-
-          // Insert after the 8th card (index 7) — before the 9th card
-          var ninthCard = cards[8];
-          if (ninthCard) {
-            grid.insertBefore(midBanner, ninthCard);
-          } else {
-            grid.appendChild(midBanner);
+            var ninthCard = cards[8];
+            if (ninthCard) {
+              grid.insertBefore(midBanner, ninthCard);
+            } else {
+              grid.appendChild(midBanner);
+            }
           }
-        }, 20000); // 20 seconds after load — causes CLS
+        }
       });
     </script>
   </body>

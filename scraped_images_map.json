@@ -141,7 +141,6 @@
     "image": "https://image.hm.com/assets/hm/ea/bf/eabfc2776a22f9a2093fa639a28ed9bb68c4e267.jpg?imwidth=1536",
     "colors": ["White"]
   },
-
   {
     "name": "Relaxed Fit Twill trousers",
     "image": "https://image.hm.com/assets/hm/14/c4/14c4a71dc710ea373ed246550db8474678b3018c.jpg?imwidth=1536",
@@ -152,11 +151,7 @@
     "image": "https://image.hm.com/assets/hm/a9/81/a981aa0653f6118224de6f3baa6c0d67b3f49155.jpg?imwidth=1536",
     "colors": ["Grey/White"]
   },
-  {
-    "name": "Relaxed Fit Cotton flannel shirt",
-    "image": "https://image.hm.com/assets/hm/3d/46/3d469a71e6e65eefa2ac47501a81088c4a369c9c.jpg?imwidth=1536",
-    "colors": ["Red/Check", "Blue/Check"]
-  },
+
   {
     "name": "Workwear jacket",
     "image": "https://image.hm.com/assets/hm/bb/13/bb134dabc8f45c10d48823b64f8334f18c342eb0.jpg?imwidth=1536",
@@ -197,11 +192,7 @@
     "image": "https://image.hm.com/assets/hm/aa/8f/aa8feb22d0472f8a7b4f726e5a00574890920512.jpg?imwidth=1536",
     "colors": ["White", "Black"]
   },
-  {
-    "name": "Denim jacket",
-    "image": "https://image.hm.com/assets/hm/ab/e3/abe390029cdbe9dd89e3546271f38ca74e0696b2.jpg?imwidth=1536",
-    "colors": ["Light Denim", "Black"]
-  },
+
   {
     "name": "Regular Fit Cotton T-shirt",
     "image": "https://image.hm.com/assets/hm/4f/d8/4fd8e52c9e1424905c31fd9e991889af7896da5b.jpg?imwidth=1536",
