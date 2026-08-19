@@ -7,7 +7,7 @@
     <!-- Performance Degradation - must be first to block FCP -->
     <script src="../js/performance-delay.js"></script>
     <script src="../js/cls-degradation.js" defer></script>
-
+    <script src="../js/spring-sale-banner.js" defer></script>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <meta
       name="description"
@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../css/new_header.css" />
     <link rel="stylesheet" href="../css/filters.css" />
     <link rel="stylesheet" href="../css/wishlist.css" />
-    <script src="../js/spring-sale-banner.js" defer></script>
   </head>
 
   <body>
@@ -783,26 +782,6 @@
           categoryKey: "men",
           gridId: "men-product-grid",
         });
-
-        // Fast-loading mid-page sale banner
-        var grid = document.getElementById("men-product-grid");
-        if (grid) {
-          var cards = grid.querySelectorAll(".group.block.relative");
-          if (cards.length >= 8) {
-            var midBanner = document.createElement("div");
-            midBanner.id = "men-mid-sale-banner";
-            midBanner.className = "mid-sale-banner";
-            midBanner.textContent =
-              "\uD83C\uDF38 SPRING SALE \u2014 50% OFF \uD83C\uDF38";
-
-            var ninthCard = cards[8];
-            if (ninthCard) {
-              grid.insertBefore(midBanner, ninthCard);
-            } else {
-              grid.appendChild(midBanner);
-            }
-          }
-        }
       });
     </script>
   </body>
